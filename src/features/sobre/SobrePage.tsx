@@ -1,0 +1,216 @@
+import React from 'react';
+import {
+  EVENT_INFO,
+  TIMELINE_DATA,
+  FOUNDER_TRIBUTE,
+  METRICS_DATA,
+} from '../../core/constants';
+import { AnimatedCounter } from '../../components/AnimatedCounter';
+import { CalangoMascot } from '../../components/CalangoMascot';
+import {
+  History,
+  Heart,
+  Award,
+  Sparkles,
+  BookOpen,
+  Target,
+  Users,
+  Compass,
+  CheckCircle2,
+  GraduationCap,
+} from 'lucide-react';
+
+export const SobrePage: React.FC = () => {
+  return (
+    <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
+      {/* Header */}
+      <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
+        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-wider">
+          <History className="w-4 h-4" />
+          <span>6 Anos de História · 2021 a 2026</span>
+        </div>
+        <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
+          Sobre o Ôxe Maker & Nossa Missão
+        </h1>
+        <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
+          Da primeira oficina com caixas de papelão e motores de DVD usados em 2021 ao maior
+          encontro de robótica educacional e cultura maker da rede pública estadual de Pernambuco.
+        </p>
+      </div>
+
+      {/* Origin & Meaning of "Ôxe" */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#1E292D] border-2 border-slate-700/80 rounded-sm p-6 sm:p-10 maker-shadow-yellow">
+        <div className="lg:col-span-8 space-y-4">
+          <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest block">
+            Identidade & Orgulho Pernambucano
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
+            Por que "Ôxe Maker"?
+          </h2>
+          <p className="text-sm text-slate-300 leading-relaxed font-sans">
+            "Ôxe" é a interjeição mais autêntica do vocabulário pernambucano: expressa surpresa,
+            admiração, entusiasmo e acolhimento. Quando nossos alunos ligam um circuito e exclamam
+            <em className="text-[#FCC140] font-semibold"> "Ôxe, funcionou!"</em>, estamos
+            celebrando a democratização do conhecimento científico.
+          </p>
+          <p className="text-sm text-slate-300 leading-relaxed font-sans">
+            Unimos essa energia nordestina à cultura <strong>Maker ("faça você mesmo")</strong> para
+            provar que a escola pública é polo gerador de alta tecnologia, pensamento crítico e
+            soluções socioambientais.
+          </p>
+        </div>
+
+        <div className="lg:col-span-4 flex justify-center">
+          <CalangoMascot size="lg" animated={false} />
+        </div>
+      </div>
+
+      {/* Animated Metrics Strip */}
+      <div className="space-y-6">
+        <div className="text-center space-y-1">
+          <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold">
+            Impacto Acumulado
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
+            A Trajetória em Números
+          </h2>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-3 sm:gap-4">
+          {METRICS_DATA.map((item) => (
+            <div
+              key={item.id}
+              className="p-5 bg-[#1E292D] border border-slate-700 rounded-sm text-center"
+            >
+              <div className="text-3xl sm:text-4xl font-bold font-mono-code text-[#FCC140] mb-1">
+                <AnimatedCounter value={item.value} suffix={item.suffix} />
+              </div>
+              <h3 className="text-xs font-bold text-white uppercase font-heading">{item.label}</h3>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Timeline 2021-2026 */}
+      <div className="space-y-8">
+        <div className="border-b border-slate-800 pb-4">
+          <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest block mb-1">
+            Linha do Tempo
+          </span>
+          <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
+            Ano a Ano: A Evolução da Mostra
+          </h2>
+        </div>
+
+        <div className="relative pl-6 sm:pl-8 border-l-2 border-[#01B1FD]/40 space-y-8">
+          {TIMELINE_DATA.map((m) => (
+            <div key={m.year} className="relative group">
+              {/* Bullet dot */}
+              <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[#FCC140] border-2 border-[#050D34] group-hover:scale-125 transition-transform" />
+
+              <div className="bg-[#1E292D] border border-slate-700/80 hover:border-[#FCC140] p-5 sm:p-6 rounded-sm space-y-2 transition-all">
+                <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
+                  <div className="flex items-center gap-2">
+                    <span className="text-xl sm:text-2xl font-bold font-mono-code text-[#FCC140]">
+                      {m.year}
+                    </span>
+                    <span className="text-xs font-mono-code text-slate-400">· {m.edition}</span>
+                  </div>
+                  <span className="text-xs font-mono-code text-[#01B1FD] font-semibold">
+                    {m.stats}
+                  </span>
+                </div>
+
+                <h3 className="text-lg font-heading text-white font-bold">{m.title}</h3>
+                <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
+                  {m.description}
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+
+      {/* Special Tribute to Founder Section */}
+      <section className="bg-gradient-to-r from-[#1E292D] via-[#050D34] to-[#0030B5]/30 border-2 border-[#FCC140] rounded-sm maker-shadow-yellow-lg p-6 sm:p-10 space-y-8">
+        <div className="flex items-center gap-3 border-b border-slate-700/80 pb-4">
+          <Heart className="w-6 h-6 text-rose-500 fill-rose-500 flex-shrink-0" />
+          <div>
+            <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-widest block">
+              Homenagem Especial
+            </span>
+            <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
+              Tributo à Idealizadora do Ôxe Maker
+            </h2>
+          </div>
+        </div>
+
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
+          {/* Avatar / Vector Profile */}
+          <div className="lg:col-span-4 flex flex-col items-center text-center space-y-3">
+            <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-[#1E292D] border-4 border-[#FCC140] flex items-center justify-center p-3 relative maker-shadow-yellow">
+              <GraduationCap className="w-16 h-16 text-[#FCC140]" />
+              <div className="absolute -bottom-2 bg-[#01B1FD] text-[#050D34] font-mono-code text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase">
+                Pioneira da Rede
+              </div>
+            </div>
+
+            <div>
+              <h3 className="text-xl font-heading text-white font-bold">{FOUNDER_TRIBUTE.name}</h3>
+              <p className="text-xs font-mono-code text-[#01B1FD]">{FOUNDER_TRIBUTE.role}</p>
+            </div>
+          </div>
+
+          {/* Tribute Quote and Bio */}
+          <div className="lg:col-span-8 space-y-4">
+            <blockquote className="p-4 bg-[#050D34] border-l-4 border-[#FCC140] rounded-r-sm text-sm sm:text-base italic text-slate-200 font-sans">
+              {FOUNDER_TRIBUTE.quote}
+            </blockquote>
+
+            <div className="space-y-2 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
+              {FOUNDER_TRIBUTE.bio.map((paragraph, pIdx) => (
+                <p key={pIdx}>{paragraph}</p>
+              ))}
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Mission, Vision & Values */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="p-6 bg-[#1E292D] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
+          <div className="p-2.5 bg-[#050D34] w-fit rounded-sm text-[#FCC140]">
+            <Target className="w-6 h-6" />
+          </div>
+          <h3 className="text-lg font-heading text-white uppercase">Nossa Missão</h3>
+          <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
+            Democratizar a robótica, a programação e o design maker nas escolas públicas do Litoral
+            Norte de Pernambuco, formando cidadãos críticos, autônomos e protagonistas do seu tempo.
+          </p>
+        </div>
+
+        <div className="p-6 bg-[#1E292D] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
+          <div className="p-2.5 bg-[#050D34] w-fit rounded-sm text-[#01B1FD]">
+            <Compass className="w-6 h-6" />
+          </div>
+          <h3 className="text-lg font-heading text-white uppercase">Nossa Visão</h3>
+          <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
+            Tornar a Rede Estadual de Pernambuco uma referência nacional em inovação socioambiental
+            aberta e tecnologias ecológicas construídas pelos próprios estudantes.
+          </p>
+        </div>
+
+        <div className="p-6 bg-[#1E292D] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
+          <div className="p-2.5 bg-[#050D34] w-fit rounded-sm text-[#FCC140]">
+            <Users className="w-6 h-6" />
+          </div>
+          <h3 className="text-lg font-heading text-white uppercase">Nossos Valores</h3>
+          <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
+            Educação pública de excelência, colaboração solidária, sustentabilidade com sucata
+            eletrônica, respeito à diversidade cultural e paixão pela ciência viva.
+          </p>
+        </div>
+      </div>
+    </div>
+  );
+};

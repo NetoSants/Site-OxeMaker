@@ -1,0 +1,125 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-oxe-navy: #050D34;
+    --color-oxe-yellow: #FCC140;
+    --color-oxe-cyan: #01B1FD;
+    --color-oxe-blue: #0030B5;
+    --color-oxe-card: #1E292D;
+    --font-heading: 'Londrina Solid', sans-serif;
+    --font-mono: 'Space Mono', monospace;
+    --font-body: 'Inter', sans-serif;
+  }
+
+  body {
+    background-color: #050D34;
+    color: #F1F5F9;
+    font-family: var(--font-body);
+    overflow-x: hidden;
+  }
+
+  h1, h2, h3, .font-heading {
+    font-family: var(--font-heading);
+    letter-spacing: 0.02em;
+  }
+
+  .font-mono-code {
+    font-family: var(--font-mono);
+  }
+}
+
+/* Blueprint subtle background pattern */
+.bg-blueprint {
+  background-color: #050D34;
+  background-image: 
+    linear-gradient(rgba(1, 177, 253, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(1, 177, 253, 0.07) 1px, transparent 1px),
+    linear-gradient(rgba(252, 193, 64, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(252, 193, 64, 0.04) 1px, transparent 1px);
+  background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
+  background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
+}
+
+/* Maker solid offset shadows */
+.maker-shadow-yellow {
+  box-shadow: 4px 4px 0px 0px #FCC140;
+}
+
+.maker-shadow-yellow-lg {
+  box-shadow: 6px 6px 0px 0px #FCC140;
+}
+
+.maker-shadow-cyan {
+  box-shadow: 4px 4px 0px 0px #01B1FD;
+}
+
+.maker-shadow-cyan-lg {
+  box-shadow: 6px 6px 0px 0px #01B1FD;
+}
+
+.maker-shadow-blue {
+  box-shadow: 4px 4px 0px 0px #0030B5;
+}
+
+/* Tactile press-down buttons */
+.maker-btn-primary {
+  background-color: #FCC140;
+  color: #050D34;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  border: 2px solid #FCC140;
+  box-shadow: 4px 4px 0px #01B1FD;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.maker-btn-primary:hover {
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #01B1FD;
+}
+
+.maker-btn-primary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #01B1FD;
+}
+
+.maker-btn-secondary {
+  background-color: transparent;
+  color: #01B1FD;
+  font-family: 'Space Mono', monospace;
+  font-weight: 700;
+  border: 2px solid #01B1FD;
+  box-shadow: 4px 4px 0px #FCC140;
+  transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.maker-btn-secondary:hover {
+  background-color: rgba(1, 177, 253, 0.12);
+  transform: translate(-1px, -1px);
+  box-shadow: 5px 5px 0px #FCC140;
+}
+
+.maker-btn-secondary:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #FCC140;
+}
+
+/* Card maker styling */
+.maker-card {
+  background-color: #1E292D;
+  border: 2px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.maker-card:hover {
+  border-color: #FCC140;
+  box-shadow: 4px 4px 0px #FCC140;
+  transform: translateY(-2px);
+}
+
+.maker-badge {
+  font-family: 'Space Mono', monospace;
+  font-size: 0.75rem;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+}
