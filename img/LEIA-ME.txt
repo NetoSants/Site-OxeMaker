@@ -1,0 +1,23 @@
+====================================================================
+GUIA DE IMAGENS E MÍDIAS · ÔXE MAKER 2026
+====================================================================
+
+Esta pasta (/public/img) contém os arquivos visuais locais do site.
+Para personalizar as fotos reais do evento, siga as instruções abaixo:
+
+1. FOTO DA FUNDADORA (HOMENAGEM):
+   - Arquivo atual: /public/img/homenagem-marilene.svg
+   - Como substituir: Insira uma foto em formato .jpg ou .png (resolução recomendada: 600x600px).
+   - Onde atualizar o caminho: No arquivo /src/core/constants.ts na constante FOUNDER_TRIBUTE.imagePlaceholder.
+
+2. MASCOTE CALANGO:
+   - Arquivo atual: /public/img/calango-mascote.svg
+   - O mascote também possui uma versão 100% vetorial e animada implementada em /src/components/CalangoMascot.tsx.
+
+3. FOTOS DA GALERIA HISTÓRICA:
+   - Para adicionar fotos reais das edições de 2021 a 2025:
+   - Coloque as imagens nesta pasta (ex: foto-sumo-2025.jpg, foto-oficina-2024.jpg).
+   - Registre o nome do arquivo em /src/core/constants.ts na lista GALLERY_DATA.
+
+Dúvidas sobre o site: oxemaker@gremetronorte.pe.gov.br
+====================================================================
