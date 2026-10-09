@@ -28,6 +28,7 @@ import {
   Users,
   Compass,
   Mic,
+  Lightbulb,
 } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
@@ -118,27 +119,45 @@ export const HomePage: React.FC = () => {
                 </p>
               </div>
 
-              {/* 2026 Theme Banner — foco central em amarelo */}
-              <div className="p-5 bg-[#FCC140] border-2 border-[#FCC140] rounded-sm maker-shadow-yellow-lg text-left relative overflow-hidden">
-                <span className="text-[11px] font-mono-code text-[#7A5A00] uppercase font-bold tracking-wider block mb-1">
-                  Tema Central 2026
-                </span>
-                <p className="text-lg sm:text-xl font-heading text-[#050D34] font-black leading-snug">
-                  "{EVENT_INFO.theme2026}"
-                </p>
-              </div>
-
-              {/* Event Location and Date Badges — destaque */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-sm font-mono-code">
-                <div className="flex items-center gap-2 bg-[#FCC140]/10 border-2 border-[#FCC140]/70 px-3.5 py-2 rounded-sm">
-                  <Calendar className="w-4 h-4 text-[#FCC140]" />
-                  <span className="text-white font-bold">{EVENT_INFO.dates.display}</span>
-                  <span className="text-slate-300">· {EVENT_INFO.dates.timeRange}</span>
+              {/* Destaque combinado: Tema Central + Data + Local */}
+              <div className="rounded-sm overflow-hidden border-2 border-[#FCC140]/40 maker-shadow-cyan-lg bg-[#050D34]">
+                <div className="p-5 sm:p-7 bg-gradient-to-r from-[#FCC140]/15 via-transparent to-[#01B1FD]/10 border-b-2 border-[#FCC140]/40 text-left">
+                  <span className="inline-flex items-center gap-2 text-[11px] font-mono-code text-[#FCC140] uppercase font-bold tracking-widest mb-2">
+                    <Lightbulb className="w-4 h-4" /> Tema Central 2026
+                  </span>
+                  <p className="text-lg sm:text-2xl font-heading text-white font-black leading-tight">
+                    "{EVENT_INFO.theme2026}"
+                  </p>
                 </div>
-                <div className="flex items-center gap-2 bg-[#01B1FD]/10 border-2 border-[#01B1FD]/60 px-3.5 py-2 rounded-sm">
-                  <MapPin className="w-4 h-4 text-[#01B1FD]" />
-                  <span className="text-white font-bold">{EVENT_INFO.location.venue}</span>
-                  <span className="text-slate-300">· Olinda-PE</span>
+                <div className="grid grid-cols-1 sm:grid-cols-2 text-left">
+                  <div className="flex items-center gap-3 p-5 sm:p-6 border-b sm:border-b-0 sm:border-r border-slate-700/60">
+                    <div className="flex items-center justify-center w-11 h-11 shrink-0 bg-[#FCC140]/15 border-2 border-[#FCC140] rounded-sm">
+                      <Calendar className="w-5 h-5 text-[#FCC140]" />
+                    </div>
+                    <div>
+                      <span className="block text-[10px] font-mono-code text-[#FCC140] uppercase font-bold tracking-widest mb-0.5">
+                        Data
+                      </span>
+                      <p className="text-base sm:text-lg font-heading text-white font-black leading-tight">
+                        {EVENT_INFO.dates.display}
+                      </p>
+                      <p className="text-xs font-mono-code text-slate-300">{EVENT_INFO.dates.timeRange}</p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-3 p-5 sm:p-6">
+                    <div className="flex items-center justify-center w-11 h-11 shrink-0 bg-[#01B1FD]/15 border-2 border-[#01B1FD] rounded-sm">
+                      <MapPin className="w-5 h-5 text-[#01B1FD]" />
+                    </div>
+                    <div>
+                      <span className="block text-[10px] font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest mb-0.5">
+                        Local
+                      </span>
+                      <p className="text-base sm:text-lg font-heading text-white font-black leading-tight">
+                        {EVENT_INFO.location.venue}
+                      </p>
+                      <p className="text-xs font-mono-code text-slate-300">Olinda-PE · {EVENT_INFO.location.neighborhood}</p>
+                    </div>
+                  </div>
                 </div>
               </div>
 
