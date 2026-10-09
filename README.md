@@ -2,12 +2,13 @@
 
 Site oficial da **6ª edição do Ôxe Maker (2021–2026)** — Mostra de Robótica Educacional e Cultura Maker/Geek da **GRE Metropolitana Norte** (Rede Pública Estadual de Pernambuco).
 
-- **Data do Evento**: 02 e 03 de julho de 2026 (07h00 às 17h30)
-- **Local**: Escola Técnica Estadual (ETE) José de Alencar — Ginásio e Pátio Central
-- **Endereço**: Av. Getúlio Vargas, s/n, Bairro Novo, Olinda – PE, 53030-010
+- **Data do Evento**: 27 de novembro de 2026 (Sexta-feira) — Das 07h00 às 18h00
+- **Local**: EREM Áurea de Moura Cavalcanti — Front da escola, ginásio, pátio e cafeteria
+- **Endereço**: Rodovia PE-15, Km 3,6, s/n, Ouro Preto, Olinda – PE
 - **Tema 2026**: *"Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"*
 - **Slogan**: *"Metropolitana Norte · Vidas · Escolas · Comunidade"*
 - **Mascote**: Calango Maker (Lagarto com óculos maker e detalhes robóticos)
+- **Organizador**: GRE Metropolitana Norte · Secretaria de Educação e Esportes de Pernambuco
 
 ---
 
@@ -46,6 +47,16 @@ npm run preview
 npm run lint
 ```
 
+### Deploy (GitHub Pages)
+
+O site é publicado automaticamente em **`https://netosants.github.io/Site-OxeMaker/`**:
+
+- `vite.config.ts` usa `base: '/Site-OxeMaker/'` e o app roda com **HashRouter** (rotas no formato `/#/torneio`), o que dispensa configuração server-side.
+- O workflow **`.github/workflows/deploy.yml`** compila o projeto e publica a cada **push na branch `main`**.
+- No GitHub, em *Settings → Pages*, o **Source** deve estar em **"GitHub Actions"**.
+
+> 💡 Toda atualização de conteúdo ou código que for para o `main` sobe o site sozinha.
+
 ---
 
 ## 📁 Arquitetura do Projeto
@@ -61,29 +72,29 @@ O código foi organizado em camadas modulares para facilitar manutenções futur
     ├── core/                    # DADOS CENTRALIZADOS (FONTE ÚNICA DA VERDADE)
     │   ├── types.ts             # Interfaces TypeScript de todo o evento
     │   └── constants.ts         # TODOS OS TEXTOS, DATAS, LINKS E TABELAS EDITÁVEIS
-    ├── components/              # Componentes reutilizáveis
-    │   ├── Navbar.tsx           # Cabeçalho responsivo com menu mobile animado
-    │   ├── Footer.tsx           # Rodapé institucional com realização e redes
-    │   ├── Logo.tsx             # Marca oficial com tipografia e mascote
-    │   ├── CalangoMascot.tsx    # Mascote Calango vetorial animado (SVG)
-    │   ├── CountdownTimer.tsx   # Contagem regressiva ao vivo para 02/07/2026 09:00
-    │   ├── AnimatedCounter.tsx  # Contadores com IntersectionObserver
-    │   ├── RegistrationModal.tsx# Modal interativo de inscrição (com Google Forms e simulação)
-    │   ├── EditalModal.tsx      # Modal de leitura e download de editais técnicos
-    │   ├── ScrollToTop.tsx      # Restaura scroll ao trocar de rota
-    │   └── MainLayout.tsx       # Shell com grade blueprint e layout padrão
-    ├── features/                # Telas do evento
-    │   ├── home/                # Hero, Provas Sociais, 6 Destaques, Galeria, Patrocinadores e FAQ
-    │   ├── programacao/         # Grade de 2 dias com filtros e busca
-    │   ├── mapa/                # Endereço, Google Maps embed, transporte e setores
-    │   ├── torneio/             # 5 Competições de robótica, requisitos e editais
-    │   ├── geek/                # Cosplay, K-pop Dance Cover e Arena Just Dance
-    │   ├── oxethon/             # Hackathon 48h, 4 trilhas e regulamento
-    │   ├── oficinas/            # 4 Oficinas práticas com instrutores editáveis
-    │   └── sobre/               # História desde 2021, linha do tempo e Homenagem à Fundadora
-    ├── index.css                # Tema escuro maker, sombras offset e estilos blueprint
-    ├── App.tsx                  # Definição das rotas React Router
-    └── main.tsx                 # Ponto de entrada React 19
+│   ├── components/             # Componentes reutilizáveis
+    │   │   ├── Navbar.tsx          # Cabeçalho responsivo com menu mobile animado
+    │   │   ├── Footer.tsx          # Rodapé compacto com slogan, tema e parceiros
+    │   │   ├── Logo.tsx            # Marca oficial com tipografia e mascote
+    │   │   ├── CalangoMascot.tsx   # Mascote Calango vetorial animado (SVG)
+    │   │   ├── CountdownTimer.tsx  # Contagem regressiva ao vivo para 27/11/2026 07h00
+    │   │   ├── AnimatedCounter.tsx # Contadores com IntersectionObserver
+    │   │   ├── RegistrationModal.tsx # Modal interativo de inscrição (com Google Forms e simulação)
+    │   │   ├── EditalModal.tsx     # Modal de leitura e download de editais técnicos
+    │   │   ├── ScrollToTop.tsx     # Restaura scroll ao trocar de rota
+    │   │   └── MainLayout.tsx       # Shell com fundo de glifos de ciência animados (reagem ao scroll)
+    │   ├── features/               # Telas do evento
+    │   │   ├── home/               # Hero, Provas Sociais, 6 Destaques, Galeria, Patrocinadores e FAQ
+    │   │   ├── programacao/        # Grade do dia com blocos Manhã e Tarde, filtros e busca
+    │   │   ├── mapa/               # Endereço, Google Maps embed, transporte e setores
+    │   │   ├── torneio/            # 3 categorias de robótica (Buzz Line, Buzz Pro, Sumô) e editais
+    │   │   ├── geek/               # Cosplay, K-pop Dance Cover e Arena Just Dance
+    │   │   ├── oxethon/            # Hackathon, história e regulamento
+    │   │   ├── oficinas/           # 5 Oficinas práticas com instrutores editáveis
+    │   │   └── sobre/              # História desde 2021, linha do tempo e Homenagem à Fundadora
+    │   ├── index.css               # Tema escuro maker, sombras offset e tipografia justificada
+    │   ├── App.tsx                 # Rotas React Router (HashRouter) — necessário para o GitHub Pages
+    │   └── main.tsx                # Ponto de entrada React 19
 ```
 
 ---
@@ -99,8 +110,8 @@ Todos os textos, datas, nomes e links de inscrição estão concentrados no arqu
 | **Links dos formulários Google Forms** | Objeto `EVENT_INFO.links` |
 | **Contatos e Redes Sociais** | Objeto `EVENT_INFO.contact` |
 | **Números de impacto (provas sociais)** | Array `METRICS_DATA` |
-| **Grade de horários dos 2 dias** | Array `SCHEDULE_DATA` |
-| **Regras dos torneios de robótica** | Array `TOURNAMENTS_DATA` |
+| **Grade de horários do evento** | Array `SCHEDULE_DATA` (blocos Manhã/Tarde) |
+| **Categorias dos torneios de robótica** | Array `TOURNAMENTS_DATA` (3 categorias) |
 | **Categorias geek (Cosplay, K-pop, Just Dance)** | Array `GEEK_CATEGORIES` |
 | **Desafios e trilhas do Oxethon 48h** | Objeto `OXETHON_INFO` |
 | **Professores e detalhes das oficinas** | Array `WORKSHOPS_DATA` |

@@ -7,4 +7,12 @@ coverage/
 .env*
 !.env.example
 
+# Pasta-fonte de logotipos (não versionar)
 logos-site/
+
+# Windows / Editores
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.local
