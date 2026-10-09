@@ -38,7 +38,7 @@ export const GeekPage: React.FC = () => {
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
         <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-wider">
           <Sparkles className="w-4 h-4 text-[#FCC140]" />
-          <span>Palco Geek & Cultura Pop · Pátio Central da ETE</span>
+          <span>Palco Geek & Cultura Pop · {EVENT_INFO.location.venue}</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
           Cultura Geek & Expressão Juvenil
@@ -60,7 +60,7 @@ export const GeekPage: React.FC = () => {
             Apresentações ao Vivo, Torcida Apaixonada & Premiações
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 font-sans max-w-xl">
-            Inscrições 100% gratuitas para estudantes da rede pública e comunidade. Traga seu
+            Inscrições abertas para estudantes da rede pública e comunidade. Traga seu
             cosplay feito com materiais makers, monte seu grupo cover de K-pop ou venha suar a camisa
             no Just Dance!
           </p>
@@ -85,6 +85,17 @@ export const GeekPage: React.FC = () => {
             className="bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-6 flex flex-col justify-between space-y-6 transition-all hover:maker-shadow-yellow group"
           >
             <div className="space-y-4">
+              {cat.image && (
+                <div className="rounded-sm overflow-hidden border border-slate-700/80 bg-[#050D34]">
+                  <img
+                    src={cat.image}
+                    alt={cat.name}
+                    className="w-full h-40 object-cover group-hover:scale-[1.02] transition-transform"
+                    loading="lazy"
+                  />
+                </div>
+              )}
+
               {/* Icon and Title */}
               <div className="flex items-center gap-3">
                 <div className="p-3 bg-[#050D34] border border-slate-700 rounded-sm">
@@ -162,7 +173,7 @@ export const GeekPage: React.FC = () => {
                 className="w-full maker-btn-primary py-2.5 text-xs uppercase flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-3.5 h-3.5" />
-                <span>Inscrever-se Gratuitamente</span>
+                <span>Inscrever-se</span>
               </button>
             </div>
           </div>

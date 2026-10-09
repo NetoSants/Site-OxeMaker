@@ -4,7 +4,7 @@
  */
 
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 import { MainLayout } from './components/MainLayout';
 import { HomePage } from './features/home/HomePage';
 import { ProgramacaoPage } from './features/programacao/ProgramacaoPage';
@@ -44,7 +44,7 @@ const NotFoundPage: React.FC = () => (
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route element={<MainLayout />}>
           <Route path="/" element={<HomePage />} />
@@ -59,6 +59,6 @@ export default function App() {
           <Route path="*" element={<Navigate to="/404" replace />} />
         </Route>
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

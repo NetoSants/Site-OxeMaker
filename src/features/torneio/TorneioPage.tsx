@@ -7,8 +7,6 @@ import {
   Bot,
   Zap,
   Shield,
-  Swords,
-  HeartHandshake,
   Navigation,
   FileText,
   Users,
@@ -30,10 +28,6 @@ export const TorneioPage: React.FC = () => {
         return <Zap className="w-6 h-6 text-[#FCC140]" />;
       case 'Shield':
         return <Shield className="w-6 h-6 text-[#01B1FD]" />;
-      case 'Swords':
-        return <Swords className="w-6 h-6 text-rose-400" />;
-      case 'HeartHandshake':
-        return <HeartHandshake className="w-6 h-6 text-emerald-400" />;
       default:
         return <Navigation className="w-6 h-6 text-[#FCC140]" />;
     }
@@ -45,37 +39,37 @@ export const TorneioPage: React.FC = () => {
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
         <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-wider">
           <Bot className="w-4 h-4" />
-          <span>Arenas de Competição · Ginásio da ETE José de Alencar</span>
+          <span>Competições · 27 de Novembro · {EVENT_INFO.location.venue}</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
           Torneios de Robótica 2026
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
-          5 modalidades oficiais de robótica autônoma, combate rádio controlado e resgate
-          socioambiental. Reúna sua equipe escolar, construa seu robô e dispute troféus históricos!
+          3 categorias oficiais de robótica: Buzz Line, Buzz Pro e Sumô.
+          Reúna sua equipe escolar, construa seu robô e dispute os troféus do Ôxe Maker 2026!
         </p>
       </div>
 
-      {/* Safety & Weigh-in Notice Banner */}
+      {/* Credentialing Notice Banner */}
       <div className="p-4 bg-[#1E292D] border-l-4 border-[#01B1FD] border-y border-r border-slate-700/80 rounded-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex items-start gap-3">
           <AlertTriangle className="w-5 h-5 text-[#FCC140] flex-shrink-0 mt-0.5" />
           <div className="text-xs text-slate-300 space-y-0.5">
             <span className="font-bold text-white block uppercase font-mono-code">
-              Pesagem e Homologação Técnica dos Robôs:
+              Credenciamento e Regras Técnicas:
             </span>
             <p>
-              Todos os robôs devem passar obrigatoriamente pela bancada de vistoria técnica no dia
-              02/07 entre 07h30 e 08h30. Baterias LiPo devem possuir bolsa de proteção (safe bag).
+              As equipes devem estar credenciadas das 07h00 às 08h00 do dia 27/11. Todos os robôs
+              devem respeitar os padrões de segurança e possuir chave geral identificada.
             </p>
           </div>
         </div>
         <span className="text-xs font-mono-code text-[#01B1FD] font-bold flex-shrink-0">
-          Vagas Limitadas por Escola
+          Competições · 14h30 às 15h30
         </span>
       </div>
 
-      {/* 5 Tournament Cards */}
+      {/* 3 Tournament Cards */}
       <div className="space-y-8">
         {TOURNAMENTS_DATA.map((t, index) => (
           <div
@@ -83,8 +77,8 @@ export const TorneioPage: React.FC = () => {
             className="bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-6 sm:p-8 transition-all hover:maker-shadow-yellow group"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
-              {/* Left Column: Title, Category, Description */}
-              <div className="lg:col-span-7 space-y-4">
+              {/* Left Column: Title, Category, Description + Imagem */}
+              <div className="lg:col-span-8 space-y-4">
                 <div className="flex items-center gap-3">
                   <div className="p-3 bg-[#050D34] border border-slate-700 rounded-sm">
                     {getIcon(t.icon)}
@@ -103,20 +97,16 @@ export const TorneioPage: React.FC = () => {
                   {t.description}
                 </p>
 
-                {/* Requirements bullet list */}
-                <div>
-                  <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold block mb-2">
-                    Regras & Requisitos Principais:
-                  </span>
-                  <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300">
-                    {t.requirements.map((req, rIdx) => (
-                      <li key={rIdx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#01B1FD] flex-shrink-0 mt-0.5" />
-                        <span>{req}</span>
-                      </li>
-                    ))}
-                  </ul>
-                </div>
+                {t.image && (
+                  <div className="rounded-sm overflow-hidden border border-slate-700/80 bg-[#050D34]">
+                    <img
+                      src={t.image}
+                      alt={t.name}
+                      className="w-full h-56 sm:h-64 lg:h-72 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+                      loading="lazy"
+                    />
+                  </div>
+                )}
 
                 {/* Arena details */}
                 <div className="p-3 bg-[#050D34] border border-slate-800 rounded-sm text-xs font-sans text-slate-300">
@@ -127,8 +117,8 @@ export const TorneioPage: React.FC = () => {
                 </div>
               </div>
 
-              {/* Right Column: Schedule, Team size, Prize and Actions */}
-              <div className="lg:col-span-5 bg-[#050D34] border border-slate-700/80 rounded-sm p-5 flex flex-col justify-between space-y-4">
+              {/* Right Column: Schedule, Team, Prize, Regras & Ações */}
+              <div className="lg:col-span-4 bg-[#050D34] border border-slate-700/80 rounded-sm p-5 flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs font-mono-code text-slate-300 border-b border-slate-800 pb-2">
                     <span className="flex items-center gap-1.5 text-slate-400">
@@ -152,6 +142,21 @@ export const TorneioPage: React.FC = () => {
                     </span>
                     <p className="font-sans leading-tight text-slate-300">{t.prizeSummary}</p>
                   </div>
+                </div>
+
+                {/* Requirements bullet list */}
+                <div className="space-y-1.5 pt-3 border-t border-slate-800">
+                  <span className="text-[11px] font-mono-code text-[#FCC140] uppercase font-bold block">
+                    Regras & Requisitos Principais:
+                  </span>
+                  <ul className="space-y-1.5 text-xs text-slate-300">
+                    {t.requirements.map((req, rIdx) => (
+                      <li key={rIdx} className="flex items-start gap-2">
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#01B1FD] flex-shrink-0 mt-0.5" />
+                        <span>{req}</span>
+                      </li>
+                    ))}
+                  </ul>
                 </div>
 
                 {/* Action buttons */}

@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { Link } from 'react-router-dom';
 import { OXETHON_INFO, EVENT_INFO } from '../../core/constants';
-import { RegistrationModal } from '../../components/RegistrationModal';
 import {
   Cpu,
   Clock,
@@ -8,45 +8,37 @@ import {
   CheckCircle2,
   Calendar,
   Users,
-  Target,
-  Lightbulb,
   Award,
-  Sparkles,
-  ShieldCheck,
   FileText,
-  AlertCircle,
+  Compass,
 } from 'lucide-react';
 
 export const OxethonPage: React.FC = () => {
-  const [isRegModalOpen, setIsRegModalOpen] = useState(false);
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
       {/* Header */}
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
         <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-wider">
           <Cpu className="w-4 h-4 text-[#01B1FD]" />
-          <span>Maratona Maker de Inovação Aberta · 48 Horas Imersivas</span>
+          <span>Hackathon Ôxe Maker · Pitch Final às 16h</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
-          Oxethon 2026 · O Hackathon Socioambiental
+          {OXETHON_INFO.title} 2026
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
-          Estudantes da rede pública reunidos com mentores de tecnologia para prototipar soluções
-          reais e de baixo custo para o enfrentamento das mudanças climáticas, enchentes e
-          sustentabilidade das comunidades pernambucanas.
+          {OXETHON_INFO.description}
         </p>
 
         <div className="pt-3 flex flex-wrap items-center gap-3">
-          <button
-            onClick={() => setIsRegModalOpen(true)}
-            className="maker-btn-primary px-6 py-3 text-xs uppercase flex items-center gap-2 cursor-pointer"
+          <Link
+            to="/programacao"
+            className="maker-btn-primary px-6 py-3 text-xs uppercase flex items-center gap-2"
           >
-            <Sparkles className="w-4 h-4" />
-            <span>Inscrever Minha Equipe no Oxethon</span>
-          </button>
+            <Compass className="w-4 h-4" />
+            <span>Ver Horário na Grade</span>
+          </Link>
           <span className="text-xs font-mono-code text-slate-400">
-            Prazo: até {OXETHON_INFO.registrationDeadline}
+            {EVENT_INFO.dates.display} · {EVENT_INFO.location.venue}
           </span>
         </div>
       </div>
@@ -56,96 +48,85 @@ export const OxethonPage: React.FC = () => {
         <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm maker-shadow-yellow space-y-2">
           <div className="flex items-center gap-2 text-[#FCC140] font-mono-code text-xs uppercase font-bold">
             <Clock className="w-4 h-4" />
-            <span>Duração & Formato</span>
+            <span>Pitch Final</span>
           </div>
-          <h3 className="text-xl font-heading text-white">48 Horas de Prototipagem</h3>
+          <h3 className="text-xl font-heading text-white">16h00 às 17h00</h3>
           <p className="text-xs text-slate-300 font-sans">
-            Das 11h de quinta-feira (02/07) às 14h de sexta-feira (03/07), com bancada de testes e
-            mentores rotativos.
+            As equipes apresentam seus projetos no grande pitch, logo antes da cerimônia de
+            premiação.
           </p>
         </div>
 
         <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm maker-shadow-cyan space-y-2">
           <div className="flex items-center gap-2 text-[#01B1FD] font-mono-code text-xs uppercase font-bold">
             <Users className="w-4 h-4" />
-            <span>Equipes Multidisciplinares</span>
+            <span>Participação</span>
           </div>
-          <h3 className="text-xl font-heading text-white">3 a 5 Integrantes</h3>
+          <h3 className="text-xl font-heading text-white">Equipes Escolares</h3>
           <p className="text-xs text-slate-300 font-sans">
-            Composição recomendada: desenvolvedores, montadores de hardware, pesquisadores e
-            apresentadores de pitch.
+            Inscrição de equipes e projetos pelo formulário oficial até 09/10/2026, com
+            representantes da rede pública de Pernambuco.
           </p>
         </div>
 
         <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm maker-shadow-yellow space-y-2">
           <div className="flex items-center gap-2 text-emerald-400 font-mono-code text-xs uppercase font-bold">
             <Trophy className="w-4 h-4" />
-            <span>Premiações Oficiais</span>
+            <span>Premiação</span>
           </div>
-          <h3 className="text-xl font-heading text-white">R$ 5.000 em Prêmios</h3>
+          <h3 className="text-xl font-heading text-white">Cerimônia às 17h</h3>
           <p className="text-xs text-slate-300 font-sans">
-            Troféus ecológicos em 3D, equipamentos para os laboratórios das escolas e bolsas de
-            aceleração no Porto Digital.
+            A premiação do Hackathon acontece junto com a entrega de prêmios das competições, das
+            17h00 às 18h00.
           </p>
         </div>
       </div>
 
-      {/* 4 Thematic Tracks */}
-      <div className="space-y-6">
-        <div className="border-b border-slate-800 pb-3">
-          <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest block mb-1">
-            Desafios Reais
+      {/* Hackathon Arretado — história e espírito */}
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm p-6 sm:p-8 items-center">
+        <div className="lg:col-span-7 space-y-4">
+          <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-widest block">
+            O Hackathon Arretado
           </span>
           <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
-            As 4 Trilhas do Oxethon 2026
+            {OXETHON_INFO.slogan}
           </h2>
-        </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-          {OXETHON_INFO.tracks.map((track) => (
-            <div
-              key={track.id}
-              className="bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-6 space-y-4 transition-all hover:maker-shadow-yellow group"
+          <p className="text-sm text-slate-300 font-sans leading-relaxed">{OXETHON_INFO.story}</p>
+          <div className="flex flex-wrap gap-3 pt-2">
+            <a
+              href={OXETHON_INFO.registrationUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="maker-btn-primary px-5 py-2.5 text-xs uppercase flex items-center gap-2"
             >
-              <div className="flex items-center justify-between border-b border-slate-800 pb-3">
-                <span className="px-2 py-0.5 bg-[#050D34] text-[#FCC140] font-mono-code text-xs font-bold rounded-sm border border-slate-700">
-                  {track.number}
-                </span>
-                <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold">
-                  {track.focusArea}
-                </span>
-              </div>
-
-              <h3 className="text-xl font-heading text-white group-hover:text-[#FCC140] transition-colors">
-                {track.title}
-              </h3>
-
-              <div className="space-y-2 text-xs font-sans text-slate-300">
-                <div>
-                  <strong className="text-white block font-mono-code text-[11px] uppercase mb-0.5">
-                    Problemática da Comunidade:
-                  </strong>
-                  <p className="leading-relaxed">{track.problemStatement}</p>
-                </div>
-
-                <div className="pt-2 border-t border-slate-800">
-                  <strong className="text-[#01B1FD] block font-mono-code text-[11px] uppercase mb-0.5">
-                    Entregável Esperado:
-                  </strong>
-                  <p className="leading-relaxed">{track.expectedDeliverable}</p>
-                </div>
-              </div>
-            </div>
-          ))}
+              <Users className="w-4 h-4" />
+              <span>Inscrever Equipe</span>
+            </a>
+            <a
+              href={OXETHON_INFO.regulationsUrl}
+              className="maker-btn-secondary px-5 py-2.5 text-xs uppercase flex items-center gap-2"
+            >
+              <FileText className="w-4 h-4" />
+              <span>Regulamento</span>
+            </a>
+          </div>
+        </div>
+        <div className="lg:col-span-5">
+          <img
+            src={OXETHON_INFO.image}
+            alt="Hackathon Oxethon Ôxe Maker"
+            className="w-full h-56 md:h-64 object-cover rounded-sm border border-slate-700/80"
+            loading="lazy"
+          />
         </div>
       </div>
 
-      {/* 48-Hour Phases Timeline */}
+      {/* Stages Timeline */}
       <div className="bg-[#1E292D] border-2 border-[#01B1FD] rounded-sm p-6 sm:p-8 maker-shadow-cyan-lg space-y-6">
         <div className="flex items-center gap-2 border-b border-slate-800 pb-4">
           <Calendar className="w-5 h-5 text-[#FCC140]" />
           <h2 className="text-2xl font-heading text-white uppercase">
-            Cronograma das Fases do Hackathon
+            Momento do Hackathon no Cronograma
           </h2>
         </div>
 
@@ -169,51 +150,55 @@ export const OxethonPage: React.FC = () => {
               </div>
             </div>
           ))}
+
+          <div className="bg-[#050D34] border border-slate-700/80 p-4 rounded-sm space-y-2 flex flex-col justify-between">
+            <div>
+              <span className="text-[10px] font-mono-code text-[#FCC140] uppercase font-bold block mb-1">
+                Premiação
+              </span>
+              <h4 className="text-sm font-bold font-heading text-white">
+                Cerimônia de Premiação Geral
+              </h4>
+              <span className="text-xs font-mono-code text-[#FCC140] block my-1">
+                Sexta, 27/11 · 17h00 às 18h00
+              </span>
+              <p className="text-xs text-slate-300 font-sans leading-relaxed">
+                Entrega de prêmios, encerramento e foto oficial do evento.
+              </p>
+            </div>
+          </div>
         </div>
       </div>
 
-      {/* Prizes Section */}
-      <div className="space-y-6">
-        <div className="border-b border-slate-800 pb-3">
-          <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-widest block mb-1">
-            Reconhecimento & Apoio
-          </span>
-          <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
-            Premiação dos Projetos Destaque
-          </h2>
+      {/* Awards highlight */}
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+        <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm space-y-2">
+          <div className="flex items-center gap-2 text-[#FCC140] font-mono-code text-xs uppercase font-bold">
+            <Award className="w-4 h-4" />
+            <span>Tema 2026</span>
+          </div>
+          <p className="text-sm text-slate-200 font-sans leading-relaxed">
+            "Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"
+          </p>
         </div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-          {OXETHON_INFO.prizes.map((pz, idx) => (
-            <div
-              key={idx}
-              className={`p-6 bg-[#1E292D] border-2 rounded-sm space-y-3 ${
-                idx === 0
-                  ? 'border-[#FCC140] maker-shadow-yellow'
-                  : 'border-slate-700 hover:border-[#01B1FD]'
-              }`}
-            >
-              <div className="flex items-center justify-between">
-                <span className="text-xs font-mono-code font-bold uppercase text-[#FCC140]">
-                  {pz.place}
-                </span>
-                <Trophy
-                  className={`w-5 h-5 ${
-                    idx === 0
-                      ? 'text-[#FCC140]'
-                      : idx === 1
-                      ? 'text-slate-300'
-                      : 'text-amber-600'
-                  }`}
-                />
-              </div>
-
-              <h3 className="text-base font-bold text-white font-sans">{pz.reward}</h3>
-              <p className="text-xs text-slate-300 font-sans leading-relaxed border-t border-slate-800 pt-2">
-                {pz.perks}
-              </p>
-            </div>
-          ))}
+        <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm space-y-2">
+          <div className="flex items-center gap-2 text-[#01B1FD] font-mono-code text-xs uppercase font-bold">
+            <Clock className="w-4 h-4" />
+            <span>Validação</span>
+          </div>
+          <p className="text-sm text-slate-200 font-sans leading-relaxed">
+            Projetos selecionados são validados por banca composta por representantes da GRE
+            Metropolitana Norte e da SEE-PE.
+          </p>
+        </div>
+        <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm space-y-2">
+          <div className="flex items-center gap-2 text-emerald-400 font-mono-code text-xs uppercase font-bold">
+            <Users className="w-4 h-4" />
+            <span>Inscrições</span>
+          </div>
+          <p className="text-sm text-slate-200 font-sans leading-relaxed">
+            Inscrições limitadas por modalidade, até 09 de outubro de 2026.
+          </p>
         </div>
       </div>
 
@@ -221,7 +206,7 @@ export const OxethonPage: React.FC = () => {
       <div className="bg-[#1E292D] border border-slate-700/80 rounded-sm p-6 space-y-4">
         <h3 className="text-base font-bold font-heading text-white flex items-center gap-2">
           <FileText className="w-5 h-5 text-[#01B1FD]" />
-          <span>Regulamento Resumido & Código de Ética</span>
+          <span>Orientações do Hackathon</span>
         </h3>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300 font-sans">
           {OXETHON_INFO.regulationsSummary.map((reg, idx) => (
@@ -233,32 +218,23 @@ export const OxethonPage: React.FC = () => {
         </ul>
       </div>
 
-      {/* Final Register CTA Banner */}
+      {/* Final CTA Banner */}
       <div className="text-center p-8 bg-[#0030B5]/20 border-2 border-[#FCC140] rounded-sm maker-shadow-yellow space-y-4">
         <h3 className="text-2xl sm:text-3xl font-heading text-white uppercase">
-          Pronto para Transformar sua Ideia em Solução Real?
+          Inscreva Sua Equipe Até 09/10
         </h3>
         <p className="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto font-sans">
-          Reúna sua equipe escolar e garanta uma das 20 vagas exclusivas do Oxethon 2026.
+          Garanta a vaga da sua escola no Ôxe Maker 2026 e prepare o projeto para o pitch final das
+          16h.
         </p>
-        <button
-          onClick={() => setIsRegModalOpen(true)}
-          className="maker-btn-primary px-8 py-3.5 text-xs uppercase inline-flex items-center gap-2 cursor-pointer"
+        <Link
+          to="/#inscricoes"
+          className="maker-btn-primary px-8 py-3.5 text-xs uppercase inline-flex items-center gap-2"
         >
-          <Sparkles className="w-4 h-4" />
-          <span>Preencher Inscrição da Equipe</span>
-        </button>
+          <Trophy className="w-4 h-4" />
+          <span>Ver Modalidades de Inscrição</span>
+        </Link>
       </div>
-
-      {/* Registration Modal Dialog */}
-      <RegistrationModal
-        isOpen={isRegModalOpen}
-        onClose={() => setIsRegModalOpen(false)}
-        title="Inscrição de Equipe · Oxethon 2026"
-        categoryName="Oxethon Hackathon 48h (Socioambiental)"
-        formUrl={EVENT_INFO.links.oxethonRegistration}
-        type="oxethon"
-      />
     </div>
   );
 };

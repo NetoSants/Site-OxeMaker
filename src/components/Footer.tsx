@@ -6,18 +6,23 @@ import { MapPin, Mail, Phone, ExternalLink, Heart, ShieldCheck, Calendar } from 
 
 export const Footer: React.FC = () => {
   return (
-    <footer className="bg-[#030822] text-slate-300 border-t-2 border-[#01B1FD]/20 pt-16 pb-12 relative overflow-hidden">
+    <footer className="bg-[#030822] text-slate-300 border-t-2 border-[#01B1FD]/20 pt-14 pb-8 relative overflow-hidden">
       {/* Decorative top accent line */}
       <div className="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-[#FCC140] via-[#01B1FD] to-[#0030B5]" />
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-12 border-b border-slate-800">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-10 pb-10 border-b border-slate-800">
           {/* Brand & Slogan Column */}
           <div className="lg:col-span-4 space-y-4">
             <Logo size="md" />
-            <p className="text-xs font-mono-code text-[#FCC140] tracking-wide">
-              {EVENT_INFO.tagline}
-            </p>
+            <div>
+              <p className="text-xs font-mono-code text-[#FCC140] tracking-wide">
+                {EVENT_INFO.tagline}
+              </p>
+              <p className="text-[11px] font-mono-code text-slate-500">
+                // formando cidadãs e cidadãos críticos e responsáveis
+              </p>
+            </div>
             <p className="text-sm text-slate-400 leading-relaxed font-sans">
               O maior evento de robótica educacional e cultura maker da rede pública de Pernambuco.
               Inovação aberta, ciência viva e protagonismo juvenil das escolas do Litoral Norte.
@@ -33,7 +38,7 @@ export const Footer: React.FC = () => {
           </div>
 
           {/* Quick Links Column */}
-          <div className="lg:col-span-2 space-y-3">
+          <div className="lg:col-span-3 space-y-3">
             <h3 className="text-xs font-mono-code uppercase font-bold text-white tracking-widest border-b border-slate-800 pb-2">
               Navegação
             </h3>
@@ -45,7 +50,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/programacao" className="text-slate-400 hover:text-[#FCC140] transition-colors">
-                  Programação 2 Dias
+                  Programação do Evento
                 </Link>
               </li>
               <li>
@@ -60,7 +65,7 @@ export const Footer: React.FC = () => {
               </li>
               <li>
                 <Link to="/oxethon" className="text-slate-400 hover:text-[#FCC140] transition-colors">
-                  Oxethon 48 Horas
+                  Hackathon Ôxe Maker
                 </Link>
               </li>
               <li>
@@ -81,70 +86,63 @@ export const Footer: React.FC = () => {
             </ul>
           </div>
 
-          {/* Location & Dates Column */}
-          <div className="lg:col-span-3 space-y-3">
-            <h3 className="text-xs font-mono-code uppercase font-bold text-white tracking-widest border-b border-slate-800 pb-2">
-              Data & Local
-            </h3>
-            <div className="space-y-2.5 text-xs text-slate-400">
-              <div className="flex items-start gap-2">
-                <Calendar className="w-4 h-4 text-[#FCC140] flex-shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-white block font-mono-code">{EVENT_INFO.dates.display}</strong>
-                  <span>{EVENT_INFO.dates.timeRange}</span>
+          {/* Data · Local · Contato Column (unificada) */}
+          <div className="lg:col-span-5 space-y-5">
+            <div className="space-y-3">
+              <h3 className="text-xs font-mono-code uppercase font-bold text-white tracking-widest border-b border-slate-800 pb-2">
+                Data & Local
+              </h3>
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-xs text-slate-400">
+                <div className="space-y-2.5">
+                  <div className="flex items-start gap-2">
+                    <Calendar className="w-4 h-4 text-[#FCC140] flex-shrink-0 mt-0.5" />
+                    <div>
+                      <strong className="text-white block font-mono-code">{EVENT_INFO.dates.display}</strong>
+                      <span>{EVENT_INFO.dates.timeRange}</span>
+                    </div>
+                  </div>
+                  <Link
+                    to="/mapa"
+                    className="inline-flex items-center gap-1.5 text-xs font-mono-code text-[#01B1FD] hover:underline"
+                  >
+                    <span>Ver rota e mapa ampliado</span>
+                    <ExternalLink className="w-3 h-3" />
+                  </Link>
+                </div>
+
+                <div className="flex items-start gap-2">
+                  <MapPin className="w-4 h-4 text-[#01B1FD] flex-shrink-0 mt-0.5" />
+                  <div>
+                    <strong className="text-white block">{EVENT_INFO.location.venue}</strong>
+                    <p>{EVENT_INFO.location.space}</p>
+                    <p>{EVENT_INFO.location.fullAddress}</p>
+                  </div>
                 </div>
               </div>
+            </div>
 
-              <div className="flex items-start gap-2">
-                <MapPin className="w-4 h-4 text-[#01B1FD] flex-shrink-0 mt-0.5" />
-                <div>
-                  <strong className="text-white block">{EVENT_INFO.location.venue}</strong>
-                  <p>{EVENT_INFO.location.space}</p>
-                  <p>{EVENT_INFO.location.fullAddress}</p>
+            <div className="pt-4 border-t border-slate-800 space-y-3">
+              <h3 className="text-xs font-mono-code uppercase font-bold text-white tracking-widest">
+                Realização & Contato
+              </h3>
+              <p className="text-xs text-slate-300 font-semibold">
+                {EVENT_INFO.organizer} · Secretaria de Educação e Esportes de PE
+              </p>
+              <div className="space-y-2 text-xs font-mono-code text-slate-400">
+                <div className="flex items-center gap-2">
+                  <Mail className="w-3.5 h-3.5 text-slate-400" />
+                  <a
+                    href={`mailto:${EVENT_INFO.contact.email}`}
+                    className="hover:text-[#FCC140] transition-colors"
+                  >
+                    {EVENT_INFO.contact.email}
+                  </a>
+                </div>
+                <div className="flex items-center gap-2">
+                  <Phone className="w-3.5 h-3.5 text-slate-400" />
+                  <span>{EVENT_INFO.contact.phone}</span>
                 </div>
               </div>
-            </div>
-
-            <div className="pt-2">
-              <Link
-                to="/mapa"
-                className="inline-flex items-center gap-1.5 text-xs font-mono-code text-[#01B1FD] hover:underline"
-              >
-                <span>Ver rota e mapa ampliado</span>
-                <ExternalLink className="w-3 h-3" />
-              </Link>
-            </div>
-          </div>
-
-          {/* Institutional Credits Column */}
-          <div className="lg:col-span-3 space-y-3">
-            <h3 className="text-xs font-mono-code uppercase font-bold text-white tracking-widest border-b border-slate-800 pb-2">
-              Realização Pública
-            </h3>
-            <p className="text-xs text-slate-300 font-semibold">
-              {EVENT_INFO.organizerFullName}
-            </p>
-            <p className="text-xs text-slate-400">
-              Governo do Estado de Pernambuco
-            </p>
-
-            <div className="pt-2 space-y-2 text-xs font-mono-code text-slate-400">
-              <div className="flex items-center gap-2">
-                <Mail className="w-3.5 h-3.5 text-slate-400" />
-                <a
-                  href={`mailto:${EVENT_INFO.contact.email}`}
-                  className="hover:text-[#FCC140] transition-colors"
-                >
-                  {EVENT_INFO.contact.email}
-                </a>
-              </div>
-              <div className="flex items-center gap-2">
-                <Phone className="w-3.5 h-3.5 text-slate-400" />
-                <span>{EVENT_INFO.contact.phone}</span>
-              </div>
-            </div>
-
-            <div className="pt-3">
               <div className="inline-flex items-center gap-1.5 px-2.5 py-1 bg-slate-900 border border-slate-700 rounded text-[11px] font-mono-code text-emerald-400">
                 <ShieldCheck className="w-3.5 h-3.5" />
                 <span>Evento Oficial Certificado · 6ª Edição</span>
@@ -153,11 +151,17 @@ export const Footer: React.FC = () => {
           </div>
         </div>
 
-        {/* Bottom copyright & credits */}
-        <div className="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-mono-code text-slate-500">
+        {/* Bottom unified bar: créditos + parceiros */}
+        <div className="pt-6 flex flex-col lg:flex-row items-center justify-between gap-4 text-xs font-mono-code text-slate-500">
           <p>
             © 2021–2026 {EVENT_INFO.name}. Todos os direitos reservados.
           </p>
+          <img
+            src="img/logos-claras.png"
+            alt="Logos dos parceiros do Ôxe Maker"
+            className="max-h-12 object-contain"
+            loading="lazy"
+          />
           <p className="flex items-center gap-1.5">
             <span>Desenvolvido com</span>
             <Heart className="w-3.5 h-3.5 text-rose-500 fill-rose-500" />

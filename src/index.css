@@ -1,4 +1,4 @@
-@import "tailwindcss";
+﻿@import "tailwindcss";
 
 @layer base {
   :root {
@@ -16,6 +16,9 @@
     background-color: #050D34;
     color: #F1F5F9;
     font-family: var(--font-body);
+    font-size: 17px;
+    line-height: 1.7;
+    zoom: 1.1;
     overflow-x: hidden;
   }
 
@@ -26,6 +29,12 @@
 
   .font-mono-code {
     font-family: var(--font-mono);
+  }
+
+  p, li {
+    text-align: justify;
+    hyphens: auto;
+    -webkit-hyphens: auto;
   }
 }
 
@@ -123,3 +132,62 @@
   letter-spacing: 0.05em;
   text-transform: uppercase;
 }
+
+/* Rotacao lenta do texto circular da logo (20s por volta) */
+@keyframes rotate-slow {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+.animate-rotate {
+  animation: rotate-slow 20s linear infinite;
+}
+
+/* Transicao de pagina via View Transitions API (botoes da navbar) */
+::view-transition-old(root) {
+  animation: page-exit 0.25s ease-in forwards;
+}
+
+::view-transition-new(root) {
+  animation: page-enter 0.25s ease-out forwards;
+}
+
+@keyframes page-exit {
+  to { opacity: 0; transform: translateY(-8px); }
+}
+
+@keyframes page-enter {
+  from { opacity: 0; transform: translateY(8px); }
+}
+
+/* Fallback: entrada suave da pagina a cada troca de rota (todos os navegadores) */
+@keyframes page-enter-fade {
+  from { opacity: 0; transform: translateY(12px); }
+  to { opacity: 1; transform: none; }
+}
+
+.page-enter {
+  animation: page-enter-fade 0.3s ease-out;
+}
+
+/* Legibilidade: textos secundarios mais claros (ganham das utilities do tailwind por serem nao-layered) */
+.text-slate-300 { color: #E8EDF4; }
+.text-slate-400 { color: #D3DBE7; }
+
+/* Glifos de ciencia flutuando no fundo */
+.science-float {
+  top: 110vh;
+  animation-name: science-drift;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+@keyframes science-drift {
+  from {
+    transform: translateY(0vh) rotate(-10deg);
+  }
+  to {
+    transform: translateY(-150vh) rotate(22deg);
+  }
+}
+

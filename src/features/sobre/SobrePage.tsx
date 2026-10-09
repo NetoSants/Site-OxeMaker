@@ -60,8 +60,56 @@ export const SobrePage: React.FC = () => {
           </p>
         </div>
 
-        <div className="lg:col-span-4 flex justify-center">
+        <div className="lg:col-span-4 flex flex-col items-center gap-3">
           <CalangoMascot size="lg" animated={false} />
+          <span className="px-2.5 py-1 bg-[#FCC140] text-[#050D34] font-mono-code text-xs font-bold rounded-sm uppercase tracking-wider">
+            Maker de Raça!
+          </span>
+        </div>
+      </div>
+
+      {/* Nossa História — origem do projeto */}
+      <div className="bg-[#1E292D] border-2 border-slate-700/80 rounded-sm p-6 sm:p-10 space-y-4">
+        <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest block">
+          Nossa História · Desde 2021
+        </span>
+        <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">O Ôxe Maker</h2>
+
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          <p className="text-sm text-slate-300 leading-relaxed font-sans">
+            O Ôxe Maker surgiu da ideia de trazer para os jovens da Regional Metropolitana Norte da
+            Rede Estadual de Educação de Pernambuco um evento que reunisse{' '}
+            <strong className="text-[#FCC140]">Robótica</strong>,{' '}
+            <strong className="text-[#FCC140]">Cultura Maker</strong> e o{' '}
+            <strong className="text-[#FCC140]">Universo Geek</strong>.
+          </p>
+          <p className="text-sm text-slate-300 leading-relaxed font-sans">
+            A proposta contempla aspectos vivenciados por essa juventude cosmopolita, possibilitando
+            a exposição dos projetos desenvolvidos pelas Escolas Estaduais da Regional.
+          </p>
+          <p className="text-sm text-slate-300 leading-relaxed font-sans">
+            É tecnologia e educação de mãos dadas na era digital, proporcionando uma verdadeira
+            viagem — sem sair do lugar — em uma mistura de diversão, iniciação científica e
+            protagonismo juvenil.
+          </p>
+          <p className="text-sm text-slate-300 leading-relaxed font-sans">
+            O projeto, atualmente em sua sexta edição, foi idealizado pela Professora Lidyane Lira
+            com o objetivo de fomentar práticas ligadas à Robótica e Cultura Maker.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
+          {['Vidas reais', 'Escolas Makers', 'Comunidade Unida', 'Justiça pra Todos'].map(
+            (v, i) => (
+              <div
+                key={v}
+                className="p-3 bg-[#050D34] border border-slate-700 rounded-sm text-center"
+              >
+                <span className="text-[10px] font-mono-code text-[#01B1FD] block">0{i + 1}_</span>
+                <span className="text-sm font-bold font-heading text-[#FCC140] uppercase">{v}</span>
+              </div>
+            )
+          )}
         </div>
       </div>
 
@@ -148,8 +196,12 @@ export const SobrePage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Avatar / Vector Profile */}
           <div className="lg:col-span-4 flex flex-col items-center text-center space-y-3">
-            <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-[#1E292D] border-4 border-[#FCC140] flex items-center justify-center p-3 relative maker-shadow-yellow">
-              <GraduationCap className="w-16 h-16 text-[#FCC140]" />
+            <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-[#1E292D] border-4 border-[#FCC140] flex items-center justify-center p-1 relative maker-shadow-yellow overflow-hidden">
+              <img
+                src="img/foto-lidy.jpeg"
+                alt={`Foto de ${FOUNDER_TRIBUTE.name}`}
+                className="w-full h-full object-cover rounded-full"
+              />
               <div className="absolute -bottom-2 bg-[#01B1FD] text-[#050D34] font-mono-code text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase">
                 Pioneira da Rede
               </div>
@@ -163,9 +215,11 @@ export const SobrePage: React.FC = () => {
 
           {/* Tribute Quote and Bio */}
           <div className="lg:col-span-8 space-y-4">
-            <blockquote className="p-4 bg-[#050D34] border-l-4 border-[#FCC140] rounded-r-sm text-sm sm:text-base italic text-slate-200 font-sans">
-              {FOUNDER_TRIBUTE.quote}
-            </blockquote>
+            {FOUNDER_TRIBUTE.quote && (
+              <blockquote className="p-4 bg-[#050D34] border-l-4 border-[#FCC140] rounded-r-sm text-sm sm:text-base italic text-slate-200 font-sans">
+                {FOUNDER_TRIBUTE.quote}
+              </blockquote>
+            )}
 
             <div className="space-y-2 text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
               {FOUNDER_TRIBUTE.bio.map((paragraph, pIdx) => (
@@ -184,8 +238,8 @@ export const SobrePage: React.FC = () => {
           </div>
           <h3 className="text-lg font-heading text-white uppercase">Nossa Missão</h3>
           <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
-            Democratizar a robótica, a programação e o design maker nas escolas públicas do Litoral
-            Norte de Pernambuco, formando cidadãos críticos, autônomos e protagonistas do seu tempo.
+            Democratizar o acesso à tecnologia e à cultura maker para estudantes da rede pública,
+            transformando consumidores de tecnologia em criadores de soluções reais.
           </p>
         </div>
 
@@ -195,8 +249,8 @@ export const SobrePage: React.FC = () => {
           </div>
           <h3 className="text-lg font-heading text-white uppercase">Nossa Visão</h3>
           <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
-            Tornar a Rede Estadual de Pernambuco uma referência nacional em inovação socioambiental
-            aberta e tecnologias ecológicas construídas pelos próprios estudantes.
+            Ser o principal ecossistema de inovação educacional em Pernambuco, conectando escola,
+            comunidade e mercado através do 'aprender fazendo'.
           </p>
         </div>
 
@@ -206,8 +260,8 @@ export const SobrePage: React.FC = () => {
           </div>
           <h3 className="text-lg font-heading text-white uppercase">Nossos Valores</h3>
           <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
-            Educação pública de excelência, colaboração solidária, sustentabilidade com sucata
-            eletrônica, respeito à diversidade cultural e paixão pela ciência viva.
+            Vidas reais · Escolas Makers · Comunidade Unida · Justiça pra Todos. Educação pública de
+            excelência, colaboração solidária e paixão pela ciência viva.
           </p>
         </div>
       </div>

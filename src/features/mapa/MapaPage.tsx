@@ -13,40 +13,44 @@ import {
 } from 'lucide-react';
 
 export const MapaPage: React.FC = () => {
-  const [activeSector, setActiveSector] = useState<'ginasio' | 'patio' | 'labs' | 'oxethon'>('ginasio');
+  const [activeSector, setActiveSector] = useState<'ginasio' | 'patio' | 'labs' | 'cafeteria'>('ginasio');
 
   const sectors = [
     {
       id: 'ginasio',
-      name: 'Ginásio Poliesportivo',
-      subtitle: 'Arenas de Robótica & Batalhas',
-      description: 'Coração das competições! Abriga a Arena Blindada de Combate (Antweight), Dohyo Oficial de Sumô 1kg e 3kg, Pista Óptica Buzz Line e as baias dos Pits de Engenharia para manutenção e pesagem dos robôs.',
+      name: 'Frente da Escola · Credenciamento',
+      subtitle: '07h00 às 08h00',
+      description:
+        'Ponto de chegada de todos os participantes. O credenciamento dos inscritos acontece na frente do evento, das 07h00 às 08h00, antes da abertura cultural.',
       color: '#FCC140',
-      highlights: ['Arena Blindada Antweight', 'Pista Buzz Line Júnior & PRO', 'Dohyo de Sumô', 'Bancadas de Pits com 220V/110V'],
+      highlights: ['Credenciamento dos inscritos', 'Acolhimento e crachás', 'Chegada de caravanas escolares'],
     },
     {
       id: 'patio',
-      name: 'Pátio Central & Palco Geek',
-      subtitle: 'Cultura, Apresentações & Feira',
-      description: 'Espaço aberto arborizado onde acontecem a cerimônia de abertura, os desfiles de Cosplay, o campeonato de K-Pop Dance, a Arena Just Dance em telão e a Mostra Científica com mais de 90 projetos escolares.',
+      name: 'Palco Principal · Abertura & Premiação',
+      subtitle: 'Cultura, Palestras & Pitch',
+      description:
+        'Palco onde acontecem a abertura cultural com danças (08h30), os TED Talks (09h00), a apresentação do pitch do Hackathon (16h00) e a cerimônia de premiação (17h00).',
       color: '#01B1FD',
-      highlights: ['Palco Principal', 'Tenda Interativa Just Dance', 'Estandes de Projetos Científicos', 'Área de Convivência & Acolhimento'],
+      highlights: ['Abertura Cultural · 08h30', 'TED Talks · 09h00', 'Pitch do Hackathon · 16h00', 'Premiação · 17h00'],
     },
     {
       id: 'labs',
-      name: 'Laboratórios Maker (Salas 101 a 104)',
-      subtitle: 'Oficinas Práticas Mão na Massa',
-      description: 'Ambientes climatizados equipados com computadores, ferros de solda com exaustão, impressoras 3D e bancadas com componentes para as 4 oficinas oficiais do evento.',
+      name: 'Salas de Oficina',
+      subtitle: 'Oficinas de Robótica & Cultura Maker',
+      description:
+        'Salas onde acontecem as oficinas de robótica e cultura maker, das 10h00 às 12h00, com os oficineiros (alunos e professores) inscritos até 09/10.',
       color: '#4ADE80',
-      highlights: ['Lab 1: Soldagem & Tinkercad 3D', 'Lab 2: Arduino & Sensores', 'Lab 3: Robótica com Sucata', 'Exaustores e Óculos de Segurança'],
+      highlights: ['Oficina de robótica', 'Cultura maker', 'Materiais fornecidos pela organização'],
     },
     {
-      id: 'oxethon',
-      name: 'Espaço Inovação Oxethon',
-      subtitle: 'Maratona 48h de Ideação',
-      description: 'Área reservada para as 20 equipes multidisciplinares do hackathon, com monitores de apoio, ponto de recarga, internet dedicada e sala para ensaio dos pitches finais.',
+      id: 'cafeteria',
+      name: 'Cafeteria · Almoço & Lanches',
+      subtitle: 'Intervalos do Dia',
+      description:
+        'Espaço dos intervalos: lanche às 09h30, almoço das 12h00 às 13h00 e novo lanche às 15h30, conforme o cronograma oficial.',
       color: '#C084FC',
-      highlights: ['Bancadas de Ideação', 'Mentoria Contínua', 'Sala de Pitch com Projetor', 'Suporte Técnico Exclusivo'],
+      highlights: ['Lanche · 09h30', 'Almoço · 12h00 às 13h00', 'Lanche · 15h30'],
     },
   ];
 
@@ -62,8 +66,8 @@ export const MapaPage: React.FC = () => {
           Como Chegar & Mapa do Local
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
-          O Ôxe Maker 2026 será sediado nas instalações da ETE José de Alencar, em Olinda, com
-          ginásio poliesportivo coberto, pátio central amplo e laboratórios maker de última geração.
+          O Ôxe Maker 2026 será sediado na EREM Áurea de Moura, em Olinda (Ouro Preto), com
+          frente ampla para credenciamento, palco principal, salas de oficina e cafeteria.
         </p>
       </div>
 
@@ -119,13 +123,13 @@ export const MapaPage: React.FC = () => {
           <div className="p-2 flex items-center justify-between text-xs font-mono-code text-slate-300 bg-[#050D34] border border-slate-800 rounded-t-sm mb-2">
             <span className="flex items-center gap-1.5 text-[#01B1FD]">
               <Compass className="w-3.5 h-3.5" />
-              <span>Olinda, Bairro Novo (PE)</span>
+              <span>Ouro Preto, Olinda (PE)</span>
             </span>
             <span className="text-slate-400">Ao vivo</span>
           </div>
           <div className="flex-1 w-full rounded-sm overflow-hidden border border-slate-700/60 relative">
             <iframe
-              title="Localização ETE José de Alencar no Google Maps"
+              title="Localização EREM Áurea de Moura no Google Maps"
               src={EVENT_INFO.location.googleMapsEmbedUrl}
               className="w-full h-full min-h-[300px] border-0"
               loading="lazy"
@@ -158,7 +162,7 @@ export const MapaPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Interactive Sectors Map of ETE José de Alencar */}
+      {/* Interactive Sectors Map of EREM Áurea de Moura */}
       <div className="bg-[#1E292D] border-2 border-[#FCC140] rounded-sm p-6 sm:p-8 maker-shadow-yellow-lg space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
@@ -166,7 +170,7 @@ export const MapaPage: React.FC = () => {
               Planta & Ambientes do Evento
             </span>
             <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
-              Setores da ETE José de Alencar
+              Espaços da EREM Áurea de Moura
             </h2>
           </div>
           <div className="flex items-center gap-1.5 text-xs font-mono-code text-[#FCC140]">

@@ -10,13 +10,12 @@ export interface EventGeneralInfo {
   dates: {
     display: string;
     day1: string;
-    day2: string;
-    isoStartDate: string; // "2026-07-02T09:00:00-03:00"
-    isoEndDate: string;
+    isoStartDate: string; // "2026-11-27T07:00:00-03:00"
     timeRange: string;
   };
   location: {
     venue: string;
+    fullName: string;
     space: string;
     street: string;
     neighborhood: string;
@@ -39,14 +38,9 @@ export interface EventGeneralInfo {
     phone: string;
   };
   links: {
-    generalRegistration: string;
-    tournamentRegistration: string;
-    geekRegistration: string;
-    oxethonRegistration: string;
-    workshopRegistration: string;
-    volunteerRegistration: string;
-    schoolCaravanRegistration: string;
-    generalEditalPdf: string;
+    oficineirosRegistration: string;
+    mostraRegistration: string;
+    palestrantesRegistration: string;
   };
 }
 
@@ -70,11 +64,11 @@ export interface FeatureHighlight {
 
 export interface ScheduleItem {
   id: string;
-  day: 'day1' | 'day2';
+  day: 'day1';
   time: string;
   title: string;
   description: string;
-  category: 'robotica' | 'oficinas' | 'geek' | 'palestras' | 'cerimonia';
+  category: 'robotica' | 'oficinas' | 'geek' | 'palestras' | 'cerimonia' | 'mostra';
   location: string;
   speakerOrHost?: string;
 }
@@ -92,6 +86,7 @@ export interface RoboticsTournament {
   registrationUrl: string;
   prizeSummary: string;
   icon: string;
+  image?: string;
 }
 
 export interface GeekCategory {
@@ -106,57 +101,43 @@ export interface GeekCategory {
   registrationUrl: string;
   rulesPdfUrl: string;
   prizes: string;
+  image?: string;
 }
 
 export interface Workshop {
   id: string;
   title: string;
-  instructor: {
+  description: string;
+  schedule: string;
+  targetAudience: string;
+  registrationUrl: string;
+  duration?: string;
+  room?: string;
+  capacity?: number;
+  prerequisites?: string;
+  materialsProvided?: string[];
+  instructor?: {
     name: string;
     role: string;
     institution: string;
     bio: string;
   };
-  schedule: string;
-  duration: string;
-  capacity: number;
-  room: string;
-  targetAudience: string;
-  prerequisites: string;
-  description: string;
-  materialsProvided: string[];
-  registrationUrl: string;
-}
-
-export interface OxethonTrack {
-  id: string;
-  number: string;
-  title: string;
-  problemStatement: string;
-  expectedDeliverable: string;
-  focusArea: string;
 }
 
 export interface OxethonInfo {
   title: string;
-  durationHours: number;
-  theme: string;
   description: string;
-  registrationDeadline: string;
-  maxTeams: number;
-  teamSize: string;
   stages: {
     phase: string;
     time: string;
     description: string;
   }[];
-  tracks: OxethonTrack[];
-  prizes: {
-    place: string;
-    reward: string;
-    perks: string;
-  }[];
   regulationsSummary: string[];
+  slogan?: string;
+  story?: string;
+  registrationUrl?: string;
+  regulationsUrl?: string;
+  image?: string;
 }
 
 export interface TimelineMilestone {
@@ -171,7 +152,7 @@ export interface FounderTribute {
   name: string;
   role: string;
   title: string;
-  quote: string;
+  quote?: string;
   bio: string[];
   imagePlaceholder: string;
 }
@@ -193,4 +174,5 @@ export interface GalleryItem {
   category: 'competicoes' | 'projetos' | 'oficinas' | 'geek';
   description: string;
   caption: string;
+  image?: string;
 }

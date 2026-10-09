@@ -29,8 +29,8 @@ export const EditalModal: React.FC<EditalModalProps> = ({
     // Generate simple printable text document
     const content = `ÔXE MAKER 2026 - REGULAMENTO OFICIAL
 ${tournamentName} - ${category}
-Data: 02 e 03 de julho de 2026
-Local: ETE José de Alencar, Olinda - PE
+Data: 27 de novembro de 2026
+Local: EREM Áurea de Moura, Olinda - PE
 Realização: GRE Metropolitana Norte / SEE-PE
 
 TEMA 2026: "Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"
@@ -39,8 +39,8 @@ TEMA 2026: "Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça S
 Fomentar a criatividade e a aplicação prática da robótica e cultura maker entre estudantes da rede pública de Pernambuco.
 
 2. ESPECIFICAÇÕES TÉCNICAS:
-- Inscrições gratuitas e limitadas por modalidade.
-- Vistorias de pesagem realizadas no dia 02/07 a partir das 07h30.
+- Inscrições abertas até 09/10/2026, limitadas por modalidade.
+- Credenciamento das 07h00 às 08h00, na frente do evento.
 - Todos os robôs devem respeitar os padrões de segurança e possuir chave geral identificada.
 
 3. PREMIAÇÃO:
@@ -130,16 +130,15 @@ Consulte a coordenação pelo e-mail: ${EVENT_INFO.contact.email}
               3. Sistema de Pontuação e Julgamento
             </h4>
             <p className="text-xs sm:text-sm">
-              As partidas serão conduzidas por comitê de arbitragem composto por professores e
-              pesquisadores da Universidade de Pernambuco (UPE) e IFPE. As decisões do juiz principal
-              são soberanas e baseadas no espírito de cooperação, fair-play e aprendizado mútuo.
+              As partidas serão conduzidas por comissão de arbitragem composta por professores e
+              educadores da rede pública. As decisões do juiz principal são soberanas e baseadas no
+              espírito de cooperação, fair-play e aprendizado mútuo.
             </p>
           </div>
 
           <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-sm text-xs text-amber-200">
-            <strong>Atenção:</strong> O check-in e a pesagem oficial dos protótipos encerram-se às
-            08h30 do dia 02 de julho. Robôs reprovados na pesagem terão 30 minutos de pit stop para
-            adequação.
+            <strong>Atenção:</strong> O credenciamento das equipes encerra-se às 08h00 do dia 27 de
+            novembro de 2026. Equipes não credenciadas não poderão competir.
           </div>
         </div>
 

@@ -14,9 +14,9 @@ export interface RegistrationModalProps {
 export const RegistrationModal: React.FC<RegistrationModalProps> = ({
   isOpen,
   onClose,
-  title = 'Inscrição Gratuita · Ôxe Maker 2026',
+  title = 'Inscrição · Ôxe Maker 2026',
   categoryName = 'Participação Geral',
-  formUrl = EVENT_INFO.links.generalRegistration,
+  formUrl = EVENT_INFO.links.oficineirosRegistration,
   type = 'visitante',
 }) => {
   const [copied, setCopied] = useState(false);
@@ -117,7 +117,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 {protocolNumber}
               </span>
               <span className="text-xs text-slate-400 block mt-1">
-                Apresente este código ou seu documento no credenciamento em 02 ou 03/07/2026.
+                Apresente este código ou seu documento no credenciamento em 27/11/2026.
               </span>
             </div>
 
@@ -183,7 +183,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                 <span className="text-xs font-mono-code uppercase font-bold text-[#FCC140]">
                   Ou inscreva-se direto por aqui:
                 </span>
-                <span className="text-[11px] font-mono-code text-slate-400">100% Gratuito</span>
+                <span className="text-[11px] font-mono-code text-slate-400">Até 09/10/2026</span>
               </div>
 
               <form onSubmit={handleSimulatedSubmit} className="space-y-3.5">
@@ -239,7 +239,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                       type="text"
                       value={formData.school}
                       onChange={(e) => setFormData({ ...formData, school: e.target.value })}
-                      placeholder="Ex: ETE José de Alencar"
+                      placeholder="Ex: EREM Áurea de Moura"
                       className="w-full px-3 py-2 bg-[#050D34] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-white placeholder-slate-500 focus:outline-none"
                     />
                   </div>
@@ -267,10 +267,10 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                     className="w-full maker-btn-primary py-3 text-sm uppercase flex items-center justify-center gap-2"
                   >
                     <CheckCircle2 className="w-4 h-4" />
-                    <span>Confirmar Inscrição Gratuita</span>
+                    <span>Confirmar Inscrição</span>
                   </button>
                   <p className="text-[11px] font-mono-code text-slate-400 text-center mt-2">
-                    ✓ Entrada franca · Certificado digital incluso de 16h
+                    ✓ Inscrições até 09/10/2026
                   </p>
                 </div>
               </form>

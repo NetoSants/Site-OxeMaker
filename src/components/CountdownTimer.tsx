@@ -54,7 +54,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
         className={`inline-flex items-center gap-2 px-4 py-2 bg-[#107C41] border-2 border-[#FCC140] rounded-sm text-white font-mono-code font-bold ${className}`}
       >
         <span className="w-2.5 h-2.5 rounded-full bg-[#FCC140] animate-ping" />
-        <span>O Ôxe Maker 2026 está acontecendo agora na ETE José de Alencar!</span>
+        <span>O Ôxe Maker 2026 está acontecendo agora na {EVENT_INFO.location.venue}!</span>
       </div>
     );
   }
@@ -83,7 +83,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
     <div className={`flex flex-col items-center ${className}`}>
       <div className="flex items-center gap-2 text-xs font-mono-code text-[#01B1FD] uppercase tracking-wider mb-2.5">
         <span className="w-2 h-2 rounded-full bg-[#FCC140] animate-pulse" />
-        <span>Contagem Regressiva para a Abertura · 02/07 às 09h00</span>
+        <span>Contagem Regressiva para o Credenciamento · 27/11 às 07h00</span>
       </div>
 
       <div className="grid grid-cols-4 gap-2 sm:gap-3.5">

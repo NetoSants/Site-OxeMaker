@@ -8,7 +8,6 @@ import {
   SPONSORS_TIERS,
   FAQ_DATA,
 } from '../../core/constants';
-import { CalangoMascot } from '../../components/CalangoMascot';
 import { CountdownTimer } from '../../components/CountdownTimer';
 import { AnimatedCounter } from '../../components/AnimatedCounter';
 import { RegistrationModal } from '../../components/RegistrationModal';
@@ -28,13 +27,38 @@ import {
   CheckCircle2,
   Users,
   Compass,
+  Mic,
 } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
   const [isRegModalOpen, setIsRegModalOpen] = useState(false);
   const [regTitle, setRegTitle] = useState('Inscrição Oficial · Ôxe Maker 2026');
   const [regCategory, setRegCategory] = useState('Visitante Geral & Comunidade');
-  const [regUrl, setRegUrl] = useState(EVENT_INFO.links.generalRegistration);
+  const [regUrl, setRegUrl] = useState(EVENT_INFO.links.oficineirosRegistration);
+
+  const registrationOptions = [
+    {
+      id: 'oficineiros',
+      title: 'Oficineiros',
+      description: 'Para alunos e professores que querem participar das oficinas de robótica e cultura maker.',
+      url: EVENT_INFO.links.oficineirosRegistration,
+      icon: <Wrench className="w-5 h-5 text-[#FCC140]" />,
+    },
+    {
+      id: 'mostra',
+      title: 'Mostra de Projetos',
+      description: 'Para equipes que vão apresentar seus projetos para a banca.',
+      url: EVENT_INFO.links.mostraRegistration,
+      icon: <Sparkles className="w-5 h-5 text-[#01B1FD]" />,
+    },
+    {
+      id: 'palestrantes',
+      title: 'Palestrantes',
+      description: 'Para quem deseja palestrar, preferencialmente no formato TED Talks.',
+      url: EVENT_INFO.links.palestrantesRegistration,
+      icon: <Mic className="w-5 h-5 text-purple-400" />,
+    },
+  ];
 
   const [activeGalleryCategory, setActiveGalleryCategory] = useState<string>('todos');
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
@@ -67,8 +91,7 @@ export const HomePage: React.FC = () => {
          ===================================================================== */}
       <section className="relative overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24 border-b border-slate-800">
         {/* Glow backdrop circles */}
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#0030B5]/20 blur-[120px] pointer-events-none rounded-full" />
-        <div className="absolute top-10 right-10 w-72 h-72 bg-[#01B1FD]/10 blur-[100px] pointer-events-none rounded-full" />
+        <div className="absolute top-10 right-10 w-72 h-72 bg-[#01B1FD]/10 blur-[80px] pointer-events-none rounded-full" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -109,62 +132,64 @@ export const HomePage: React.FC = () => {
               <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-mono-code text-slate-300">
                 <div className="flex items-center gap-1.5 bg-[#050D34] border border-slate-700 px-3 py-1.5 rounded-sm">
                   <Calendar className="w-4 h-4 text-[#FCC140]" />
-                  <span>{EVENT_INFO.dates.display} (07h às 17h30)</span>
+                  <span>{EVENT_INFO.dates.display} · {EVENT_INFO.dates.timeRange}</span>
                 </div>
                 <div className="flex items-center gap-1.5 bg-[#050D34] border border-slate-700 px-3 py-1.5 rounded-sm">
                   <MapPin className="w-4 h-4 text-[#01B1FD]" />
-                  <span>ETE José de Alencar · Olinda-PE</span>
+                  <span>{EVENT_INFO.location.venue} · Olinda-PE</span>
                 </div>
               </div>
 
               {/* CTA Buttons */}
               <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                <button
-                  onClick={() =>
-                    handleOpenRegistration(
-                      'Credenciamento Gratuito · Ôxe Maker 2026',
-                      'Credenciamento Geral de Visitantes',
-                      EVENT_INFO.links.generalRegistration
-                    )
-                  }
+                <a
+                  href="#inscricoes"
                   className="maker-btn-primary px-6 py-3.5 text-sm uppercase flex items-center gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
-                  <span>Garantir Entrada Gratuita</span>
-                </button>
+                  <span>Inscreva-se até 09/10</span>
+                </a>
 
                 <Link
                   to="/programacao"
                   className="maker-btn-secondary px-5 py-3.5 text-sm uppercase flex items-center gap-2"
                 >
                   <Compass className="w-4 h-4" />
-                  <span>Ver Grade de 2 Dias</span>
+                  <span>Ver Programação</span>
                 </Link>
               </div>
             </div>
 
             {/* Right Column: Mascot & Live Countdown */}
             <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-6">
-              <div className="relative group p-6 rounded-2xl bg-gradient-to-b from-[#1E292D]/70 to-[#050D34] border-2 border-[#01B1FD]/30 maker-shadow-cyan-lg">
-                <div className="text-center mb-2">
-                  <span className="text-[11px] font-mono-code text-[#FCC140] uppercase tracking-wider block">
-                    Conheça o nosso Mascote Oficial
-                  </span>
-                  <h3 className="text-xl font-heading text-white">
-                    Calango Maker · O Lagarto Cientista
-                  </h3>
+              <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
+                {/* Texto circular rotativo */}
+                <div className="absolute inset-0 animate-rotate">
+                  <svg viewBox="0 0 200 200" className="w-full h-full">
+                    <path
+                      id="circlePath"
+                      d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
+                      fill="none"
+                    />
+                    <text className="font-heading fill-current text-white uppercase text-[15px] font-black tracking-[0.2em]">
+                      <textPath href="#circlePath" startOffset="0%">
+                        ÔXE MAKER 2026 • ÔXE MAKER 2026 • ÔXE MAKER 2026 •
+                      </textPath>
+                    </text>
+                  </svg>
                 </div>
 
-                <div className="flex justify-center py-2">
-                  <CalangoMascot size="hero" animated={true} />
+                {/* Logo central */}
+                <div className="relative w-2/3 h-2/3 flex items-center justify-center p-2">
+                  <img
+                    alt="Calango Maker"
+                    className="w-full h-full object-contain drop-shadow-2xl"
+                    src="img/calango-logo.png"
+                  />
                 </div>
-
-                <p className="text-center text-xs text-slate-300 font-sans max-w-xs mx-auto">
-                  Símbolo da resiliência, agilidade e engenhosidade dos estudantes pernambucanos!
-                </p>
               </div>
 
-              {/* Live Countdown to 02/07/2026 09:00 */}
+              {/* Live Countdown to 27/11/2026 07:00 */}
               <div className="w-full">
                 <CountdownTimer />
               </div>
@@ -243,7 +268,7 @@ export const HomePage: React.FC = () => {
             </h2>
           </div>
           <p className="text-sm text-slate-400 max-w-md">
-            Dois dias intensos de aprendizado mão na massa, adrenalina nas arenas de batalha e
+            Um dia intensíssimo de aprendizado mão na massa, adrenalina nas arenas de batalha e
             celebração do protagonismo juvenil.
           </p>
         </div>
@@ -335,14 +360,27 @@ export const HomePage: React.FC = () => {
               key={item.id}
               className="bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#01B1FD] rounded-sm p-4 transition-all hover:maker-shadow-cyan group"
             >
-              {/* Graphic visual illustration placeholder */}
-              <div className="relative aspect-video bg-[#050D34] rounded-sm border border-slate-800 overflow-hidden flex flex-col items-center justify-center p-4 text-center mb-3">
-                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
-                <Bot className="w-10 h-10 text-[#01B1FD] mb-2 group-hover:scale-110 transition-transform" />
-                <span className="text-[10px] font-mono-code text-[#FCC140] uppercase tracking-wider">
-                  Edição {item.year}
-                </span>
-                <span className="text-xs font-bold text-white z-10">{item.title}</span>
+              {/* Visual illustration / photo placeholder */}
+              <div className="relative aspect-video bg-[#050D34] rounded-sm border border-slate-800 overflow-hidden mb-3">
+                {item.image ? (
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                    loading="lazy"
+                  />
+                ) : (
+                  <>
+                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
+                      <Bot className="w-10 h-10 text-[#01B1FD] mb-2 group-hover:scale-110 transition-transform" />
+                      <span className="text-[10px] font-mono-code text-[#FCC140] uppercase tracking-wider">
+                        Edição {item.year}
+                      </span>
+                      <span className="text-xs font-bold text-white z-10">{item.title}</span>
+                    </div>
+                  </>
+                )}
               </div>
 
               <p className="text-xs text-slate-300 font-sans mb-2 leading-relaxed">
@@ -408,6 +446,58 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* =====================================================================
+          5.5 INSCRIÇÕES (3 MODALIDADES ATÉ 09/10)
+         ===================================================================== */}
+      <section id="inscricoes" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
+        <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
+          <div>
+            <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-widest block mb-1">
+              Inscrições Abertas · Até 09/10/2026
+            </span>
+            <h2 className="text-3xl md:text-4xl font-heading text-white uppercase">
+              Escolha Sua Modalidade
+            </h2>
+          </div>
+          <p className="text-sm text-slate-400 max-w-md">
+            Três formas de participar do Ôxe Maker 2026: como oficineiro, apresentando um projeto
+            na mostra ou pautando uma palestra.
+          </p>
+        </div>
+
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+          {registrationOptions.map((option) => (
+            <button
+              key={option.id}
+              onClick={() =>
+                handleOpenRegistration(
+                  `Inscrição · ${option.title}`,
+                  option.title,
+                  option.url
+                )
+              }
+              className="maker-card p-6 rounded-sm text-left flex flex-col gap-4 group cursor-pointer"
+            >
+              <div className="p-3 bg-[#050D34] border border-slate-700 rounded-sm w-fit group-hover:border-[#FCC140] transition-colors">
+                {option.icon}
+              </div>
+              <div className="space-y-2 flex-1">
+                <h3 className="text-xl font-heading text-white group-hover:text-[#FCC140] transition-colors uppercase">
+                  {option.title}
+                </h3>
+                <p className="text-sm text-slate-400 font-sans leading-relaxed">
+                  {option.description}
+                </p>
+              </div>
+              <span className="inline-flex items-center gap-2 text-xs font-mono-code uppercase font-bold text-[#01B1FD] group-hover:text-[#FCC140] transition-colors">
+                Inscrever-se
+                <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
+              </span>
+            </button>
+          ))}
+        </div>
+      </section>
+
+      {/* =====================================================================
           6. PERGUNTAS FREQUENTES (FAQ)
          ===================================================================== */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -462,31 +552,25 @@ export const HomePage: React.FC = () => {
             <div className="lg:col-span-8 space-y-4">
               <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#01B1FD] uppercase font-bold">
                 <CheckCircle2 className="w-4 h-4 text-[#FCC140]" />
-                <span>Entrada 100% Gratuita · Aberto a Toda a Comunidade</span>
+                <span>Aberto a Toda a Comunidade</span>
               </div>
               <h2 className="text-3xl sm:text-5xl font-heading text-white uppercase leading-tight">
                 Venha Viver o Maior Encontro Maker de Pernambuco!
               </h2>
               <p className="text-slate-300 text-sm sm:text-base max-w-2xl font-sans">
                 Traga sua escola, seus amigos e sua família para prestigiar o talento e a inovação
-                dos jovens estudantes da Rede Estadual na ETE José de Alencar em Olinda.
+                dos jovens estudantes da Rede Estadual na {EVENT_INFO.location.venue}, em Olinda.
               </p>
             </div>
 
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-              <button
-                onClick={() =>
-                  handleOpenRegistration(
-                    'Credenciamento Oficial · Ôxe Maker 2026',
-                    'Visitantes & Comunidade Escolar',
-                    EVENT_INFO.links.generalRegistration
-                  )
-                }
+              <a
+                href="#inscricoes"
                 className="maker-btn-primary py-3.5 px-6 text-xs uppercase flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>Garantir Inscrição Agora</span>
-              </button>
+                <span>Inscreva-se Até 09/10</span>
+              </a>
 
               <Link
                 to="/mapa"
