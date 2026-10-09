@@ -153,7 +153,7 @@ export const Navbar: React.FC = () => {
             <div className="flex items-center gap-3">
               <button
                 onClick={() => setIsRegModalOpen(true)}
-                className="hidden sm:flex maker-btn-primary px-5 py-2.5 text-sm uppercase items-center gap-1.5 tracking-wider cursor-pointer"
+                className="hidden sm:flex maker-btn-secondary px-5 py-2.5 text-sm uppercase items-center gap-1.5 tracking-wider cursor-pointer"
               >
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Inscreva-se</span>
@@ -229,7 +229,7 @@ export const Navbar: React.FC = () => {
                   setIsOpen(false);
                   setIsRegModalOpen(true);
                 }}
-                className="maker-btn-primary w-full py-3 text-lg uppercase tracking-widest"
+                className="maker-btn-secondary w-full py-3 text-lg uppercase tracking-widest"
               >
                 Inscreva-se
               </button>

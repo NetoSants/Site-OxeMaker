@@ -118,25 +118,27 @@ export const HomePage: React.FC = () => {
                 </p>
               </div>
 
-              {/* 2026 Theme Banner */}
-              <div className="p-4 bg-[#1E292D] border-l-4 border-[#FCC140] border-y border-r border-slate-700/80 rounded-sm text-left">
-                <span className="text-[11px] font-mono-code text-[#FCC140] uppercase font-bold tracking-wider block mb-1">
-                  Tema Central 2026:
+              {/* 2026 Theme Banner — foco central em amarelo */}
+              <div className="p-5 bg-[#FCC140] border-2 border-[#FCC140] rounded-sm maker-shadow-yellow-lg text-left relative overflow-hidden">
+                <span className="text-[11px] font-mono-code text-[#7A5A00] uppercase font-bold tracking-wider block mb-1">
+                  Tema Central 2026
                 </span>
-                <p className="text-sm md:text-base text-slate-200 font-medium">
+                <p className="text-lg sm:text-xl font-heading text-[#050D34] font-black leading-snug">
                   "{EVENT_INFO.theme2026}"
                 </p>
               </div>
 
-              {/* Event Location and Date Badges */}
-              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-4 text-xs font-mono-code text-slate-300">
-                <div className="flex items-center gap-1.5 bg-[#050D34] border border-slate-700 px-3 py-1.5 rounded-sm">
+              {/* Event Location and Date Badges — destaque */}
+              <div className="flex flex-wrap items-center justify-center lg:justify-start gap-3 text-sm font-mono-code">
+                <div className="flex items-center gap-2 bg-[#FCC140]/10 border-2 border-[#FCC140]/70 px-3.5 py-2 rounded-sm">
                   <Calendar className="w-4 h-4 text-[#FCC140]" />
-                  <span>{EVENT_INFO.dates.display} · {EVENT_INFO.dates.timeRange}</span>
+                  <span className="text-white font-bold">{EVENT_INFO.dates.display}</span>
+                  <span className="text-slate-300">· {EVENT_INFO.dates.timeRange}</span>
                 </div>
-                <div className="flex items-center gap-1.5 bg-[#050D34] border border-slate-700 px-3 py-1.5 rounded-sm">
+                <div className="flex items-center gap-2 bg-[#01B1FD]/10 border-2 border-[#01B1FD]/60 px-3.5 py-2 rounded-sm">
                   <MapPin className="w-4 h-4 text-[#01B1FD]" />
-                  <span>{EVENT_INFO.location.venue} · Olinda-PE</span>
+                  <span className="text-white font-bold">{EVENT_INFO.location.venue}</span>
+                  <span className="text-slate-300">· Olinda-PE</span>
                 </div>
               </div>
 
@@ -144,7 +146,7 @@ export const HomePage: React.FC = () => {
               <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 <a
                   href="#inscricoes"
-                  className="maker-btn-primary px-6 py-3.5 text-sm uppercase flex items-center gap-2 cursor-pointer"
+                  className="maker-btn-secondary px-6 py-3.5 text-sm uppercase flex items-center gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>Inscreva-se até 09/10</span>
@@ -152,7 +154,7 @@ export const HomePage: React.FC = () => {
 
                 <Link
                   to="/programacao"
-                  className="maker-btn-secondary px-5 py-3.5 text-sm uppercase flex items-center gap-2"
+                  className="px-5 py-3.5 text-sm uppercase flex items-center gap-2 border-2 border-slate-600 rounded-sm text-slate-200 hover:border-[#01B1FD] hover:text-white transition-colors"
                 >
                   <Compass className="w-4 h-4" />
                   <span>Ver Programação</span>

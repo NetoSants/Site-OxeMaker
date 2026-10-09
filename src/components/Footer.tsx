@@ -27,11 +27,11 @@ export const Footer: React.FC = () => {
               O maior evento de robótica educacional e cultura maker da rede pública de Pernambuco.
               Inovação aberta, ciência viva e protagonismo juvenil das escolas do Litoral Norte.
             </p>
-            <div className="p-3 bg-[#1E292D] border border-slate-700/80 rounded-sm">
-              <span className="text-[10px] font-mono-code text-[#01B1FD] uppercase font-bold block mb-1">
+            <div className="p-3 bg-[#FCC140]/10 border-2 border-[#FCC140]/70 rounded-sm">
+              <span className="text-[10px] font-mono-code text-[#FCC140] uppercase font-bold block mb-1">
                 Tema Oficial 2026:
               </span>
-              <p className="text-xs text-slate-200 italic font-sans">
+              <p className="text-xs text-white italic font-sans font-semibold">
                 "{EVENT_INFO.theme2026}"
               </p>
             </div>
