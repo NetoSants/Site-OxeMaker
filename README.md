@@ -3,8 +3,8 @@
 Site oficial da **6ª edição do Ôxe Maker (2021–2026)** — Mostra de Robótica Educacional e Cultura Maker/Geek da **GRE Metropolitana Norte** (Rede Pública Estadual de Pernambuco).
 
 - **Data do Evento**: 27 de novembro de 2026 (Sexta-feira) — Das 07h00 às 18h00
-- **Local**: EREM Áurea de Moura Cavalcanti — Front da escola, ginásio, pátio e cafeteria
-- **Endereço**: Rodovia PE-15, Km 3,6, s/n, Ouro Preto, Olinda – PE
+- **Local**: ETE José de Alencar — Ginásio e Pátio Central
+- **Endereço**: Av. Getúlio Vargas, s/n, Bairro Novo, Olinda – PE, 53030-010
 - **Tema 2026**: *"Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"*
 - **Slogan**: *"Metropolitana Norte · Vidas · Escolas · Comunidade"*
 - **Mascote**: Calango Maker (Lagarto com óculos maker e detalhes robóticos)

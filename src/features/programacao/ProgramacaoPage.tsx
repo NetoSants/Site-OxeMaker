@@ -126,7 +126,7 @@ export const ProgramacaoPage: React.FC = () => {
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
           Acompanhe todos os horários do dia: credenciamento, abertura cultural, TED Talks,
           oficinas, Mostra de Projetos, competições, pitch do Hackathon e cerimônia de premiação
-          na EREM Áurea de Moura, em Olinda.
+          na ETE José de Alencar, em Olinda.
         </p>
 
         <div className="pt-2 flex flex-wrap items-center gap-3">
