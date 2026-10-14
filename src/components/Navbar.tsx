@@ -175,7 +175,7 @@ export const Navbar: React.FC = () => {
         {isOpen && (
           <div className="lg:hidden bg-[#16204F] border-b-2 border-[#FCC140] px-4 pt-3 pb-6 space-y-1 shadow-2xl animate-in slide-in-from-top duration-200">
             <div className="p-2 mb-2 bg-[#1E292D] border border-slate-700 rounded-sm text-xs font-mono-code text-slate-300">
-              <p className="text-[#FCC140] font-bold">Ôxe Maker 2026 · 6ª Edição</p>
+              <p className="brand-name font-bold">Ôxe Maker 2026 · 6ª Edição</p>
               <p className="text-[11px] text-slate-400">{EVENT_INFO.dates.display} · {EVENT_INFO.location.venue}</p>
             </div>
 

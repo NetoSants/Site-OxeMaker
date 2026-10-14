@@ -30,7 +30,7 @@ export const SobrePage: React.FC = () => {
           <span>6 Anos de História · 2021 a 2026</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
-          Sobre o Ôxe Maker & Nossa Missão
+          Sobre o <span className="brand-name">Ôxe Maker</span> &amp; Nossa Missão
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
           Da primeira oficina com caixas de papelão e motores de DVD usados em 2021 ao maior
@@ -45,7 +45,7 @@ export const SobrePage: React.FC = () => {
             Identidade & Orgulho Pernambucano
           </span>
           <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
-            Por que "Ôxe Maker"?
+            Por que "<span className="brand-name">Ôxe Maker</span>"?
           </h2>
           <p className="text-sm text-slate-300 leading-relaxed font-sans">
             "Ôxe" é a interjeição mais autêntica do vocabulário pernambucano: expressa surpresa,
@@ -73,7 +73,7 @@ export const SobrePage: React.FC = () => {
         <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest block">
           Nossa História · Desde 2021
         </span>
-        <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">O Ôxe Maker</h2>
+        <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">O <span className="brand-name">Ôxe Maker</span></h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <p className="text-sm text-slate-300 leading-relaxed font-sans">
@@ -188,7 +188,7 @@ export const SobrePage: React.FC = () => {
               Homenagem Especial
             </span>
             <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
-              Tributo à Idealizadora do Ôxe Maker
+              Tributo à Idealizadora do <span className="brand-name">Ôxe Maker</span>
             </h2>
           </div>
         </div>

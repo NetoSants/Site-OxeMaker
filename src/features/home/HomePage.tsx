@@ -111,8 +111,8 @@ export const HomePage: React.FC = () => {
 
               {/* Main Heading */}
               <div className="space-y-2">
-                <h1 className="text-4xl sm:text-6xl xl:text-7xl font-heading font-black tracking-tight text-white uppercase leading-[1.05]">
-                  ÔXE MAKER <span className="text-[#FCC140]">2026</span>
+                <h1 className="text-4xl sm:text-6xl xl:text-7xl font-heading font-black tracking-tight brand-name uppercase leading-[1.05]">
+                  ÔXE MAKER <span>2026</span>
                 </h1>
                 <p className="text-lg sm:text-xl font-heading text-[#01B1FD] tracking-wide">
                   Mostra de Robótica Educacional & Cultura Maker da Rede Estadual
@@ -120,22 +120,23 @@ export const HomePage: React.FC = () => {
               </div>
 
               {/* Destaque combinado: Tema Central + Data + Local */}
-              <div className="rounded-sm overflow-hidden border-2 border-[#FCC140]/40 maker-shadow-cyan-lg bg-[#050D34]">
-                <div className="p-5 sm:p-7 bg-gradient-to-r from-[#FCC140]/15 via-transparent to-[#01B1FD]/10 border-b-2 border-[#FCC140]/40 text-left">
-                  <span className="inline-flex items-center gap-2 text-[11px] font-mono-code text-[#FCC140] uppercase font-bold tracking-widest mb-2">
-                    <Lightbulb className="w-4 h-4" /> Tema Central 2026
-                  </span>
-                  <p className="text-lg sm:text-2xl font-heading text-white font-black leading-tight">
-                    "{EVENT_INFO.theme2026}"
-                  </p>
-                </div>
-                <div className="grid grid-cols-1 sm:grid-cols-2 text-left">
-                  <div className="flex items-center gap-3 p-5 sm:p-6 border-b sm:border-b-0 sm:border-r border-slate-700/60">
+              <div className="rounded-sm border-2 border-[#FCC140]/40 maker-shadow-cyan-lg bg-[#050D34] text-left p-5 sm:p-6">
+                {/* Tema Central */}
+                <span className="inline-flex items-center gap-2 text-sm font-mono-code text-[#FCC140] uppercase font-bold tracking-widest">
+                  <Lightbulb className="w-4 h-4" /> Tema Central 2026
+                </span>
+                <p className="mt-2 text-xl sm:text-2xl font-heading text-white font-black leading-tight">
+                  "{EVENT_INFO.theme2026}"
+                </p>
+
+                {/* Data + Local na mesma faixa */}
+                <div className="mt-5 pt-5 border-t border-slate-700/60 flex flex-col sm:flex-row sm:items-center gap-4 sm:gap-10">
+                  <div className="flex items-center gap-3">
                     <div className="flex items-center justify-center w-11 h-11 shrink-0 bg-[#FCC140]/15 border-2 border-[#FCC140] rounded-sm">
                       <Calendar className="w-5 h-5 text-[#FCC140]" />
                     </div>
                     <div>
-                      <span className="block text-[10px] font-mono-code text-[#FCC140] uppercase font-bold tracking-widest mb-0.5">
+                      <span className="block text-[11px] font-mono-code text-[#FCC140] uppercase font-bold tracking-widest">
                         Data
                       </span>
                       <p className="text-base sm:text-lg font-heading text-white font-black leading-tight">
@@ -144,12 +145,12 @@ export const HomePage: React.FC = () => {
                       <p className="text-xs font-mono-code text-slate-300">{EVENT_INFO.dates.timeRange}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 p-5 sm:p-6">
+                  <div className="flex items-center gap-3">
                     <div className="flex items-center justify-center w-11 h-11 shrink-0 bg-[#01B1FD]/15 border-2 border-[#01B1FD] rounded-sm">
                       <MapPin className="w-5 h-5 text-[#01B1FD]" />
                     </div>
                     <div>
-                      <span className="block text-[10px] font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest mb-0.5">
+                      <span className="block text-[11px] font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest">
                         Local
                       </span>
                       <p className="text-base sm:text-lg font-heading text-white font-black leading-tight">
@@ -192,7 +193,7 @@ export const HomePage: React.FC = () => {
                       d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
                       fill="none"
                     />
-                    <text className="font-heading fill-current text-white uppercase text-[15px] font-black tracking-[0.2em]">
+                    <text className="font-heading brand-name uppercase text-[15px] font-black tracking-[0.2em]">
                       <textPath href="#circlePath" startOffset="0%">
                         ÔXE MAKER 2026 • ÔXE MAKER 2026 • ÔXE MAKER 2026 •
                       </textPath>
@@ -285,7 +286,7 @@ export const HomePage: React.FC = () => {
               Pilares do Evento
             </span>
             <h2 className="text-3xl md:text-4xl font-heading text-white uppercase">
-              O Que Rola no Ôxe Maker 2026
+              O Que Rola no <span className="brand-name">Ôxe Maker</span> 2026
             </h2>
           </div>
           <p className="text-sm text-slate-400 max-w-md">
@@ -343,7 +344,7 @@ export const HomePage: React.FC = () => {
             Memórias & Trajetória
           </span>
           <h2 className="text-3xl md:text-4xl font-heading text-white uppercase">
-            Galeria Ôxe Maker (2021–2026)
+            Galeria <span className="brand-name">Ôxe Maker</span> (2021–2026)
           </h2>
           <p className="text-sm text-slate-400 max-w-xl mx-auto">
             Registros marcantes de robôs em combate, oficinas cheias de entusiasmo e jovens

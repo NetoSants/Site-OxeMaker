@@ -133,6 +133,28 @@
   text-transform: uppercase;
 }
 
+/* Nome "Ôxe Maker" — lettering padronizado: branco #FFFFFF com contorno azul
+   (#0030B5) e sombra deslocada azul mais escura (#001A66). */
+.brand-name {
+  color: #FFFFFF;
+  fill: currentColor;
+  text-shadow:
+    1.5px 1.5px 0 #0030B5,
+    -1.5px 1.5px 0 #0030B5,
+    1.5px -1.5px 0 #0030B5,
+    -1.5px -1.5px 0 #0030B5,
+    4px 4px 0 #001A66;
+}
+
+.group:hover .brand-name {
+  text-shadow:
+    1.5px 1.5px 0 #0030B5,
+    -1.5px 1.5px 0 #0030B5,
+    1.5px -1.5px 0 #0030B5,
+    -1.5px -1.5px 0 #0030B5,
+    6px 6px 0 #001A66;
+}
+
 /* Rotacao lenta do texto circular da logo (20s por volta) */
 @keyframes rotate-slow {
   from { transform: rotate(0deg); }
