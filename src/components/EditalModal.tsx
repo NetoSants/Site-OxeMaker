@@ -30,7 +30,7 @@ export const EditalModal: React.FC<EditalModalProps> = ({
     const content = `ÔXE MAKER 2026 - REGULAMENTO OFICIAL
 ${tournamentName} - ${category}
 Data: 27 de novembro de 2026
-Local: EREM Áurea de Moura, Olinda - PE
+Local: ETE José de Alencar, Olinda - PE
 Realização: GRE Metropolitana Norte / SEE-PE
 
 TEMA 2026: "Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"

@@ -66,7 +66,7 @@ export const MapaPage: React.FC = () => {
           Como Chegar & Mapa do Local
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
-          O Ôxe Maker 2026 será sediado na EREM Áurea de Moura, em Olinda (Ouro Preto), com
+          O Ôxe Maker 2026 será sediado na ETE José de Alencar, em Olinda (Bairro Novo), com
           frente ampla para credenciamento, palco principal, salas de oficina e cafeteria.
         </p>
       </div>
@@ -123,13 +123,13 @@ export const MapaPage: React.FC = () => {
           <div className="p-2 flex items-center justify-between text-xs font-mono-code text-slate-300 bg-[#F1F4FB] border border-slate-800 rounded-t-sm mb-2">
             <span className="flex items-center gap-1.5 text-[#0369A1]">
               <Compass className="w-3.5 h-3.5" />
-              <span>Ouro Preto, Olinda (PE)</span>
+              <span>Bairro Novo, Olinda (PE)</span>
             </span>
             <span className="text-slate-400">Ao vivo</span>
           </div>
           <div className="flex-1 w-full rounded-sm overflow-hidden border border-slate-700/60 relative">
             <iframe
-              title="Localização EREM Áurea de Moura no Google Maps"
+              title="Localização ETE José de Alencar no Google Maps"
               src={EVENT_INFO.location.googleMapsEmbedUrl}
               className="w-full h-full min-h-[300px] border-0"
               loading="lazy"
@@ -162,7 +162,7 @@ export const MapaPage: React.FC = () => {
         </div>
       </div>
 
-      {/* Interactive Sectors Map of EREM Áurea de Moura */}
+      {/* Interactive Sectors Map of ETE José de Alencar */}
       <div className="bg-[#F9FDFE] border-2 border-[#FCC140] rounded-sm p-6 sm:p-8 maker-shadow-yellow-lg space-y-6">
         <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4 border-b border-slate-800 pb-4">
           <div>
@@ -170,7 +170,7 @@ export const MapaPage: React.FC = () => {
               Planta & Ambientes do Evento
             </span>
             <h2 className="text-2xl sm:text-3xl font-heading text-[#0B1330] uppercase">
-              Espaços da EREM Áurea de Moura
+              Espaços da ETE José de Alencar
             </h2>
           </div>
           <div className="flex items-center gap-1.5 text-xs font-mono-code text-[#8A5A04]">

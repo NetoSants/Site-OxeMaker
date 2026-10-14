@@ -36,30 +36,30 @@ export const EVENT_INFO: EventGeneralInfo = {
     timeRange: 'Das 07h00 às 18h00',
   },
   location: {
-    venue: 'EREM Áurea de Moura',
-    fullName: 'Escola de Referência em Ensino Médio (EREM) Áurea de Moura Cavalcanti',
+    venue: 'ETE José de Alencar',
+    fullName: 'Escola Técnica Estadual (ETE) José de Alencar',
     space: 'Frente da escola, ginásio, pátio e cafeteria',
-    street: 'Rodovia PE-15, Km 3,6, s/n',
-    neighborhood: 'Ouro Preto',
+    street: 'Av. Getúlio Vargas, s/n',
+    neighborhood: 'Bairro Novo',
     city: 'Olinda',
     state: 'PE',
-    cep: '53320-640',
-    fullAddress: 'Rodovia PE-15, Km 3,6, s/n — Ouro Preto, Olinda – PE, 53320-640',
+    cep: '53030-010',
+    fullAddress: 'Av. Getúlio Vargas, s/n — Bairro Novo, Olinda – PE, 53030-010',
     // Embed URL for Google Maps
     googleMapsEmbedUrl:
-      'https://www.google.com/maps?q=EREM+%C3%81urea+de+Moura+Cavalcanti,+Olinda,+PE,+53320-640&output=embed',
+      'https://www.google.com/maps?q=ETE+Jos%C3%A9+de+Alencar,+Olinda,+PE,+53030-010&output=embed',
     googleMapsDirectionsUrl:
-      'https://maps.google.com/?q=EREM+Áurea+de+Moura+Cavalcanti+Olinda+PE',
+      'https://maps.google.com/?q=ETE+José+de+Alencar+Olinda+PE',
     referencePoints: [
-      'Localizado na Rodovia PE-15, Km 3,6 — Bairro Ouro Preto, Olinda-PE',
-      'Acesso direto pela Rodovia PE-15',
+      'Localizado na Av. Getúlio Vargas — Bairro Novo, Olinda-PE',
+      'Acesso pela Av. Getúlio Vargas (região central de Olinda)',
       'Credenciamento na frente do evento (a partir das 07h00)',
     ],
     transitTips: [
       {
         title: 'Ônibus',
         description:
-          'Linhas que circulam pela Rodovia PE-15 deixam passageiros nas proximidades da escola. Confirme o trajeto com sua escola ou transporte da região.',
+          'Linhas que circulam pela Av. Getúlio Vargas e região central de Olinda deixam passageiros nas proximidades da escola. Confirme o trajeto com sua escola ou transporte da região.',
       },
       {
         title: 'Caravana Escolar',
@@ -208,7 +208,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     title: 'Credenciamento',
     description: 'Local para credenciamento dos inscritos, na frente do evento.',
     category: 'cerimonia',
-    location: 'Frente da EREM Áurea de Moura',
+    location: 'Frente da ETE José de Alencar',
   },
   {
     id: 'd1-2',
@@ -396,7 +396,7 @@ export const GEEK_CATEGORIES: GeekCategory[] = [
       'Camarim climatizado para preparação dos participantes no local',
     ],
     scheduleTime: 'Sexta, 27 de novembro · Competições & Geek (14h30 - 15h30)',
-    stage: 'EREM Áurea de Moura · Olinda-PE',
+    stage: 'ETE José de Alencar · Olinda-PE',
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSd4R3JcsSD_8gPA9DwBJ3HMes4C9Z5YwhQk57AadqcZn6wGug/viewform',
     rulesPdfUrl: '#regulamento-cosplay',
     prizes: '1º Lugar: R$ 800 em vales geek + Troféu Calango Dourado; 2º e 3º Lugares: Vales e Colecionáveis.',
@@ -419,7 +419,7 @@ export const GEEK_CATEGORIES: GeekCategory[] = [
       'Ensaios e reconhecimento de palco combinados com a coordenação no dia 27/11',
     ],
     scheduleTime: 'Sexta, 27 de novembro · Competições & Geek (14h30 - 15h30)',
-    stage: 'EREM Áurea de Moura · Olinda-PE',
+    stage: 'ETE José de Alencar · Olinda-PE',
     registrationUrl: 'https://forms.gle/oxemaker2026-kpop',
     rulesPdfUrl: '#regulamento-kpop',
     prizes: 'Troféus para Campeão Solo e Campeão Grupo + Vales em lojas de dança e kits culturais.',
@@ -492,7 +492,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
       'Oficina de robótica e cultura maker, das 10h00 às 12h00 no dia 27 de novembro. Os oficineiros (alunos e professores) são inscritos pelo formulário oficial até 09 de outubro de 2026.',
     schedule: '27 de novembro · 10h00 às 12h00',
     duration: '2 horas',
-    room: 'Salas de oficina da EREM Áurea de Moura',
+    room: 'Salas de oficina da ETE José de Alencar',
     targetAudience: 'Alunos e professores inscritos como oficineiros.',
     prerequisites: 'Inscrição previa pelo formulário oficial de Oficineiros (até 09/10/2026).',
     materialsProvided: [
@@ -509,7 +509,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
       'Aprenda as técnicas básicas de soldagem eletrônica e monte seu primeiro circuito arretado.',
     schedule: '27 de novembro · horário da tarde (a definir)',
     duration: '1h30',
-    room: 'Laboratório Maker · EREM Áurea de Moura',
+    room: 'Laboratório Maker · ETE José de Alencar',
     targetAudience: 'Oficineiros iniciantes com ou sem experiência em eletrônica.',
     prerequisites: 'Inscrição como oficineiro pelo formulário oficial (até 09/10/2026).',
     materialsProvided: [
@@ -532,7 +532,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
       'Dê vida aos seus projetos! Aprenda a programar microcontroladores e controlar sensores e atuadores.',
     schedule: '27 de novembro · horário da tarde (a definir)',
     duration: '1h30',
-    room: 'Laboratório Maker · EREM Áurea de Moura',
+    room: 'Laboratório Maker · ETE José de Alencar',
     targetAudience: 'Oficineiros com noções básicas de lógica de programação.',
     prerequisites: 'Inscrição como oficineiro pelo formulário oficial (até 09/10/2026).',
     materialsProvided: [
@@ -555,7 +555,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
       'Crie seus próprios objetos em 3D e entenda como funciona a impressão 3D na prática.',
     schedule: '27 de novembro · horário da tarde (a definir)',
     duration: '1h30',
-    room: 'Laboratório Maker · EREM Áurea de Moura',
+    room: 'Laboratório Maker · ETE José de Alencar',
     targetAudience: 'Oficineiros curiosos por design e fabricação digital.',
     prerequisites: 'Inscrição como oficineiro pelo formulário oficial (até 09/10/2026).',
     materialsProvided: [
@@ -578,7 +578,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
       'Transforme o que seria lixo em tecnologia! Oficina prática de reaproveitamento de materiais.',
     schedule: '27 de novembro · horário da tarde (a definir)',
     duration: '1h30',
-    room: 'Laboratório Maker · EREM Áurea de Moura',
+    room: 'Laboratório Maker · ETE José de Alencar',
     targetAudience: 'Oficineiros de todas as idades, alinhado ao tema de justiça socioambiental.',
     prerequisites: 'Inscrição como oficineiro pelo formulário oficial (até 09/10/2026).',
     materialsProvided: [
@@ -642,7 +642,7 @@ export const TIMELINE_DATA: TimelineMilestone[] = [
     edition: '6ª Edição',
     title: 'O Presente: Justiça Socioambiental & Futuro',
     description:
-      'A 6ª edição acontece em um único dia, 27 de novembro, na EREM Áurea de Moura em Olinda, com oficinas, mostra de projetos, competições, cultura geek e o pitch do Hackathon.',
+      'A 6ª edição acontece em um único dia, 27 de novembro, na ETE José de Alencar em Olinda, com oficinas, mostra de projetos, competições, cultura geek e o pitch do Hackathon.',
     stats: '58+ escolas parceiras · 6+ competições · 90+ projetos makers',
   },
 ];
@@ -684,9 +684,9 @@ export const SPONSORS_TIERS: SponsorTier[] = [
         logoAlt: 'Logo da Secretaria de Educação e Esportes de Pernambuco',
       },
       {
-        name: 'EREM Áurea de Moura',
+        name: 'ETE José de Alencar',
         role: 'Escola Anfitriã (Olinda-PE)',
-        logoAlt: 'Logo da EREM Áurea de Moura',
+        logoAlt: 'Logo da ETE José de Alencar',
       },
     ],
   },
@@ -763,7 +763,7 @@ export const FAQ_DATA = [
   {
     question: 'Quando e onde acontece o Ôxe Maker 2026?',
     answer:
-      'O evento acontece em um único dia: 27 de novembro de 2026 (sexta-feira), das 07h00 às 18h00, na EREM Áurea de Moura (Rodovia PE-15, Km 3,6 — Ouro Preto, Olinda-PE).',
+      'O evento acontece em um único dia: 27 de novembro de 2026 (sexta-feira), das 07h00 às 18h00, na ETE José de Alencar (Av. Getúlio Vargas, s/n — Bairro Novo, Olinda-PE).',
   },
   {
     question: 'Até quando posso me inscrever?',

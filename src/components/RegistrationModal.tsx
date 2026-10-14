@@ -239,7 +239,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                       type="text"
                       value={formData.school}
                       onChange={(e) => setFormData({ ...formData, school: e.target.value })}
-                      placeholder="Ex: EREM Áurea de Moura"
+                      placeholder="Ex: ETE José de Alencar"
                       className="w-full px-3 py-2 bg-[#F1F4FB] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-[#0B1330] placeholder-slate-500 focus:outline-none"
                     />
                   </div>
