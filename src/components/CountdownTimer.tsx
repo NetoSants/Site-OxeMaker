@@ -69,9 +69,9 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
   if (compact) {
     return (
       <div className={`flex items-center gap-2 font-mono-code text-sm ${className}`}>
-        <Clock className="w-4 h-4 text-[#FCC140]" />
+        <Clock className="w-4 h-4 text-[#8A5A04]" />
         <span className="text-slate-300">Faltam:</span>
-        <span className="font-bold text-[#FCC140]">
+        <span className="font-bold text-[#8A5A04]">
           {timeLeft.days}d {formatNumber(timeLeft.hours)}h {formatNumber(timeLeft.minutes)}m{' '}
           {formatNumber(timeLeft.seconds)}s
         </span>
@@ -81,7 +81,7 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
 
   return (
     <div className={`flex flex-col items-center ${className}`}>
-      <div className="flex items-center gap-2 text-xs font-mono-code text-[#01B1FD] uppercase tracking-wider mb-2.5">
+      <div className="flex items-center gap-2 text-xs font-mono-code text-[#0369A1] uppercase tracking-wider mb-2.5">
         <span className="w-2 h-2 rounded-full bg-[#FCC140] animate-pulse" />
         <span>Contagem Regressiva para o Credenciamento · 27/11 às 07h00</span>
       </div>
@@ -90,9 +90,9 @@ export const CountdownTimer: React.FC<CountdownTimerProps> = ({
         {units.map((unit, index) => (
           <div
             key={index}
-            className="flex flex-col items-center justify-center p-2.5 sm:p-3 min-w-[64px] sm:min-w-[80px] bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm transition-all duration-200 maker-shadow-yellow"
+            className="flex flex-col items-center justify-center p-2.5 sm:p-3 min-w-[64px] sm:min-w-[80px] bg-[#F9FDFE] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm transition-all duration-200 maker-shadow-yellow"
           >
-            <span className="text-2xl sm:text-4xl font-bold font-mono-code text-[#FCC140] tracking-tight">
+            <span className="text-2xl sm:text-4xl font-bold font-mono-code text-[#8A5A04] tracking-tight">
               {unit.value}
             </span>
             <span className="text-[10px] sm:text-xs font-mono-code text-slate-400 uppercase tracking-widest mt-0.5">

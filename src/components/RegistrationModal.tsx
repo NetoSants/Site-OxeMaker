@@ -72,23 +72,23 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
       aria-labelledby="modal-title"
     >
       <div
-        className="relative w-full max-w-xl bg-[#1E292D] border-2 border-[#FCC140] rounded-sm maker-shadow-yellow-lg p-6 max-h-[90vh] overflow-y-auto"
+        className="relative w-full max-w-xl bg-[#F9FDFE] border-2 border-[#FCC140] rounded-sm maker-shadow-yellow-lg p-6 max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         {/* Header */}
         <div className="flex items-start justify-between gap-4 border-b border-slate-700/80 pb-4 mb-5">
           <div>
-            <div className="inline-flex items-center gap-1.5 text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-wider mb-1">
-              <Sparkles className="w-3.5 h-3.5 text-[#FCC140]" />
+            <div className="inline-flex items-center gap-1.5 text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-wider mb-1">
+              <Sparkles className="w-3.5 h-3.5 text-[#8A5A04]" />
               <span>{categoryName}</span>
             </div>
-            <h2 id="modal-title" className="text-2xl font-bold font-heading text-white">
+            <h2 id="modal-title" className="text-2xl font-bold font-heading text-[#0B1330]">
               {title}
             </h2>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded transition-colors"
+            className="p-1.5 text-slate-400 hover:text-[#0B1330] hover:bg-slate-800 rounded transition-colors"
             aria-label="Fechar janela de inscrição"
           >
             <X className="w-5 h-5" />
@@ -97,23 +97,23 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
 
         {isSimulatedSubmitted ? (
           <div className="py-6 text-center space-y-4">
-            <div className="w-16 h-16 mx-auto rounded-full bg-[#107C41]/20 border-2 border-[#107C41] flex items-center justify-center text-[#4ADE80]">
+            <div className="w-16 h-16 mx-auto rounded-full bg-[#107C41]/20 border-2 border-[#107C41] flex items-center justify-center text-[#15803D]">
               <CheckCircle2 className="w-10 h-10" />
             </div>
-            <h3 className="text-2xl font-bold font-heading text-[#FCC140]">
+            <h3 className="text-2xl font-bold font-heading text-[#8A5A04]">
               Inscrição Confirmada com Sucesso!
             </h3>
             <p className="text-slate-300 text-sm max-w-md mx-auto">
-              Parabéns, <strong className="text-white">{formData.name}</strong>! Seus dados foram
-              registrados para <strong className="text-[#01B1FD]">{categoryName}</strong> no Ôxe Maker
+              Parabéns, <strong className="text-[#0B1330]">{formData.name}</strong>! Seus dados foram
+              registrados para <strong className="text-[#0369A1]">{categoryName}</strong> no Ôxe Maker
               2026.
             </p>
 
-            <div className="p-4 bg-[#050D34] border border-slate-700 rounded-sm font-mono-code text-sm">
+            <div className="p-4 bg-[#F1F4FB] border border-slate-700 rounded-sm font-mono-code text-sm">
               <span className="text-slate-400 block text-xs uppercase mb-1">
                 Protocolo Digital da Vaga
               </span>
-              <span className="text-lg font-bold text-[#FCC140] tracking-widest">
+              <span className="text-lg font-bold text-[#8A5A04] tracking-widest">
                 {protocolNumber}
               </span>
               <span className="text-xs text-slate-400 block mt-1">
@@ -125,7 +125,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
               <button
                 type="button"
                 onClick={() => setIsSimulatedSubmitted(false)}
-                className="px-4 py-2 text-xs font-mono-code text-slate-300 hover:text-white border border-slate-600 rounded-sm"
+                className="px-4 py-2 text-xs font-mono-code text-slate-300 hover:text-[#0B1330] border border-slate-600 rounded-sm"
               >
                 Nova Inscrição
               </button>
@@ -141,11 +141,11 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
         ) : (
           <div className="space-y-5">
             {/* Direct Google Forms CTA Banner */}
-            <div className="p-4 bg-[#050D34] border border-[#01B1FD]/50 rounded-sm">
+            <div className="p-4 bg-[#F1F4FB] border border-[#01B1FD]/50 rounded-sm">
               <div className="flex items-start gap-3">
-                <AlertCircle className="w-5 h-5 text-[#01B1FD] flex-shrink-0 mt-0.5" />
+                <AlertCircle className="w-5 h-5 text-[#0369A1] flex-shrink-0 mt-0.5" />
                 <div className="text-xs text-slate-300 space-y-1">
-                  <p className="font-bold text-white">
+                  <p className="font-bold text-[#0B1330]">
                     Formulário Oficial da GRE Metropolitana Norte
                   </p>
                   <p>
@@ -180,7 +180,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
             {/* In-app registration form */}
             <div className="border-t border-slate-700/80 pt-4">
               <div className="flex items-center justify-between mb-3">
-                <span className="text-xs font-mono-code uppercase font-bold text-[#FCC140]">
+                <span className="text-xs font-mono-code uppercase font-bold text-[#8A5A04]">
                   Ou inscreva-se direto por aqui:
                 </span>
                 <span className="text-[11px] font-mono-code text-slate-400">Até 09/10/2026</span>
@@ -197,7 +197,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
                     placeholder="Ex: Maria Clara dos Santos"
-                    className="w-full px-3 py-2 bg-[#050D34] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-white placeholder-slate-500 focus:outline-none"
+                    className="w-full px-3 py-2 bg-[#F1F4FB] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-[#0B1330] placeholder-slate-500 focus:outline-none"
                   />
                 </div>
 
@@ -212,7 +212,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                       value={formData.email}
                       onChange={(e) => setFormData({ ...formData, email: e.target.value })}
                       placeholder="seu.email@exemplo.com"
-                      className="w-full px-3 py-2 bg-[#050D34] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-white placeholder-slate-500 focus:outline-none"
+                      className="w-full px-3 py-2 bg-[#F1F4FB] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-[#0B1330] placeholder-slate-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -225,7 +225,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                       value={formData.phone}
                       onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
                       placeholder="(81) 99999-9999"
-                      className="w-full px-3 py-2 bg-[#050D34] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-white placeholder-slate-500 focus:outline-none"
+                      className="w-full px-3 py-2 bg-[#F1F4FB] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-[#0B1330] placeholder-slate-500 focus:outline-none"
                     />
                   </div>
                 </div>
@@ -240,7 +240,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                       value={formData.school}
                       onChange={(e) => setFormData({ ...formData, school: e.target.value })}
                       placeholder="Ex: EREM Áurea de Moura"
-                      className="w-full px-3 py-2 bg-[#050D34] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-white placeholder-slate-500 focus:outline-none"
+                      className="w-full px-3 py-2 bg-[#F1F4FB] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-[#0B1330] placeholder-slate-500 focus:outline-none"
                     />
                   </div>
                   <div>
@@ -250,7 +250,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
                     <select
                       value={formData.role}
                       onChange={(e) => setFormData({ ...formData, role: e.target.value })}
-                      className="w-full px-3 py-2 bg-[#050D34] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-white focus:outline-none"
+                      className="w-full px-3 py-2 bg-[#F1F4FB] border border-slate-600 focus:border-[#FCC140] rounded-sm text-sm text-[#0B1330] focus:outline-none"
                     >
                       <option value="Estudante da Rede Estadual">Estudante da Rede Estadual PE</option>
                       <option value="Estudante da Rede Municipal / Outras">Estudante de Outra Rede</option>

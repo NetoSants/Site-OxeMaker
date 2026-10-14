@@ -77,32 +77,32 @@ export const ProgramacaoPage: React.FC = () => {
       case 'robotica':
         return {
           label: 'Robótica & Batalhas',
-          bg: 'bg-[#FCC140]/10 border-[#FCC140]/50 text-[#FCC140]',
+          bg: 'bg-[#FCC140]/10 border-[#FCC140]/50 text-[#8A5A04]',
         };
       case 'oficinas':
         return {
           label: 'Oficina Maker',
-          bg: 'bg-[#01B1FD]/10 border-[#01B1FD]/50 text-[#01B1FD]',
+          bg: 'bg-[#01B1FD]/10 border-[#01B1FD]/50 text-[#0369A1]',
         };
       case 'mostra':
         return {
           label: 'Mostra de Projetos',
-          bg: 'bg-sky-500/10 border-sky-500/50 text-sky-300',
+          bg: 'bg-sky-500/10 border-sky-500/50 text-sky-700',
         };
       case 'geek':
         return {
           label: 'Cultura Geek',
-          bg: 'bg-purple-500/10 border-purple-500/50 text-purple-300',
+          bg: 'bg-purple-500/10 border-purple-500/50 text-purple-700',
         };
       case 'palestras':
         return {
           label: 'Palestra / Debate',
-          bg: 'bg-emerald-500/10 border-emerald-500/50 text-emerald-300',
+          bg: 'bg-emerald-500/10 border-emerald-500/50 text-emerald-700',
         };
       case 'cerimonia':
         return {
           label: 'Solenidade Oficial',
-          bg: 'bg-amber-500/10 border-amber-500/50 text-amber-300',
+          bg: 'bg-amber-500/10 border-amber-500/50 text-amber-800',
         };
       default:
         return {
@@ -116,11 +116,11 @@ export const ProgramacaoPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-10">
       {/* Page Header */}
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
-        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-wider">
+        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-wider">
           <Calendar className="w-4 h-4" />
           <span>Grade Oficial de Atividades · 07h00 às 18h00</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
+        <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           Programação · 27 de Novembro
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
@@ -144,7 +144,7 @@ export const ProgramacaoPage: React.FC = () => {
       </div>
 
       {/* Filter Controls Bar */}
-      <div className="bg-[#1E292D] border-2 border-slate-700/80 rounded-sm p-4 space-y-4 maker-shadow-yellow">
+      <div className="bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm p-4 space-y-4 maker-shadow-yellow">
         {/* Category & Search Filter */}
         <div className="flex flex-col md:flex-row items-stretch md:items-center justify-between gap-3">
           {/* Category tabs */}
@@ -157,7 +157,7 @@ export const ProgramacaoPage: React.FC = () => {
                 className={`px-2.5 py-1 text-xs font-mono-code rounded-sm transition-colors ${
                   selectedCategory === cat.id
                     ? 'bg-[#01B1FD] text-[#050D34] font-bold'
-                    : 'bg-[#050D34]/70 text-slate-300 hover:text-white border border-slate-800'
+                    : 'bg-[#F1F4FB]/70 text-slate-300 hover:text-[#0B1330] border border-slate-800'
                 }`}
               >
                 {cat.label}
@@ -173,7 +173,7 @@ export const ProgramacaoPage: React.FC = () => {
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder="Buscar por atração ou sala..."
-              className="w-full pl-9 pr-3 py-1.5 bg-[#050D34] border border-slate-700 focus:border-[#FCC140] rounded-sm text-xs text-white placeholder-slate-400 focus:outline-none"
+              className="w-full pl-9 pr-3 py-1.5 bg-[#F1F4FB] border border-slate-700 focus:border-[#FCC140] rounded-sm text-xs text-[#0B1330] placeholder-slate-400 focus:outline-none"
             />
           </div>
         </div>
@@ -181,8 +181,8 @@ export const ProgramacaoPage: React.FC = () => {
 
       {/* Aviso Importante | O que esperar? | Dica Maker */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-5 bg-[#1E292D] border-2 border-[#FCC140]/60 rounded-sm space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono-code text-[#FCC140] uppercase font-bold">
+        <div className="p-5 bg-[#F9FDFE] border-2 border-[#FCC140]/60 rounded-sm space-y-2">
+          <div className="flex items-center gap-2 text-xs font-mono-code text-[#8A5A04] uppercase font-bold">
             <AlertTriangle className="w-4 h-4" />
             <span>Aviso Importante</span>
           </div>
@@ -191,8 +191,8 @@ export const ProgramacaoPage: React.FC = () => {
           </p>
         </div>
 
-        <div className="p-5 bg-[#1E292D] border border-slate-700/80 rounded-sm space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono-code text-[#01B1FD] uppercase font-bold">
+        <div className="p-5 bg-[#F9FDFE] border border-slate-700/80 rounded-sm space-y-2">
+          <div className="flex items-center gap-2 text-xs font-mono-code text-[#0369A1] uppercase font-bold">
             <ListChecks className="w-4 h-4" />
             <span>O que esperar?</span>
           </div>
@@ -204,9 +204,9 @@ export const ProgramacaoPage: React.FC = () => {
           </ul>
         </div>
 
-        <div className="p-5 bg-[#1E292D] border-2 border-[#01B1FD]/60 rounded-sm space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono-code text-[#FCC140] uppercase font-bold">
-            <Lightbulb className="w-4 h-4 text-[#01B1FD]" />
+        <div className="p-5 bg-[#F9FDFE] border-2 border-[#01B1FD]/60 rounded-sm space-y-2">
+          <div className="flex items-center gap-2 text-xs font-mono-code text-[#8A5A04] uppercase font-bold">
+            <Lightbulb className="w-4 h-4 text-[#0369A1]" />
             <span>Dica Maker</span>
           </div>
           <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
@@ -217,9 +217,9 @@ export const ProgramacaoPage: React.FC = () => {
 
       {/* Schedule Items Timeline — dividido em Manhã & Tarde */}
       {filteredSchedule.length === 0 ? (
-        <div className="text-center py-16 bg-[#1E292D] border border-slate-800 rounded-sm">
+        <div className="text-center py-16 bg-[#F9FDFE] border border-slate-800 rounded-sm">
           <Clock className="w-10 h-10 text-slate-500 mx-auto mb-2" />
-          <h3 className="text-lg font-heading text-white">Nenhuma atividade encontrada</h3>
+          <h3 className="text-lg font-heading text-[#0B1330]">Nenhuma atividade encontrada</h3>
           <p className="text-xs text-slate-400 mt-1">
             Tente remover os filtros ou buscar por outro termo.
           </p>
@@ -228,7 +228,7 @@ export const ProgramacaoPage: React.FC = () => {
               setSelectedCategory('all');
               setSearchQuery('');
             }}
-            className="mt-3 text-xs font-mono-code text-[#01B1FD] hover:underline"
+            className="mt-3 text-xs font-mono-code text-[#0369A1] hover:underline"
           >
             Limpar todos os filtros
           </button>
@@ -255,15 +255,15 @@ export const ProgramacaoPage: React.FC = () => {
               {/* Period Header */}
               <div className="flex flex-wrap items-center justify-between gap-3 pb-3 border-b-2 border-slate-800">
                 <div className="flex items-center gap-3">
-                  <period.icon className="w-6 h-6 text-[#FCC140]" />
-                  <h2 className="text-2xl font-heading font-black uppercase text-white">
+                  <period.icon className="w-6 h-6 text-[#8A5A04]" />
+                  <h2 className="text-2xl font-heading font-black uppercase text-[#0B1330]">
                     {period.label}
                     <span className="ml-3 text-xs font-mono-code text-slate-400 font-normal uppercase tracking-wider">
                       {period.range}
                     </span>
                   </h2>
                 </div>
-                <span className="text-xs font-mono-code px-2.5 py-1 bg-[#050D34] border border-slate-700 rounded-sm text-slate-300">
+                <span className="text-xs font-mono-code px-2.5 py-1 bg-[#F1F4FB] border border-slate-700 rounded-sm text-slate-300">
                   {period.items.length} atividade{period.items.length === 1 ? '' : 's'}
                 </span>
               </div>
@@ -280,17 +280,17 @@ export const ProgramacaoPage: React.FC = () => {
                     return (
                       <div
                         key={item.id}
-                        className="bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-4 sm:p-5 transition-all hover:maker-shadow-yellow group"
+                        className="bg-[#F9FDFE] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-4 sm:p-5 transition-all hover:maker-shadow-yellow group"
                       >
                         <div className="flex flex-col md:flex-row md:items-center justify-between gap-3 pb-3 border-b border-slate-800">
                           {/* Left: Time */}
                           <div className="flex flex-wrap items-center gap-2">
-                            <span className="font-mono-code text-sm sm:text-base font-bold text-[#FCC140] flex items-center gap-1.5">
-                              <Clock className="w-4 h-4 text-[#01B1FD]" />
+                            <span className="font-mono-code text-sm sm:text-base font-bold text-[#8A5A04] flex items-center gap-1.5">
+                              <Clock className="w-4 h-4 text-[#0369A1]" />
                               {item.time}
                             </span>
                             <span className="text-slate-500">·</span>
-                            <span className="text-[11px] font-mono-code px-2 py-0.5 rounded-sm border bg-[#0030B5]/30 border-[#01B1FD]/40 text-[#01B1FD]">
+                            <span className="text-[11px] font-mono-code px-2 py-0.5 rounded-sm border bg-[#0030B5]/30 border-[#01B1FD]/40 text-[#0369A1]">
                               27/11 · Sexta-feira
                             </span>
                           </div>
@@ -305,7 +305,7 @@ export const ProgramacaoPage: React.FC = () => {
 
                         {/* Middle: Title & Description */}
                         <div className="py-3 space-y-1.5">
-                          <h3 className="text-lg sm:text-xl font-heading text-white group-hover:text-[#FCC140] transition-colors">
+                          <h3 className="text-lg sm:text-xl font-heading text-[#0B1330] group-hover:text-[#8A5A04] transition-colors">
                             {item.title}
                           </h3>
                           <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
@@ -316,7 +316,7 @@ export const ProgramacaoPage: React.FC = () => {
                         {/* Bottom: Location and Speaker */}
                         <div className="pt-2 flex flex-wrap items-center justify-between gap-2 text-xs font-mono-code text-slate-400 border-t border-slate-800/80">
                           <div className="flex items-center gap-1.5 text-slate-300">
-                            <MapPin className="w-3.5 h-3.5 text-[#01B1FD]" />
+                            <MapPin className="w-3.5 h-3.5 text-[#0369A1]" />
                             <span>{item.location}</span>
                           </div>
 

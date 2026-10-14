@@ -50,7 +50,7 @@ export const Logo: React.FC<LogoProps> = ({
       <div className="flex flex-col leading-none">
         <div className="flex items-center gap-1.5">
           <span
-            className={`font-black tracking-wider uppercase text-[#FCC140] font-heading whitespace-nowrap drop-shadow-[2px_2px_0px_#0030B5] transition-colors group-hover:text-white ${textSizes[size]}`}
+            className={`font-black tracking-wider uppercase brand-name font-heading whitespace-nowrap transition-all ${textSizes[size]}`}
           >
             ÔXE MAKER
           </span>

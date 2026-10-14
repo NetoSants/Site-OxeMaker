@@ -43,21 +43,21 @@ export const HomePage: React.FC = () => {
       title: 'Oficineiros',
       description: 'Para alunos e professores que querem participar das oficinas de robótica e cultura maker.',
       url: EVENT_INFO.links.oficineirosRegistration,
-      icon: <Wrench className="w-5 h-5 text-[#FCC140]" />,
+      icon: <Wrench className="w-5 h-5 text-[#8A5A04]" />,
     },
     {
       id: 'mostra',
       title: 'Mostra de Projetos',
       description: 'Para equipes que vão apresentar seus projetos para a banca.',
       url: EVENT_INFO.links.mostraRegistration,
-      icon: <Sparkles className="w-5 h-5 text-[#01B1FD]" />,
+      icon: <Sparkles className="w-5 h-5 text-[#0369A1]" />,
     },
     {
       id: 'palestrantes',
       title: 'Palestrantes',
       description: 'Para quem deseja palestrar, preferencialmente no formato TED Talks.',
       url: EVENT_INFO.links.palestrantesRegistration,
-      icon: <Mic className="w-5 h-5 text-purple-400" />,
+      icon: <Mic className="w-5 h-5 text-purple-700" />,
     },
   ];
 
@@ -65,12 +65,12 @@ export const HomePage: React.FC = () => {
   const [openFaqIndex, setOpenFaqIndex] = useState<number | null>(0);
 
   const iconMap: Record<string, React.ReactNode> = {
-    Wrench: <Wrench className="w-6 h-6 text-[#FCC140]" />,
-    Network: <Network className="w-6 h-6 text-[#01B1FD]" />,
-    Bot: <Bot className="w-6 h-6 text-[#FCC140]" />,
-    Cpu: <Cpu className="w-6 h-6 text-[#01B1FD]" />,
-    Sparkles: <Sparkles className="w-6 h-6 text-[#01B1FD]" />,
-    Trophy: <Trophy className="w-6 h-6 text-[#FCC140]" />,
+    Wrench: <Wrench className="w-6 h-6 text-[#8A5A04]" />,
+    Network: <Network className="w-6 h-6 text-[#0369A1]" />,
+    Bot: <Bot className="w-6 h-6 text-[#8A5A04]" />,
+    Cpu: <Cpu className="w-6 h-6 text-[#0369A1]" />,
+    Sparkles: <Sparkles className="w-6 h-6 text-[#0369A1]" />,
+    Trophy: <Trophy className="w-6 h-6 text-[#8A5A04]" />,
   };
 
   const handleOpenRegistration = (title: string, category: string, url: string) => {
@@ -92,7 +92,7 @@ export const HomePage: React.FC = () => {
          ===================================================================== */}
       <section className="relative overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24 border-b border-slate-800">
         {/* Glow backdrop circles */}
-        <div className="absolute top-10 right-10 w-72 h-72 bg-[#01B1FD]/10 blur-[80px] pointer-events-none rounded-full" />
+        <div className="absolute top-10 right-10 w-72 h-72 bg-[#0030B5]/20 blur-[80px] pointer-events-none rounded-full" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
@@ -104,41 +104,41 @@ export const HomePage: React.FC = () => {
                   {EVENT_INFO.edition} · 2021–2026
                 </span>
                 <span className="text-slate-400">·</span>
-                <span className="text-[#01B1FD] font-semibold tracking-wide">
+                <span className="text-[#0369A1] font-semibold tracking-wide">
                   {EVENT_INFO.tagline}
                 </span>
               </div>
 
               {/* Main Heading */}
               <div className="space-y-2">
-                <h1 className="text-4xl sm:text-6xl xl:text-7xl font-heading font-black tracking-tight text-white uppercase leading-[1.05]">
-                  ÔXE MAKER <span className="text-[#FCC140]">2026</span>
+                <h1 className="text-4xl sm:text-6xl xl:text-7xl font-heading font-black tracking-tight brand-name uppercase leading-[1.05]">
+                  ÔXE MAKER <span>2026</span>
                 </h1>
-                <p className="text-lg sm:text-xl font-heading text-[#01B1FD] tracking-wide">
+                <p className="text-lg sm:text-xl font-heading text-[#0369A1] tracking-wide">
                   Mostra de Robótica Educacional & Cultura Maker da Rede Estadual
                 </p>
               </div>
 
               {/* Destaque combinado: Tema Central + Data + Local */}
-              <div className="rounded-sm overflow-hidden border-2 border-[#FCC140]/40 maker-shadow-cyan-lg bg-[#050D34]">
-                <div className="p-5 sm:p-7 bg-gradient-to-r from-[#FCC140]/15 via-transparent to-[#01B1FD]/10 border-b-2 border-[#FCC140]/40 text-left">
-                  <span className="inline-flex items-center gap-2 text-[11px] font-mono-code text-[#FCC140] uppercase font-bold tracking-widest mb-2">
-                    <Lightbulb className="w-4 h-4" /> Tema Central 2026
-                  </span>
-                  <p className="text-lg sm:text-2xl font-heading text-white font-black leading-tight">
-                    "{EVENT_INFO.theme2026}"
-                  </p>
-                </div>
+        <div className="rounded-sm overflow-hidden border-2 border-[#FCC140] maker-shadow-yellow-lg bg-[#F9FDFE]">
+          <div className="p-5 sm:p-7 bg-gradient-to-r from-[#F9FDFE] via-[#EDF1FA] to-[#FCC140]/20 border-b-2 border-[#FCC140]/40 text-left">
+            <span className="inline-flex items-center gap-2 text-[11px] font-mono-code text-[#8A5A04] uppercase font-bold tracking-widest mb-2">
+              <Lightbulb className="w-4 h-4" /> Tema Central 2026
+            </span>
+            <p className="text-lg sm:text-2xl font-heading text-[#0B1330] font-black leading-tight">
+              "{EVENT_INFO.theme2026}"
+            </p>
+          </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 text-left">
                   <div className="flex items-center gap-3 p-5 sm:p-6 border-b sm:border-b-0 sm:border-r border-slate-700/60">
                     <div className="flex items-center justify-center w-11 h-11 shrink-0 bg-[#FCC140]/15 border-2 border-[#FCC140] rounded-sm">
-                      <Calendar className="w-5 h-5 text-[#FCC140]" />
+                      <Calendar className="w-5 h-5 text-[#8A5A04]" />
                     </div>
                     <div>
-                      <span className="block text-[10px] font-mono-code text-[#FCC140] uppercase font-bold tracking-widest mb-0.5">
+                      <span className="block text-[10px] font-mono-code text-[#8A5A04] uppercase font-bold tracking-widest mb-0.5">
                         Data
                       </span>
-                      <p className="text-base sm:text-lg font-heading text-white font-black leading-tight">
+                      <p className="text-base sm:text-lg font-heading text-[#0B1330] font-black leading-tight">
                         {EVENT_INFO.dates.display}
                       </p>
                       <p className="text-xs font-mono-code text-slate-300">{EVENT_INFO.dates.timeRange}</p>
@@ -146,13 +146,13 @@ export const HomePage: React.FC = () => {
                   </div>
                   <div className="flex items-center gap-3 p-5 sm:p-6">
                     <div className="flex items-center justify-center w-11 h-11 shrink-0 bg-[#01B1FD]/15 border-2 border-[#01B1FD] rounded-sm">
-                      <MapPin className="w-5 h-5 text-[#01B1FD]" />
+                      <MapPin className="w-5 h-5 text-[#0369A1]" />
                     </div>
                     <div>
-                      <span className="block text-[10px] font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest mb-0.5">
+                      <span className="block text-[10px] font-mono-code text-[#0369A1] uppercase font-bold tracking-widest mb-0.5">
                         Local
                       </span>
-                      <p className="text-base sm:text-lg font-heading text-white font-black leading-tight">
+                      <p className="text-base sm:text-lg font-heading text-[#0B1330] font-black leading-tight">
                         {EVENT_INFO.location.venue}
                       </p>
                       <p className="text-xs font-mono-code text-slate-300">Olinda-PE · {EVENT_INFO.location.neighborhood}</p>
@@ -173,7 +173,7 @@ export const HomePage: React.FC = () => {
 
                 <Link
                   to="/programacao"
-                  className="px-5 py-3.5 text-sm uppercase flex items-center gap-2 border-2 border-slate-600 rounded-sm text-slate-200 hover:border-[#01B1FD] hover:text-white transition-colors"
+                  className="px-5 py-3.5 text-sm uppercase flex items-center gap-2 border-2 border-slate-600 rounded-sm text-slate-200 hover:border-[#01B1FD] hover:text-[#0B1330] transition-colors"
                 >
                   <Compass className="w-4 h-4" />
                   <span>Ver Programação</span>
@@ -192,7 +192,7 @@ export const HomePage: React.FC = () => {
                       d="M 100, 100 m -75, 0 a 75,75 0 1,1 150,0 a 75,75 0 1,1 -150,0"
                       fill="none"
                     />
-                    <text className="font-heading fill-current text-white uppercase text-[15px] font-black tracking-[0.2em]">
+                    <text className="font-heading brand-name uppercase text-[15px] font-black tracking-[0.2em]">
                       <textPath href="#circlePath" startOffset="0%">
                         ÔXE MAKER 2026 • ÔXE MAKER 2026 • ÔXE MAKER 2026 •
                       </textPath>
@@ -224,10 +224,10 @@ export const HomePage: React.FC = () => {
          ===================================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-2 mb-10">
-          <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest">
+          <span className="text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-widest">
             A Força da Escola Pública
           </span>
-          <h2 className="text-3xl md:text-4xl font-heading text-white uppercase">
+          <h2 className="text-3xl md:text-4xl font-heading text-[#0B1330] uppercase">
             Números que Transformam o Futuro
           </h2>
           <p className="text-slate-400 text-sm max-w-2xl mx-auto">
@@ -240,34 +240,34 @@ export const HomePage: React.FC = () => {
           {METRICS_DATA.map((item) => (
             <div
               key={item.id}
-              className="p-5 bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm maker-shadow-yellow text-center transition-all group"
+              className="p-5 bg-[#F9FDFE] border-2 border-slate-700 hover:border-[#FCC140] rounded-sm maker-shadow-yellow text-center transition-all group"
             >
-              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold font-mono-code text-[#FCC140] group-hover:scale-105 transition-transform mb-1">
+              <div className="text-3xl sm:text-4xl lg:text-5xl font-bold font-mono-code text-[#8A5A04] group-hover:scale-105 transition-transform mb-1">
                 <AnimatedCounter value={item.value} suffix={item.suffix} />
               </div>
-              <h3 className="text-xs sm:text-sm font-bold text-white uppercase font-heading tracking-wide mb-1">
+              <h3 className="text-xs sm:text-sm font-bold text-[#0B1330] uppercase font-heading tracking-wide mb-1">
                 {item.label}
               </h3>
-              <p className="text-[11px] text-slate-400 font-sans leading-tight">
-                {item.description}
-              </p>
+            <p className="text-[11px] text-slate-400 font-sans leading-tight">
+              {item.description}
+            </p>
             </div>
           ))}
         </div>
 
         {/* 2025 Retrospective Snapshot Callout */}
-        <div className="mt-6 p-4 bg-[#0030B5]/20 border border-[#01B1FD]/40 rounded-sm flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono-code">
+        <div className="mt-6 p-4 bg-[#FCC140]/15 border border-[#FCC140]/60 rounded-sm flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono-code">
           <div className="flex items-center gap-3">
             <span className="w-3 h-3 rounded-full bg-[#FCC140] flex-shrink-0 animate-ping" />
             <p className="text-slate-200">
-              <strong className="text-[#FCC140]">Retrospectiva 2025:</strong> +70 escolas
+              <strong className="text-[#8A5A04]">Retrospectiva 2025:</strong> +70 escolas
               participantes, cerca de 2 mil estudantes no protagonismo direto e mais de 10 mil
               visitantes nos 2 dias.
             </p>
           </div>
           <Link
             to="/sobre"
-            className="text-[#01B1FD] hover:text-[#FCC140] flex items-center gap-1 font-bold flex-shrink-0"
+            className="text-[#0369A1] hover:text-[#8A5A04] flex items-center gap-1 font-bold flex-shrink-0"
           >
             <span>Conheça a história desde 2021</span>
             <ArrowRight className="w-3.5 h-3.5" />
@@ -281,17 +281,17 @@ export const HomePage: React.FC = () => {
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div>
-            <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-widest block mb-1">
+            <span className="text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-widest block mb-1">
               Pilares do Evento
             </span>
-            <h2 className="text-3xl md:text-4xl font-heading text-white uppercase">
-              O Que Rola no Ôxe Maker 2026
+            <h2 className="text-3xl md:text-4xl font-heading text-[#0B1330] uppercase">
+              O Que Rola no <span className="brand-name">Ôxe Maker</span> 2026
             </h2>
           </div>
-          <p className="text-sm text-slate-400 max-w-md">
-            Um dia intensíssimo de aprendizado mão na massa, adrenalina nas arenas de batalha e
-            celebração do protagonismo juvenil.
-          </p>
+            <p className="text-sm text-slate-400 max-w-md">
+              Um dia intensíssimo de aprendizado mão na massa, adrenalina nas arenas de batalha e
+              celebração do protagonismo juvenil.
+            </p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
@@ -302,8 +302,8 @@ export const HomePage: React.FC = () => {
             >
               <div className="space-y-4">
                 <div className="flex items-center justify-between">
-                  <div className="p-3 bg-[#050D34] border border-slate-700 rounded-sm">
-                    {iconMap[item.iconName] || <Bot className="w-6 h-6 text-[#FCC140]" />}
+                  <div className="p-3 bg-[#F1F4FB] border border-slate-700 rounded-sm">
+                    {iconMap[item.iconName] || <Bot className="w-6 h-6 text-[#8A5A04]" />}
                   </div>
                   <span className="text-[10px] font-mono-code uppercase px-2 py-0.5 rounded-sm bg-slate-800 text-slate-300 border border-slate-700">
                     {item.tag}
@@ -311,7 +311,7 @@ export const HomePage: React.FC = () => {
                 </div>
 
                 <div>
-                  <h3 className="text-xl font-heading text-white group-hover:text-[#FCC140] transition-colors mb-2">
+                  <h3 className="text-xl font-heading text-[#0B1330] group-hover:text-[#8A5A04] transition-colors mb-2">
                     {item.title}
                   </h3>
                   <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
@@ -323,7 +323,7 @@ export const HomePage: React.FC = () => {
               <div className="pt-6 mt-4 border-t border-slate-800">
                 <Link
                   to={item.link}
-                  className="inline-flex items-center gap-1.5 text-xs font-mono-code text-[#01B1FD] hover:text-[#FCC140] font-bold group-hover:translate-x-1 transition-all"
+                  className="inline-flex items-center gap-1.5 text-xs font-mono-code text-[#0369A1] hover:text-[#8A5A04] font-bold group-hover:translate-x-1 transition-all"
                 >
                   <span>Saiba Mais Detalhes</span>
                   <ArrowRight className="w-3.5 h-3.5" />
@@ -339,11 +339,11 @@ export const HomePage: React.FC = () => {
          ===================================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-2 mb-8">
-          <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest">
+          <span className="text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-widest">
             Memórias & Trajetória
           </span>
-          <h2 className="text-3xl md:text-4xl font-heading text-white uppercase">
-            Galeria Ôxe Maker (2021–2026)
+          <h2 className="text-3xl md:text-4xl font-heading text-[#0B1330] uppercase">
+            Galeria <span className="brand-name">Ôxe Maker</span> (2021–2026)
           </h2>
           <p className="text-sm text-slate-400 max-w-xl mx-auto">
             Registros marcantes de robôs em combate, oficinas cheias de entusiasmo e jovens
@@ -366,7 +366,7 @@ export const HomePage: React.FC = () => {
               className={`px-3 py-1.5 text-xs font-mono-code font-bold uppercase rounded-sm transition-all ${
                 activeGalleryCategory === tab.id
                   ? 'bg-[#FCC140] text-[#050D34] maker-shadow-cyan'
-                  : 'bg-[#1E292D] text-slate-300 hover:text-white border border-slate-700'
+                  : 'bg-[#F9FDFE] text-slate-300 hover:text-[#0B1330] border border-slate-700'
               }`}
             >
               {tab.label}
@@ -379,10 +379,10 @@ export const HomePage: React.FC = () => {
           {filteredGallery.map((item) => (
             <div
               key={item.id}
-              className="bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#01B1FD] rounded-sm p-4 transition-all hover:maker-shadow-cyan group"
+              className="bg-[#F9FDFE] border-2 border-slate-700 hover:border-[#01B1FD] rounded-sm p-4 transition-all hover:maker-shadow-cyan group"
             >
               {/* Visual illustration / photo placeholder */}
-              <div className="relative aspect-video bg-[#050D34] rounded-sm border border-slate-800 overflow-hidden mb-3">
+              <div className="relative aspect-video bg-[#F1F4FB] rounded-sm border border-slate-800 overflow-hidden mb-3">
                 {item.image ? (
                   <img
                     src={item.image}
@@ -392,13 +392,13 @@ export const HomePage: React.FC = () => {
                   />
                 ) : (
                   <>
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent pointer-events-none" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0B1330]/10 via-transparent to-transparent pointer-events-none" />
                     <div className="absolute inset-0 flex flex-col items-center justify-center p-4 text-center">
-                      <Bot className="w-10 h-10 text-[#01B1FD] mb-2 group-hover:scale-110 transition-transform" />
-                      <span className="text-[10px] font-mono-code text-[#FCC140] uppercase tracking-wider">
+                      <Bot className="w-10 h-10 text-[#0369A1] mb-2 group-hover:scale-110 transition-transform" />
+                      <span className="text-[10px] font-mono-code text-[#8A5A04] uppercase tracking-wider">
                         Edição {item.year}
                       </span>
-                      <span className="text-xs font-bold text-white z-10">{item.title}</span>
+                      <span className="text-xs font-bold text-[#0B1330] z-10">{item.title}</span>
                     </div>
                   </>
                 )}
@@ -409,7 +409,7 @@ export const HomePage: React.FC = () => {
               </p>
               <div className="flex items-center justify-between text-[10px] font-mono-code text-slate-400 border-t border-slate-800 pt-2">
                 <span>{item.caption}</span>
-                <span className="text-[#01B1FD] uppercase font-bold">{item.category}</span>
+                <span className="text-[#0369A1] uppercase font-bold">{item.category}</span>
               </div>
             </div>
           ))}
@@ -421,10 +421,10 @@ export const HomePage: React.FC = () => {
          ===================================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 border-t border-slate-800 pt-16">
         <div className="text-center space-y-2 mb-12">
-          <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-widest">
+          <span className="text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-widest">
             Aliança Pela Educação
           </span>
-          <h2 className="text-3xl md:text-4xl font-heading text-white uppercase">
+          <h2 className="text-3xl md:text-4xl font-heading text-[#0B1330] uppercase">
             Realizadores & Apoiadores Institucionais
           </h2>
           <p className="text-sm text-slate-400 max-w-2xl mx-auto">
@@ -437,7 +437,7 @@ export const HomePage: React.FC = () => {
           {SPONSORS_TIERS.map((tier, idx) => (
             <div key={idx} className="space-y-4">
               <div className="flex items-center gap-3 border-b border-slate-800 pb-2">
-                <h3 className="text-sm font-mono-code uppercase font-bold text-[#FCC140] tracking-wider">
+                <h3 className="text-sm font-mono-code uppercase font-bold text-[#8A5A04] tracking-wider">
                   {tier.tierName}
                 </h3>
                 <span className="text-xs text-slate-400 font-sans hidden sm:inline">
@@ -449,13 +449,13 @@ export const HomePage: React.FC = () => {
                 {tier.sponsors.map((sponsor, sIdx) => (
                   <div
                     key={sIdx}
-                    className="p-4 bg-[#1E292D] border border-slate-700/80 rounded-sm hover:border-[#01B1FD] transition-all flex items-center gap-3"
+                    className="p-4 bg-[#F9FDFE] border border-slate-700 rounded-sm hover:border-[#01B1FD] transition-all flex items-center gap-3"
                   >
-                    <div className="w-10 h-10 rounded-sm bg-[#050D34] border border-slate-700 flex items-center justify-center flex-shrink-0 text-[#01B1FD]">
+                    <div className="w-10 h-10 rounded-sm bg-[#F1F4FB] border border-slate-700 flex items-center justify-center flex-shrink-0 text-[#0369A1]">
                       <ShieldCheck className="w-5 h-5" />
                     </div>
                     <div>
-                      <h4 className="text-sm font-bold text-white font-sans">{sponsor.name}</h4>
+                      <h4 className="text-sm font-bold text-[#0B1330] font-sans">{sponsor.name}</h4>
                       <p className="text-xs text-slate-400 font-mono-code">{sponsor.role}</p>
                     </div>
                   </div>
@@ -472,10 +472,10 @@ export const HomePage: React.FC = () => {
       <section id="inscricoes" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div>
-            <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-widest block mb-1">
+            <span className="text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-widest block mb-1">
               Inscrições Abertas · Até 09/10/2026
             </span>
-            <h2 className="text-3xl md:text-4xl font-heading text-white uppercase">
+            <h2 className="text-3xl md:text-4xl font-heading text-[#0B1330] uppercase">
               Escolha Sua Modalidade
             </h2>
           </div>
@@ -498,18 +498,18 @@ export const HomePage: React.FC = () => {
               }
               className="maker-card p-6 rounded-sm text-left flex flex-col gap-4 group cursor-pointer"
             >
-              <div className="p-3 bg-[#050D34] border border-slate-700 rounded-sm w-fit group-hover:border-[#FCC140] transition-colors">
+              <div className="p-3 bg-[#F1F4FB] border border-slate-700 rounded-sm w-fit group-hover:border-[#FCC140] transition-colors">
                 {option.icon}
               </div>
               <div className="space-y-2 flex-1">
-                <h3 className="text-xl font-heading text-white group-hover:text-[#FCC140] transition-colors uppercase">
+                <h3 className="text-xl font-heading text-[#0B1330] group-hover:text-[#8A5A04] transition-colors uppercase">
                   {option.title}
                 </h3>
                 <p className="text-sm text-slate-400 font-sans leading-relaxed">
                   {option.description}
                 </p>
               </div>
-              <span className="inline-flex items-center gap-2 text-xs font-mono-code uppercase font-bold text-[#01B1FD] group-hover:text-[#FCC140] transition-colors">
+              <span className="inline-flex items-center gap-2 text-xs font-mono-code uppercase font-bold text-[#0369A1] group-hover:text-[#8A5A04] transition-colors">
                 Inscrever-se
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
@@ -523,10 +523,10 @@ export const HomePage: React.FC = () => {
          ===================================================================== */}
       <section className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center space-y-2 mb-10">
-          <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest">
+          <span className="text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-widest">
             Tire Suas Dúvidas
           </span>
-          <h2 className="text-3xl md:text-4xl font-heading text-white uppercase">
+          <h2 className="text-3xl md:text-4xl font-heading text-[#0B1330] uppercase">
             Perguntas Frequentes
           </h2>
         </div>
@@ -537,18 +537,18 @@ export const HomePage: React.FC = () => {
             return (
               <div
                 key={index}
-                className="bg-[#1E292D] border border-slate-700 rounded-sm overflow-hidden transition-colors"
+                className="bg-[#F9FDFE] border border-slate-700 rounded-sm overflow-hidden transition-colors"
               >
                 <button
                   type="button"
                   onClick={() => setOpenFaqIndex(isOpen ? null : index)}
-                  className="w-full p-4 text-left flex items-center justify-between gap-4 text-white font-semibold hover:text-[#FCC140] transition-colors"
+                  className="w-full p-4 text-left flex items-center justify-between gap-4 text-[#0B1330] font-semibold hover:text-[#8A5A04] transition-colors"
                   aria-expanded={isOpen}
                 >
                   <span className="text-sm sm:text-base font-sans">{item.question}</span>
                   <ChevronDown
-                    className={`w-5 h-5 text-[#01B1FD] transition-transform duration-200 flex-shrink-0 ${
-                      isOpen ? 'rotate-180 text-[#FCC140]' : ''
+                    className={`w-5 h-5 text-[#0369A1] transition-transform duration-200 flex-shrink-0 ${
+                      isOpen ? 'rotate-180 text-[#8A5A04]' : ''
                     }`}
                   />
                 </button>
@@ -568,14 +568,14 @@ export const HomePage: React.FC = () => {
           7. CTA FINAL & CONVITE
          ===================================================================== */}
       <section className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="relative overflow-hidden bg-gradient-to-r from-[#050D34] via-[#1E292D] to-[#0030B5] border-2 border-[#FCC140] rounded-sm maker-shadow-yellow-lg p-8 sm:p-12 text-center lg:text-left">
+        <div className="relative overflow-hidden bg-gradient-to-r from-[#F9FDFE] via-[#EDF1FA] to-[#0030B5]/15 border-2 border-[#FCC140] rounded-sm maker-shadow-yellow-lg p-8 sm:p-12 text-center lg:text-left">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
             <div className="lg:col-span-8 space-y-4">
-              <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#01B1FD] uppercase font-bold">
-                <CheckCircle2 className="w-4 h-4 text-[#FCC140]" />
+              <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#0369A1] uppercase font-bold">
+                <CheckCircle2 className="w-4 h-4 text-[#8A5A04]" />
                 <span>Aberto a Toda a Comunidade</span>
               </div>
-              <h2 className="text-3xl sm:text-5xl font-heading text-white uppercase leading-tight">
+              <h2 className="text-3xl sm:text-5xl font-heading text-[#0B1330] uppercase leading-tight">
                 Venha Viver o Maior Encontro Maker de Pernambuco!
               </h2>
               <p className="text-slate-300 text-sm sm:text-base max-w-2xl font-sans">

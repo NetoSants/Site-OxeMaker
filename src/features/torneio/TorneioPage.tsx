@@ -25,11 +25,11 @@ export const TorneioPage: React.FC = () => {
   const getIcon = (iconName: string) => {
     switch (iconName) {
       case 'Zap':
-        return <Zap className="w-6 h-6 text-[#FCC140]" />;
+        return <Zap className="w-6 h-6 text-[#8A5A04]" />;
       case 'Shield':
-        return <Shield className="w-6 h-6 text-[#01B1FD]" />;
+        return <Shield className="w-6 h-6 text-[#0369A1]" />;
       default:
-        return <Navigation className="w-6 h-6 text-[#FCC140]" />;
+        return <Navigation className="w-6 h-6 text-[#8A5A04]" />;
     }
   };
 
@@ -37,11 +37,11 @@ export const TorneioPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
       {/* Header */}
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
-        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-wider">
+        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-wider">
           <Bot className="w-4 h-4" />
           <span>Competições · 27 de Novembro · {EVENT_INFO.location.venue}</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
+        <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           Torneios de Robótica 2026
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
@@ -51,11 +51,11 @@ export const TorneioPage: React.FC = () => {
       </div>
 
       {/* Credentialing Notice Banner */}
-      <div className="p-4 bg-[#1E292D] border-l-4 border-[#01B1FD] border-y border-r border-slate-700/80 rounded-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
+      <div className="p-4 bg-[#F9FDFE] border-l-4 border-[#01B1FD] border-y border-r border-slate-700/80 rounded-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div className="flex items-start gap-3">
-          <AlertTriangle className="w-5 h-5 text-[#FCC140] flex-shrink-0 mt-0.5" />
+          <AlertTriangle className="w-5 h-5 text-[#8A5A04] flex-shrink-0 mt-0.5" />
           <div className="text-xs text-slate-300 space-y-0.5">
-            <span className="font-bold text-white block uppercase font-mono-code">
+            <span className="font-bold text-[#0B1330] block uppercase font-mono-code">
               Credenciamento e Regras Técnicas:
             </span>
             <p>
@@ -64,7 +64,7 @@ export const TorneioPage: React.FC = () => {
             </p>
           </div>
         </div>
-        <span className="text-xs font-mono-code text-[#01B1FD] font-bold flex-shrink-0">
+        <span className="text-xs font-mono-code text-[#0369A1] font-bold flex-shrink-0">
           Competições · 14h30 às 15h30
         </span>
       </div>
@@ -74,20 +74,20 @@ export const TorneioPage: React.FC = () => {
         {TOURNAMENTS_DATA.map((t, index) => (
           <div
             key={t.id}
-            className="bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-6 sm:p-8 transition-all hover:maker-shadow-yellow group"
+            className="bg-[#F9FDFE] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-6 sm:p-8 transition-all hover:maker-shadow-yellow group"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-6">
               {/* Left Column: Title, Category, Description + Imagem */}
               <div className="lg:col-span-8 space-y-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-3 bg-[#050D34] border border-slate-700 rounded-sm">
+                  <div className="p-3 bg-[#F1F4FB] border border-slate-700 rounded-sm">
                     {getIcon(t.icon)}
                   </div>
                   <div>
-                    <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-wider block">
+                    <span className="text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-wider block">
                       Modalidade 0{index + 1} · {t.category}
                     </span>
-                    <h2 className="text-2xl sm:text-3xl font-heading text-white group-hover:text-[#FCC140] transition-colors">
+                    <h2 className="text-2xl sm:text-3xl font-heading text-[#0B1330] group-hover:text-[#8A5A04] transition-colors">
                       {t.name}
                     </h2>
                   </div>
@@ -98,7 +98,7 @@ export const TorneioPage: React.FC = () => {
                 </p>
 
                 {t.image && (
-                  <div className="rounded-sm overflow-hidden border border-slate-700/80 bg-[#050D34]">
+                  <div className="rounded-sm overflow-hidden border border-slate-700/80 bg-[#F1F4FB]">
                     <img
                       src={t.image}
                       alt={t.name}
@@ -109,7 +109,7 @@ export const TorneioPage: React.FC = () => {
                 )}
 
                 {/* Arena details */}
-                <div className="p-3 bg-[#050D34] border border-slate-800 rounded-sm text-xs font-sans text-slate-300">
+                <div className="p-3 bg-[#F1F4FB] border border-slate-800 rounded-sm text-xs font-sans text-slate-300">
                   <strong className="text-slate-200 block font-mono-code text-[11px] uppercase mb-0.5">
                     Especificações da Arena:
                   </strong>
@@ -118,26 +118,26 @@ export const TorneioPage: React.FC = () => {
               </div>
 
               {/* Right Column: Schedule, Team, Prize, Regras & Ações */}
-              <div className="lg:col-span-4 bg-[#050D34] border border-slate-700/80 rounded-sm p-5 flex flex-col justify-between space-y-4">
+              <div className="lg:col-span-4 bg-[#F1F4FB] border border-slate-700/80 rounded-sm p-5 flex flex-col justify-between space-y-4">
                 <div className="space-y-3">
                   <div className="flex items-center justify-between text-xs font-mono-code text-slate-300 border-b border-slate-800 pb-2">
                     <span className="flex items-center gap-1.5 text-slate-400">
-                      <Clock className="w-4 h-4 text-[#FCC140]" />
+                      <Clock className="w-4 h-4 text-[#8A5A04]" />
                       Horário:
                     </span>
-                    <span className="font-bold text-white text-right">{t.scheduleTime}</span>
+                    <span className="font-bold text-[#0B1330] text-right">{t.scheduleTime}</span>
                   </div>
 
                   <div className="flex items-center justify-between text-xs font-mono-code text-slate-300 border-b border-slate-800 pb-2">
                     <span className="flex items-center gap-1.5 text-slate-400">
-                      <Users className="w-4 h-4 text-[#01B1FD]" />
+                      <Users className="w-4 h-4 text-[#0369A1]" />
                       Tamanho da Equipe:
                     </span>
-                    <span className="font-bold text-white">Até {t.maxTeamSize} integrantes</span>
+                    <span className="font-bold text-[#0B1330]">Até {t.maxTeamSize} integrantes</span>
                   </div>
 
                   <div className="text-xs text-slate-300 space-y-1">
-                    <span className="text-[11px] font-mono-code text-[#FCC140] uppercase font-bold block">
+                    <span className="text-[11px] font-mono-code text-[#8A5A04] uppercase font-bold block">
                       Premiação:
                     </span>
                     <p className="font-sans leading-tight text-slate-300">{t.prizeSummary}</p>
@@ -146,13 +146,13 @@ export const TorneioPage: React.FC = () => {
 
                 {/* Requirements bullet list */}
                 <div className="space-y-1.5 pt-3 border-t border-slate-800">
-                  <span className="text-[11px] font-mono-code text-[#FCC140] uppercase font-bold block">
+                  <span className="text-[11px] font-mono-code text-[#8A5A04] uppercase font-bold block">
                     Regras & Requisitos Principais:
                   </span>
                   <ul className="space-y-1.5 text-xs text-slate-300">
                     {t.requirements.map((req, rIdx) => (
                       <li key={rIdx} className="flex items-start gap-2">
-                        <CheckCircle2 className="w-3.5 h-3.5 text-[#01B1FD] flex-shrink-0 mt-0.5" />
+                        <CheckCircle2 className="w-3.5 h-3.5 text-[#0369A1] flex-shrink-0 mt-0.5" />
                         <span>{req}</span>
                       </li>
                     ))}
