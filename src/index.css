@@ -356,7 +356,7 @@ html.dark .brand-name {
     -1.5px 1.5px 0 #0030B5,
     1.5px -1.5px 0 #0030B5,
     -1.5px -1.5px 0 #0030B5,
-    4px 4px 0 #0030B5;
+    4px 4px 0 #001A66;
 }
 
 html.dark .group:hover .brand-name {
@@ -365,7 +365,7 @@ html.dark .group:hover .brand-name {
     -1.5px 1.5px 0 #0030B5,
     1.5px -1.5px 0 #0030B5,
     -1.5px -1.5px 0 #0030B5,
-    6px 6px 0 #0030B5;
+    6px 6px 0 #001A66;
 }
 
 html.dark .maker-card {
