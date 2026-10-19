@@ -3,6 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
 import { Menu, X, Calendar, MapPin, Sparkles, ChevronDown, ChevronRight } from 'lucide-react';
 import { RegistrationModal } from './RegistrationModal';
+import { ThemeToggle } from './ThemeToggle';
 import { EVENT_INFO } from '../core/constants';
 
 export const Navbar: React.FC = () => {
@@ -149,8 +150,9 @@ export const Navbar: React.FC = () => {
               )}
             </nav>
 
-            {/* Right Action CTA + Hamburger */}
+            {/* Right Action CTA + Theme Toggle + Hamburger */}
             <div className="flex items-center gap-3">
+              <ThemeToggle className="flex items-center justify-center w-10 h-10 border-2 border-slate-700 text-slate-300 hover:border-[#01B1FD] hover:text-[#01B1FD] rounded-sm transition-colors cursor-pointer" />
               <button
                 onClick={() => setIsRegModalOpen(true)}
                 className="hidden sm:flex maker-btn-secondary px-5 py-2.5 text-sm uppercase items-center gap-1.5 tracking-wider cursor-pointer"
