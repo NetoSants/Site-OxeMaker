@@ -34,13 +34,20 @@
 }
 
 @layer base {
+  html {
+    /* Substitui o antigo `zoom: 1.1`: escala tipografia e espaçamentos (rem)
+       sem o custo de re-renderização e sem borrar texto. */
+    font-size: 17.6px;
+    -webkit-text-size-adjust: 100%;
+    scroll-behavior: smooth;
+  }
+
   body {
     background-color: #F1F4FB; /* dark: #050D34 */
     color: #1E2C52;            /* dark: #F1F5F9 */
     font-family: var(--font-body);
-    font-size: 17px;
+    font-size: 18.7px;
     line-height: 1.7;
-    zoom: 1.1;
     overflow-x: hidden;
   }
 
@@ -234,6 +241,32 @@
   }
   to {
     transform: translateY(-150vh) rotate(22deg);
+  }
+}
+
+/* Menos glifos no celular para economizar composição */
+@media (max-width: 640px) {
+  .science-float:nth-child(n + 13) {
+    display: none;
+  }
+}
+
+/* Acessibilidade: respeita quem pediu menos movimento no sistema */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+
+  .science-float {
+    display: none;
   }
 }
 

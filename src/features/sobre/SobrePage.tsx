@@ -6,6 +6,7 @@ import {
   METRICS_DATA,
 } from '../../core/constants';
 import { AnimatedCounter } from '../../components/AnimatedCounter';
+import { img } from '../../core/images';
 import { CalangoMascot } from '../../components/CalangoMascot';
 import {
   History,
@@ -198,8 +199,12 @@ export const SobrePage: React.FC = () => {
           <div className="lg:col-span-4 flex flex-col items-center text-center space-y-3">
             <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-[#F9FDFE] border-4 border-[#FCC140] flex items-center justify-center p-1 relative maker-shadow-yellow overflow-hidden">
               <img
-                src="img/foto-lidy.jpeg"
+                src={img('foto-lidy.webp')}
                 alt={`Foto de ${FOUNDER_TRIBUTE.name}`}
+                width={288}
+                height={512}
+                loading="lazy"
+                decoding="async"
                 className="w-full h-full object-cover rounded-full"
               />
               <div className="absolute -bottom-2 bg-[#01B1FD] text-[#050D34] font-mono-code text-[10px] font-bold px-2 py-0.5 rounded-sm uppercase">

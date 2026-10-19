@@ -102,8 +102,9 @@ export const TorneioPage: React.FC = () => {
                     <img
                       src={t.image}
                       alt={t.name}
-                      className="w-full h-56 sm:h-64 lg:h-72 object-cover group-hover:scale-[1.02] transition-transform duration-300"
-                      loading="lazy"
+              className="w-full h-56 sm:h-64 lg:h-72 object-cover group-hover:scale-[1.02] transition-transform duration-300"
+              loading="lazy"
+              decoding="async"
                     />
                   </div>
                 )}

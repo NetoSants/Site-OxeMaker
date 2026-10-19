@@ -101,23 +101,23 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
               <CheckCircle2 className="w-10 h-10" />
             </div>
             <h3 className="text-2xl font-bold font-heading text-[#8A5A04]">
-              Inscrição Confirmada com Sucesso!
+              Prévia concluída — inscrição NÃO enviada
             </h3>
             <p className="text-slate-300 text-sm max-w-md mx-auto">
-              Parabéns, <strong className="text-[#0B1330]">{formData.name}</strong>! Seus dados foram
-              registrados para <strong className="text-[#0369A1]">{categoryName}</strong> no Ôxe Maker
-              2026.
+              Olá, <strong className="text-[#0B1330]">{formData.name}</strong>! Este formulário é apenas
+              uma demonstração. Para concluir sua inscrição em{' '}
+              <strong className="text-[#0369A1]">{categoryName}</strong>, use o Google Forms oficial.
             </p>
 
             <div className="p-4 bg-[#F1F4FB] border border-slate-700 rounded-sm font-mono-code text-sm">
               <span className="text-slate-400 block text-xs uppercase mb-1">
-                Protocolo Digital da Vaga
+                Protocolo de exemplo (não válido)
               </span>
               <span className="text-lg font-bold text-[#8A5A04] tracking-widest">
                 {protocolNumber}
               </span>
               <span className="text-xs text-slate-400 block mt-1">
-                Apresente este código ou seu documento no credenciamento em 27/11/2026.
+                Nenhum dado foi salvo ou enviado. A confirmação só existe pelo formulário oficial.
               </span>
             </div>
 
@@ -181,7 +181,7 @@ export const RegistrationModal: React.FC<RegistrationModalProps> = ({
             <div className="border-t border-slate-700/80 pt-4">
               <div className="flex items-center justify-between mb-3">
                 <span className="text-xs font-mono-code uppercase font-bold text-[#8A5A04]">
-                  Ou inscreva-se direto por aqui:
+                  Prévia do formulário (não envia inscrição):
                 </span>
                 <span className="text-[11px] font-mono-code text-slate-400">Até 09/10/2026</span>
               </div>

@@ -12,6 +12,7 @@ import {
   SponsorTier,
   GalleryItem,
 } from './types';
+import { img } from './images';
 
 /**
  * ============================================================================
@@ -328,7 +329,7 @@ export const TOURNAMENTS_DATA: RoboticsTournament[] = [
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSdFEmR2FsT9fwvZZjLlXCztOeZimsvnidaMZOBrRYKDA3u_Kg/viewform',
     prizeSummary: '1º, 2º e 3º Lugares com Troféu Maker 3D, medalhas e Kits de Sensores Analógicos e Digitais.',
     icon: 'Navigation',
-    image: 'img/buzzline.png',
+    image: img('buzzline.webp'),
   },
   {
     id: 'buzz-pro',
@@ -348,7 +349,7 @@ export const TOURNAMENTS_DATA: RoboticsTournament[] = [
     registrationUrl: 'https://forms.gle/oxemaker2026-buzzpro',
     prizeSummary: 'Troféus, medalhas e kits de componentes eletrônicos para os vencedores.',
     icon: 'Zap',
-    image: 'img/buzzpro.png',
+    image: img('buzzpro.webp'),
   },
   {
     id: 'sumo',
@@ -368,7 +369,7 @@ export const TOURNAMENTS_DATA: RoboticsTournament[] = [
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSeOckNfYCA_BdjSqGzWB88LSFskNIXUzmN4hGjTZ1QBykE2VQ/viewform',
     prizeSummary: 'Troféus dos Guerreiros do Mangue, motores de alto torque N20 e pontes H profissionais.',
     icon: 'Shield',
-    image: 'img/sumo.png',
+    image: img('sumo.webp'),
   },
 ];
 
@@ -400,7 +401,7 @@ export const GEEK_CATEGORIES: GeekCategory[] = [
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSd4R3JcsSD_8gPA9DwBJ3HMes4C9Z5YwhQk57AadqcZn6wGug/viewform',
     rulesPdfUrl: '#regulamento-cosplay',
     prizes: '1º Lugar: R$ 800 em vales geek + Troféu Calango Dourado; 2º e 3º Lugares: Vales e Colecionáveis.',
-    image: 'img/calango-cosplay.jpeg',
+    image: img('calango-cosplay.webp'),
   },
   {
     id: 'kpop',
@@ -423,7 +424,7 @@ export const GEEK_CATEGORIES: GeekCategory[] = [
     registrationUrl: 'https://forms.gle/oxemaker2026-kpop',
     rulesPdfUrl: '#regulamento-kpop',
     prizes: 'Troféus para Campeão Solo e Campeão Grupo + Vales em lojas de dança e kits culturais.',
-    image: 'img/k-pop.png',
+    image: img('k-pop.webp'),
   },
   {
     id: 'justdance',
@@ -445,7 +446,7 @@ export const GEEK_CATEGORIES: GeekCategory[] = [
     registrationUrl: 'https://forms.gle/oxemaker2026-justdance',
     rulesPdfUrl: '#regulamento-justdance',
     prizes: 'Medalhas Oficiais Ôxe Maker e brindes temáticos para os 4 maiores pontuadores do dia.',
-    image: 'img/calango-just.jpeg',
+    image: img('calango-just.webp'),
   },
 ];
 
@@ -476,7 +477,7 @@ export const OXETHON_INFO: OxethonInfo = {
     'O Ôxethon é a maratona de desenvolvimento e criação do Ôxe-Maker. Durante 48 horas, equipes multidisciplinares trabalham intensamente para criar soluções tecnológicas que impactem positivamente a comunidade local. É o lugar onde o código encontra a realidade e a inovação acontece na prática.',
   registrationUrl: 'https://forms.gle/oxemaker2026-oficineiros',
   regulationsUrl: '#regulamento-oxethon',
-  image: 'img/oxethon.png',
+  image: img('oxethon.webp'),
 };
 
 /**
@@ -660,7 +661,7 @@ export const FOUNDER_TRIBUTE: FounderTribute = {
     'Lidyane Lira é a fundadora do Ôxe Maker, a Mostra de Robótica Educacional da GRE Metropolitana Norte que, desde 2021, leva robótica, cultura maker e protagonismo juvenil para as escolas da rede pública de Pernambuco.',
     'Sua dedicação é a bússola ética e pedagógica de cada edição do evento, que em 2026 chega à sua 6ª edição.',
   ],
-  imagePlaceholder: '/img/homenagem-lidyane.svg',
+  imagePlaceholder: img('foto-lidy.webp'),
 };
 
 /**
@@ -705,7 +706,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     category: 'competicoes',
     description: 'Momento decisivo entre os robôs autônomos da EREM Olinda e ETE Paulista no ginásio lotado.',
     caption: 'Foto: Arquivo GRE Metro Norte 2025',
-    image: 'img/logo06oxemaker.jpeg',
+    image: img('logo06oxemaker.webp'),
   },
   {
     id: 'gal-2',
@@ -714,7 +715,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     category: 'oficinas',
     description: 'Estudantes do ensino fundamental testando sensores de luz LDR durante a oficina prática de Arduino.',
     caption: 'Foto: Laboratório Maker Ôxe Maker',
-    image: 'img/logoOxemaker05.jpeg',
+    image: img('logoOxemaker05.webp'),
   },
   {
     id: 'gal-3',
@@ -723,7 +724,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     category: 'geek',
     description: 'O palco do pátio reuniu caracterizações marcantes inspiradas em jogos e heróis da ficção científica.',
     caption: 'Foto: Palco Geek Ôxe Maker',
-    image: 'img/oxemakerlogo2024.jpeg',
+    image: img('oxemakerlogo2024.webp'),
   },
   {
     id: 'gal-4',
@@ -732,7 +733,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     category: 'projetos',
     description: 'Robôs construídos com coolers de computador e caixas de leite demonstrando a força do lixo zero.',
     caption: 'Foto: Mostra Científica 2023',
-    image: 'img/oxemaker-logo01.jpeg',
+    image: img('oxemaker-logo01.webp'),
   },
   {
     id: 'gal-5',
@@ -741,7 +742,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     category: 'competicoes',
     description: 'Concentração absoluta dos jovens pilotos antes de acionar a chave táctil do robô seguidor.',
     caption: 'Foto: Pista Alfa de Robótica',
-    image: 'img/logo01oxemaker.jpeg',
+    image: img('logo01oxemaker.webp'),
   },
   {
     id: 'gal-6',
@@ -750,7 +751,7 @@ export const GALLERY_DATA: GalleryItem[] = [
     category: 'competicoes',
     description: 'Equipes de 12 escolas diferentes comemorando juntas com os troféus ecológicos feitos em 3D.',
     caption: 'Foto: Cerimônia de Premiação 2025',
-    image: 'img/logooxemaker02.jpeg',
+    image: img('logooxemaker02.webp'),
   },
 ];
 

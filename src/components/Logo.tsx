@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { img } from '../core/images';
 
 interface LogoProps {
   className?: string;
@@ -41,8 +42,11 @@ export const Logo: React.FC<LogoProps> = ({
           className={`relative flex-shrink-0 transition-transform group-hover:rotate-6 ${mascotSizes[size]}`}
         >
           <img
-            src="img/calango-logo.png"
+            src={img('calango-logo.webp')}
             alt="Calango Maker · mascote do Ôxe Maker"
+            width={512}
+            height={413}
+            decoding="async"
             className="w-full h-full object-contain"
           />
         </div>

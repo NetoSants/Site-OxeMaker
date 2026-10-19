@@ -90,8 +90,9 @@ export const GeekPage: React.FC = () => {
                   <img
                     src={cat.image}
                     alt={cat.name}
-                    className="w-full h-40 object-cover group-hover:scale-[1.02] transition-transform"
-                    loading="lazy"
+              className="w-full h-40 object-cover group-hover:scale-[1.02] transition-transform"
+              loading="lazy"
+              decoding="async"
                   />
                 </div>
               )}

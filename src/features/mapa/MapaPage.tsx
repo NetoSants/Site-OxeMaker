@@ -134,6 +134,7 @@ export const MapaPage: React.FC = () => {
               className="w-full h-full min-h-[300px] border-0"
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
+              sandbox="allow-scripts allow-same-origin allow-popups"
             />
           </div>
         </div>

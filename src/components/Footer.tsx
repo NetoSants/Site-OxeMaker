@@ -2,6 +2,7 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import { Logo } from './Logo';
 import { EVENT_INFO } from '../core/constants';
+import { img } from '../core/images';
 import { MapPin, Mail, Phone, ExternalLink, Heart, ShieldCheck, Calendar } from 'lucide-react';
 
 export const Footer: React.FC = () => {
@@ -159,10 +160,13 @@ export const Footer: React.FC = () => {
           {/* Logos brancos ("claras") sobre plaque escuro para manter visibilidade no footer claro */}
           <div className="bg-[#0B1330] px-4 py-2.5 rounded-sm border border-[#01B1FD]/25">
             <img
-              src="img/logos-claras.png"
+              src={img('logos-claras.webp')}
               alt="Logos dos parceiros do Ôxe Maker"
-              className="max-h-10 object-contain"
+              width={900}
+              height={157}
+              className="max-h-10 w-auto object-contain"
               loading="lazy"
+              decoding="async"
             />
           </div>
           <p className="flex items-center gap-1.5">

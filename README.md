@@ -64,14 +64,16 @@ O site é publicado automaticamente em **`https://netosants.github.io/Site-OxeMa
 O código foi organizado em camadas modulares para facilitar manutenções futuras sem tocar na estrutura do JSX:
 
 ```text
-├── index.html                   # HTML base com fontes e tags OpenGraph/SEO
-├── metadata.json                # Metadados do applet
+├── index.html                   # HTML base com tags OpenGraph/SEO
 ├── public/
-│   └── img/                     # Imagens locais e placeholders (com guia LEIA-ME.txt)
+│   └── editais/                 # PDFs dos editais para download
 └── src/
     ├── core/                    # DADOS CENTRALIZADOS (FONTE ÚNICA DA VERDADE)
     │   ├── types.ts             # Interfaces TypeScript de todo o evento
+    │   ├── images.ts            # Resolve as imagens WebP de src/assets/img
     │   └── constants.ts         # TODOS OS TEXTOS, DATAS, LINKS E TABELAS EDITÁVEIS
+    ├── assets/
+    │   └── img/                 # Imagens otimizadas em WebP (~474 KB no total)
 │   ├── components/             # Componentes reutilizáveis
     │   │   ├── Navbar.tsx          # Cabeçalho responsivo com menu mobile animado
     │   │   ├── Footer.tsx          # Rodapé compacto com slogan, tema e parceiros

@@ -115,8 +115,9 @@ export const OxethonPage: React.FC = () => {
           <img
             src={OXETHON_INFO.image}
             alt="Hackathon Oxethon Ôxe Maker"
-            className="w-full h-56 md:h-64 object-cover rounded-sm border border-slate-700/80"
-            loading="lazy"
+              className="w-full h-56 md:h-64 object-cover rounded-sm border border-slate-700/80"
+              loading="lazy"
+              decoding="async"
           />
         </div>
       </div>

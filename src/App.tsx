@@ -3,18 +3,33 @@
  * SPDX-License-Identifier: Apache-2.0
  */
 
-import React from 'react';
+import React, { lazy } from 'react';
 import { HashRouter, Routes, Route, Navigate, Link } from 'react-router-dom';
 import { MainLayout } from './components/MainLayout';
 import { HomePage } from './features/home/HomePage';
-import { ProgramacaoPage } from './features/programacao/ProgramacaoPage';
-import { MapaPage } from './features/mapa/MapaPage';
-import { TorneioPage } from './features/torneio/TorneioPage';
-import { GeekPage } from './features/geek/GeekPage';
-import { OxethonPage } from './features/oxethon/OxethonPage';
-import { OficinasPage } from './features/oficinas/OficinasPage';
-import { SobrePage } from './features/sobre/SobrePage';
 import { Bot, ArrowLeft } from 'lucide-react';
+
+const ProgramacaoPage = lazy(() =>
+  import('./features/programacao/ProgramacaoPage').then((m) => ({ default: m.ProgramacaoPage })),
+);
+const MapaPage = lazy(() =>
+  import('./features/mapa/MapaPage').then((m) => ({ default: m.MapaPage })),
+);
+const TorneioPage = lazy(() =>
+  import('./features/torneio/TorneioPage').then((m) => ({ default: m.TorneioPage })),
+);
+const GeekPage = lazy(() =>
+  import('./features/geek/GeekPage').then((m) => ({ default: m.GeekPage })),
+);
+const OxethonPage = lazy(() =>
+  import('./features/oxethon/OxethonPage').then((m) => ({ default: m.OxethonPage })),
+);
+const OficinasPage = lazy(() =>
+  import('./features/oficinas/OficinasPage').then((m) => ({ default: m.OficinasPage })),
+);
+const SobrePage = lazy(() =>
+  import('./features/sobre/SobrePage').then((m) => ({ default: m.SobrePage })),
+);
 
 const NotFoundPage: React.FC = () => (
   <div className="max-w-2xl mx-auto px-4 py-24 text-center space-y-6">

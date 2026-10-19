@@ -9,6 +9,7 @@ import {
   FAQ_DATA,
 } from '../../core/constants';
 import { CountdownTimer } from '../../components/CountdownTimer';
+import { img } from '../../core/images';
 import { AnimatedCounter } from '../../components/AnimatedCounter';
 import { RegistrationModal } from '../../components/RegistrationModal';
 import {
@@ -205,7 +206,11 @@ export const HomePage: React.FC = () => {
                   <img
                     alt="Calango Maker"
                     className="w-full h-full object-contain drop-shadow-2xl"
-                    src="img/calango-logo.png"
+                    src={img('calango-logo.webp')}
+                    width={512}
+                    height={413}
+                    fetchPriority="high"
+                    decoding="async"
                   />
                 </div>
               </div>
@@ -389,6 +394,7 @@ export const HomePage: React.FC = () => {
                     alt={item.title}
                     className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
                     loading="lazy"
+                    decoding="async"
                   />
                 ) : (
                   <>

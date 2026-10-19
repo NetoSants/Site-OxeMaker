@@ -1,6 +1,0 @@
-{
-  "name": "Ôxe Maker 2026",
-  "description": "Site oficial do Ôxe Maker 2026 - Mostra de Robótica Educacional e Cultura Maker/Geek da GRE Metropolitana Norte de Pernambuco.",
-  "requestFramePermissions": [],
-  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
-}
