@@ -25,7 +25,7 @@ const SCIENCE_GLYPHS = Array.from({ length: 200 }, (_, i) => {
   const dur = 22 + ((i * 11) % 24);
   const delay = -(((i * 13) % 46)) - (((i * 7) % 10) * 0.3);
   const color = i % 3 === 1 ? '#FCC140' : '#01B1FD';
-  const opacity = 0.10 + ((i * 5) % 7) * 0.01;
+  const opacity = 0.16 + ((i * 5) % 7) * 0.02;
   return { Icon, left, cls: `w-${sizeGap} h-${sizeGap}`, dur, delay, color, opacity };
 });
 
@@ -64,11 +64,11 @@ export const MainLayout: React.FC = () => {
   }, []);
 
   return (
-    <div className="isolate min-h-screen flex flex-col bg-blueprint text-slate-100 selection:bg-[#FCC140] selection:text-[#050D34]">
-      {/* Fundo fixo: glow central + azul clarinho + glifos de ciência flutuantes */}
+    <div className={`isolate min-h-screen flex flex-col bg-blueprint text-slate-100 selection:bg-[#FCC140] selection:text-[#050D34]`}>
+      {/* Fundo fixo: glow central + cor de ambiente + glifos de ciência flutuantes */}
       <div aria-hidden className="fixed inset-0 z-[-1] pointer-events-none">
-        <div className="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] bg-[#0030B5]/20 blur-[120px] rounded-full" />
-        <div className="absolute inset-0 bg-[#01B1FD] opacity-15" />
+        <div className={`absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[300px] blur-[120px] rounded-full bg-[#0030B5]/20`} />
+        <div className={`absolute inset-0 bg-[#01B1FD] opacity-[0.06]`} />
         <div className="absolute inset-0 overflow-hidden">
           {SCIENCE_GLYPHS.map((g, i) => (
             <span

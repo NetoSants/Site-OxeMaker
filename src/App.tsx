@@ -18,14 +18,14 @@ import { Bot, ArrowLeft } from 'lucide-react';
 
 const NotFoundPage: React.FC = () => (
   <div className="max-w-2xl mx-auto px-4 py-24 text-center space-y-6">
-    <div className="w-20 h-20 mx-auto rounded-full bg-[#1E292D] border-2 border-[#FCC140] flex items-center justify-center text-[#FCC140] maker-shadow-yellow">
+    <div className="w-20 h-20 mx-auto rounded-full bg-[#F9FDFE] border-2 border-[#FCC140] flex items-center justify-center text-[#8A5A04] maker-shadow-yellow">
       <Bot className="w-10 h-10" />
     </div>
     <div className="space-y-2">
-      <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest">
+      <span className="text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-widest">
         Erro 404 · Circuito Desconectado
       </span>
-      <h1 className="text-4xl font-heading text-white uppercase">Página Não Encontrada</h1>
+      <h1 className="text-4xl font-heading text-[#0B1330] uppercase">Página Não Encontrada</h1>
       <p className="text-sm text-slate-300 font-sans">
         Ôxe! Parece que este caminho na pista do seguidor de linha não existe ou foi movido.
       </p>

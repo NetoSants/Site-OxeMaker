@@ -3,6 +3,7 @@ import { NavLink, useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
 import { Menu, X, Calendar, MapPin, Sparkles, ChevronDown, ChevronRight } from 'lucide-react';
 import { RegistrationModal } from './RegistrationModal';
+import { ThemeToggle } from './ThemeToggle';
 import { EVENT_INFO } from '../core/constants';
 
 export const Navbar: React.FC = () => {
@@ -53,25 +54,25 @@ export const Navbar: React.FC = () => {
       <header
         className={`fixed top-0 left-0 right-0 z-40 transition-all duration-200 shadow-lg shadow-black/40 ${
           scrolled
-            ? 'bg-[#16204F]/95 backdrop-blur-md border-b-2 border-[#01B1FD]/30'
-            : 'bg-[#16204F]/90 backdrop-blur-sm border-b border-slate-700'
+            ? 'bg-[#F1F4FB]/95 backdrop-blur-md border-b-2 border-[#01B1FD]/30'
+            : 'bg-[#F1F4FB]/90 backdrop-blur-sm border-b border-slate-700'
         }`}
       >
         {/* Top Info Micro-Bar */}
         <div className="hidden lg:flex items-center justify-between px-6 py-1 bg-[#0030B5]/30 border-b border-[#01B1FD]/15 text-[11px] font-mono-code text-slate-300">
           <div className="flex items-center gap-4">
-            <span className="flex items-center gap-1.5 text-[#FCC140]">
+            <span className="flex items-center gap-1.5 text-[#8A5A04]">
               <Calendar className="w-3.5 h-3.5" />
               <span>{EVENT_INFO.dates.display} · {EVENT_INFO.dates.timeRange}</span>
             </span>
             <span className="text-slate-500">·</span>
             <span className="flex items-center gap-1.5 text-slate-300">
-              <MapPin className="w-3.5 h-3.5 text-[#01B1FD]" />
+              <MapPin className="w-3.5 h-3.5 text-[#0369A1]" />
               <span>{EVENT_INFO.location.venue} · Olinda-PE</span>
             </span>
           </div>
           <div className="flex items-center gap-3">
-            <span className="text-emerald-400 font-semibold">● Inscrições até 09/10</span>
+            <span className="text-emerald-700 font-semibold">● Inscrições até 09/10</span>
             <span className="text-slate-500">·</span>
             <span className="text-slate-400">GRE Metropolitana Norte</span>
           </div>
@@ -94,8 +95,8 @@ export const Navbar: React.FC = () => {
                     <span
                       className={`group/btn relative flex items-center gap-1.5 py-5 transition-colors cursor-pointer ${
                         isChildActive(link.children)
-                          ? 'text-[#FCC140]'
-                          : 'text-white hover:text-[#FCC140]'
+                          ? 'text-[#8A5A04]'
+                          : 'text-[#0B1330] hover:text-[#8A5A04]'
                       }`}
                     >
                       <span className="group-hover:translate-x-1 transition-transform whitespace-nowrap">
@@ -107,7 +108,7 @@ export const Navbar: React.FC = () => {
                       )}
                     </span>
                     <div className="absolute left-1/2 -translate-x-1/2 top-full pt-2 w-52 opacity-0 invisible translate-y-1 group-hover:opacity-100 group-hover:visible group-hover:translate-y-0 transition-all duration-150 z-50">
-                      <div className="bg-[#16204F] border-2 border-[#FCC140] shadow-[6px_6px_0px_#0030B5] p-1.5 space-y-0.5">
+                      <div className="bg-[#F1F4FB] border-2 border-[#FCC140] shadow-[6px_6px_0px_#0030B5] p-1.5 space-y-0.5">
                         {link.children.map((child) => (
                           <NavLink
                             key={child.path}
@@ -117,7 +118,7 @@ export const Navbar: React.FC = () => {
                               `flex items-center justify-between px-3 py-2 text-xs font-mono-code uppercase tracking-wider transition-colors ${
                                 isActive
                                   ? 'bg-[#FCC140] text-[#050D34]'
-                                  : 'text-slate-200 hover:bg-slate-800/80 hover:text-[#FCC140]'
+                                  : 'text-slate-200 hover:bg-slate-800/80 hover:text-[#8A5A04]'
                               }`
                             }
                           >
@@ -133,7 +134,7 @@ export const Navbar: React.FC = () => {
                     {({ isActive }) => (
                       <span
                         className={`group relative flex items-center py-5 transition-colors cursor-pointer ${
-                          isActive ? 'text-[#FCC140]' : 'text-white hover:text-[#FCC140]'
+                          isActive ? 'text-[#8A5A04]' : 'text-[#0B1330] hover:text-[#8A5A04]'
                         }`}
                       >
                         <span className="group-hover:translate-x-1 transition-transform whitespace-nowrap">
@@ -149,8 +150,9 @@ export const Navbar: React.FC = () => {
               )}
             </nav>
 
-            {/* Right Action CTA + Hamburger */}
+            {/* Right Action CTA + Theme Toggle + Hamburger */}
             <div className="flex items-center gap-3">
+              <ThemeToggle className="flex items-center justify-center w-10 h-10 border-2 border-slate-700 text-slate-300 hover:border-[#01B1FD] hover:text-[#01B1FD] rounded-sm transition-colors cursor-pointer" />
               <button
                 onClick={() => setIsRegModalOpen(true)}
                 className="hidden sm:flex maker-btn-secondary px-5 py-2.5 text-sm uppercase items-center gap-1.5 tracking-wider cursor-pointer"
@@ -161,11 +163,11 @@ export const Navbar: React.FC = () => {
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
-                className="lg:hidden p-2 text-slate-300 hover:text-white hover:bg-slate-800 rounded-sm focus:outline-none focus:ring-2 focus:ring-[#FCC140]"
+                className="lg:hidden p-2 text-slate-300 hover:text-[#0B1330] hover:bg-slate-800 rounded-sm focus:outline-none focus:ring-2 focus:ring-[#FCC140]"
                 aria-label={isOpen ? 'Fechar menu' : 'Abrir menu de navegação'}
                 aria-expanded={isOpen}
               >
-                {isOpen ? <X className="w-6 h-6 text-[#FCC140]" /> : <Menu className="w-6 h-6" />}
+                {isOpen ? <X className="w-6 h-6 text-[#8A5A04]" /> : <Menu className="w-6 h-6" />}
               </button>
             </div>
           </div>
@@ -173,8 +175,8 @@ export const Navbar: React.FC = () => {
 
         {/* Mobile Navigation Drawer */}
         {isOpen && (
-          <div className="lg:hidden bg-[#16204F] border-b-2 border-[#FCC140] px-4 pt-3 pb-6 space-y-1 shadow-2xl animate-in slide-in-from-top duration-200">
-            <div className="p-2 mb-2 bg-[#1E292D] border border-slate-700 rounded-sm text-xs font-mono-code text-slate-300">
+          <div className="lg:hidden bg-[#F1F4FB] border-b-2 border-[#FCC140] px-4 pt-3 pb-6 space-y-1 shadow-2xl animate-in slide-in-from-top duration-200">
+            <div className="p-2 mb-2 bg-[#F9FDFE] border border-slate-700 rounded-sm text-xs font-mono-code text-slate-300">
               <p className="brand-name font-bold">Ôxe Maker 2026 · 6ª Edição</p>
               <p className="text-[11px] text-slate-400">{EVENT_INFO.dates.display} · {EVENT_INFO.location.venue}</p>
             </div>
@@ -182,7 +184,7 @@ export const Navbar: React.FC = () => {
             {navLinks.map((link) =>
               'children' in link ? (
                 <div key={link.label}>
-                  <div className="flex items-center justify-between px-3 py-2.5 text-sm font-bold text-[#01B1FD]">
+                  <div className="flex items-center justify-between px-3 py-2.5 text-sm font-bold text-[#0369A1]">
                     <span>{link.label}</span>
                     <ChevronDown className="w-4 h-4 opacity-50" />
                   </div>
@@ -195,7 +197,7 @@ export const Navbar: React.FC = () => {
                         `flex items-center justify-between pl-6 pr-3 py-2.5 text-sm font-bold rounded-sm transition-all ${
                           isActive
                             ? 'bg-[#FCC140] text-[#050D34] shadow-[3px_3px_0px_#0030B5]'
-                            : 'text-slate-200 hover:bg-slate-800/80 hover:text-[#FCC140]'
+                            : 'text-slate-200 hover:bg-slate-800/80 hover:text-[#8A5A04]'
                         }`
                       }
                     >
@@ -213,7 +215,7 @@ export const Navbar: React.FC = () => {
                     `flex items-center justify-between px-3 py-2.5 text-sm font-bold rounded-sm transition-all ${
                       isActive
                         ? 'bg-[#FCC140] text-[#050D34] shadow-[3px_3px_0px_#0030B5]'
-                        : 'text-slate-200 hover:bg-slate-800/80 hover:text-[#FCC140]'
+                        : 'text-slate-200 hover:bg-slate-800/80 hover:text-[#8A5A04]'
                     }`
                   }
                 >

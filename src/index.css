@@ -1,20 +1,42 @@
 ﻿@import "tailwindcss";
 
-@layer base {
-  :root {
-    --color-oxe-navy: #050D34;
-    --color-oxe-yellow: #FCC140;
-    --color-oxe-cyan: #01B1FD;
-    --color-oxe-blue: #0030B5;
-    --color-oxe-card: #1E292D;
-    --font-heading: 'Londrina Solid', sans-serif;
-    --font-mono: 'Space Mono', monospace;
-    --font-body: 'Inter', sans-serif;
-  }
+/* ============================================================================
+   TEMA CLARO (teste) — luminosidade invertida preservando o DNA "maker".
+   Valores do tema escuro original documentados ao lado de cada token para
+   facilitar a reversão (trocar de volta pelos valores "dark:").
+   ============================================================================ */
+@theme static {
+  /* Superfícies */
+  --color-oxe-navy: #F1F4FB;   /* dark: #050D34 — papel azulado, mesmo matiz do navy (não branco puro) */
+  --color-oxe-yellow: #FCC140; /* inalterado — acento primário (fills, bordas, sombras) */
+  --color-oxe-cyan: #01B1FD;   /* inalterado — acento secundário (fills, bordas, sombras) */
+  --color-oxe-blue: #0030B5;   /* inalterado — texto/links em fundo claro: 8.6:1 */
+  --color-oxe-card: #F9FDFE;   /* dark: #1E292D — branco com leve tinta ciano (matiz do card original) */
 
+  /* Variantes de TEXTO dos acentos, escurecidas no mesmo matiz (WCAG AA ≥4.5:1 sobre #F1F4FB) */
+  --color-oxe-yellow-text: #8A5A04; /* dark: #FCC140 — ocre 38° (marca 41°), 5.4:1 */
+  --color-oxe-cyan-text: #0369A1;   /* dark: #01B1FD — azul-ciano 203° (marca 199°), 5.1:1 */
+
+  /* Escala slate re-mapeada: textos escuros (100–500), bordas/superfícies claras (600–900) */
+  --color-slate-100: #1E2C52; /* dark: #F1F5F9 */
+  --color-slate-200: #344266; /* dark: #E2E8F0 */
+  --color-slate-300: #465578; /* dark: #CBD5E1 (override #E8EDF4) */
+  --color-slate-400: #5D6B8C; /* dark: #94A3B8 (override #D3DBE7) */
+  --color-slate-500: #6E7C9C; /* dark: #64748B */
+  --color-slate-600: #8B98B4; /* dark: #475569 */
+  --color-slate-700: #B9C4D8; /* dark: #334155 — borda principal de cards */
+  --color-slate-800: #D0D8E7; /* dark: #1E293B — bordas internas */
+  --color-slate-900: #E9EEF7; /* dark: #0F172A — superfícies "inset" claras */
+
+  --font-heading: 'Londrina Solid', sans-serif;
+  --font-mono: 'Space Mono', monospace;
+  --font-body: 'Inter', sans-serif;
+}
+
+@layer base {
   body {
-    background-color: #050D34;
-    color: #F1F5F9;
+    background-color: #F1F4FB; /* dark: #050D34 */
+    color: #1E2C52;            /* dark: #F1F5F9 */
     font-family: var(--font-body);
     font-size: 17px;
     line-height: 1.7;
@@ -38,19 +60,20 @@
   }
 }
 
-/* Blueprint subtle background pattern */
+/* Blueprint subtle background pattern — linhas adaptadas para fundo claro
+   (dark: linhas rgba(1,177,253,.07) cyan / rgba(252,193,64,.04) amarelo) */
 .bg-blueprint {
-  background-color: #050D34;
+  background-color: #F1F4FB;
   background-image: 
-    linear-gradient(rgba(1, 177, 253, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(1, 177, 253, 0.07) 1px, transparent 1px),
-    linear-gradient(rgba(252, 193, 64, 0.04) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(252, 193, 64, 0.04) 1px, transparent 1px);
+    linear-gradient(rgba(0, 48, 181, 0.055) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 48, 181, 0.055) 1px, transparent 1px),
+    linear-gradient(rgba(252, 193, 64, 0.10) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(252, 193, 64, 0.10) 1px, transparent 1px);
   background-size: 80px 80px, 80px 80px, 20px 20px, 20px 20px;
   background-position: -1px -1px, -1px -1px, -1px -1px, -1px -1px;
 }
 
-/* Maker solid offset shadows */
+/* Maker solid offset shadows — inalteradas: neon colorido sobre papel claro */
 .maker-shadow-yellow {
   box-shadow: 4px 4px 0px 0px #FCC140;
 }
@@ -74,7 +97,7 @@
 /* Tactile press-down buttons */
 .maker-btn-primary {
   background-color: #FCC140;
-  color: #050D34;
+  color: #050D34; /* navy sobre amarelo: 7.9:1 — inalterado */
   font-family: 'Space Mono', monospace;
   font-weight: 700;
   border: 2px solid #FCC140;
@@ -94,10 +117,10 @@
 
 .maker-btn-secondary {
   background-color: transparent;
-  color: #01B1FD;
+  color: #0369A1; /* dark: #01B1FD — texto ciano escurecido para AA sobre fundo claro */
   font-family: 'Space Mono', monospace;
   font-weight: 700;
-  border: 2px solid #01B1FD;
+  border: 2px solid #01B1FD; /* borda acento inalterada (identidade) */
   box-shadow: 4px 4px 0px #FCC140;
   transition: all 0.15s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -113,10 +136,10 @@
   box-shadow: 2px 2px 0px #FCC140;
 }
 
-/* Card maker styling */
+/* Card maker styling — superfície clara, borda com tinta do navy */
 .maker-card {
-  background-color: #1E292D;
-  border: 2px solid rgba(255, 255, 255, 0.12);
+  background-color: #F9FDFE; /* dark: #1E292D */
+  border: 2px solid rgba(5, 13, 52, 0.14); /* dark: rgba(255,255,255,0.12) */
   transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
 }
 
@@ -133,26 +156,26 @@
   text-transform: uppercase;
 }
 
-/* Nome "Ôxe Maker" — lettering padronizado: branco #FFFFFF com contorno azul
-   (#0030B5) e sombra deslocada azul mais escura (#001A66). */
+/* Nome "Ôxe Maker" — branco pastel puxado pro amarelo + contorno/sombra quente (fuga do azul).
+   dark: fill #FCC140 com drop-shadow #0030B5 · light: ocre #8A5A04 */
 .brand-name {
-  color: #FFFFFF;
+  color: #FFF9E1;
   fill: currentColor;
   text-shadow:
-    1.5px 1.5px 0 #0030B5,
-    -1.5px 1.5px 0 #0030B5,
-    1.5px -1.5px 0 #0030B5,
-    -1.5px -1.5px 0 #0030B5,
-    4px 4px 0 #001A66;
+    1.5px 1.5px 0 #8A5A04,
+    -1.5px 1.5px 0 #8A5A04,
+    1.5px -1.5px 0 #8A5A04,
+    -1.5px -1.5px 0 #8A5A04,
+    4px 4px 0 #8A5A04;
 }
 
 .group:hover .brand-name {
   text-shadow:
-    1.5px 1.5px 0 #0030B5,
-    -1.5px 1.5px 0 #0030B5,
-    1.5px -1.5px 0 #0030B5,
-    -1.5px -1.5px 0 #0030B5,
-    6px 6px 0 #001A66;
+    1.5px 1.5px 0 #8A5A04,
+    -1.5px 1.5px 0 #8A5A04,
+    1.5px -1.5px 0 #8A5A04,
+    -1.5px -1.5px 0 #8A5A04,
+    6px 6px 0 #8A5A04;
 }
 
 /* Rotacao lenta do texto circular da logo (20s por volta) */
@@ -192,9 +215,10 @@
   animation: page-enter-fade 0.3s ease-out;
 }
 
-/* Legibilidade: textos secundarios mais claros (ganham das utilities do tailwind por serem nao-layered) */
-.text-slate-300 { color: #E8EDF4; }
-.text-slate-400 { color: #D3DBE7; }
+/* Legibilidade (tema claro): textos secundários escuros (ganham das utilities do tailwind por serem nao-layered)
+   Overrides do tema escuro: .text-slate-300 { color: #E8EDF4; }  .text-slate-400 { color: #D3DBE7; } */
+.text-slate-300 { color: #465578; }
+.text-slate-400 { color: #5D6B8C; }
 
 /* Glifos de ciencia flutuando no fundo */
 .science-float {
@@ -213,3 +237,109 @@
   }
 }
 
+/* ============================================================================
+   TEMA ESCURO — ativado por `html.dark` (botão no cabeçalho).
+   As classes continuam as mesmas do tema claro; aqui só re-mapeamos os valores.
+   ============================================================================ */
+
+html.dark {
+  --color-slate-100: #F1F5F9;
+  --color-slate-200: #E2E8F0;
+  --color-slate-300: #CBD5E1;
+  --color-slate-400: #94A3B8;
+  --color-slate-500: #64748B;
+  --color-slate-600: #475569;
+  --color-slate-700: #334155;
+  --color-slate-800: #1E293B;
+  --color-slate-900: #0F172A;
+}
+
+html.dark body {
+  background-color: #050D34;
+  color: #F1F5F9;
+}
+
+/* Superfícies */
+html.dark .bg-\[\#F1F4FB\] { background-color: #050D34; }
+html.dark .bg-\[\#F1F4FB\]\/95 { background-color: rgba(5, 13, 52, 0.95); }
+html.dark .bg-\[\#F1F4FB\]\/90 { background-color: rgba(5, 13, 52, 0.90); }
+html.dark .bg-\[\#F1F4FB\]\/70 { background-color: rgba(5, 13, 52, 0.70); }
+html.dark .bg-\[\#F1F4FB\]\/50 { background-color: rgba(5, 13, 52, 0.50); }
+html.dark .bg-\[\#F9FDFE\] { background-color: #1E292D; }
+html.dark .bg-\[\#DFE6F3\] { background-color: #0A1433; }
+html.dark .bg-\[\#0B1330\] { background-color: #16224A; }
+
+/* Texto */
+html.dark .text-\[\#0B1330\] { color: #E8EDF4; }
+html.dark .text-\[\#8A5A04\] { color: #FCC140; }
+html.dark .text-\[\#0369A1\] { color: #01B1FD; }
+html.dark .text-\[\#15803D\] { color: #4ADE80; }
+html.dark .text-emerald-700 { color: #34D399; }
+html.dark .text-purple-700 { color: #C084FC; }
+html.dark .text-amber-800 { color: #FCD34D; }
+html.dark .text-sky-700 { color: #38BDF8; }
+html.dark .text-slate-100 { color: #F1F5F9; }
+html.dark .text-slate-200 { color: #E2E8F0; }
+html.dark .text-slate-300 { color: #E8EDF4; }
+html.dark .text-slate-400 { color: #D3DBE7; }
+html.dark .text-slate-500 { color: #94A3B8; }
+
+/* Bordas e superfícies slate */
+html.dark .border-slate-500 { border-color: #64748B; }
+html.dark .border-slate-600 { border-color: #475569; }
+html.dark .border-slate-700 { border-color: #334155; }
+html.dark .border-slate-800 { border-color: #1E293B; }
+html.dark .bg-slate-700 { background-color: #334155; }
+html.dark .bg-slate-800 { background-color: #1E293B; }
+html.dark .bg-slate-900 { background-color: #0F172A; }
+html.dark .hover\:bg-slate-800:hover { background-color: #1E293B; }
+html.dark .hover\:bg-slate-800\/80:hover { background-color: rgba(30, 41, 59, 0.8); }
+
+/* Estados de hover que dependem do texto */
+html.dark .hover\:text-\[\#8A5A04\]:hover { color: #FCC140; }
+html.dark .hover\:text-\[\#0B1330\]:hover { color: #E8EDF4; }
+html.dark .group:hover .group-hover\:text-\[\#8A5A04\] { color: #FCC140; }
+
+/* Degradês de superfície */
+html.dark .from-\[\#F9FDFE\] { --tw-gradient-from: #1E292D; }
+html.dark .via-\[\#EDF1FA\] { --tw-gradient-via: #15203F; }
+html.dark .to-\[\#C8D8F4\] { --tw-gradient-to: #0030B5; }
+
+/* Blueprint de fundo */
+html.dark .bg-blueprint {
+  background-color: #050D34;
+  background-image:
+    linear-gradient(rgba(1, 177, 253, 0.07) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(1, 177, 253, 0.07) 1px, transparent 1px),
+    linear-gradient(rgba(252, 193, 64, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(252, 193, 64, 0.04) 1px, transparent 1px);
+}
+
+/* Marca e componentes maker */
+html.dark .brand-name {
+  color: #FCC140;
+  text-shadow:
+    1.5px 1.5px 0 #0030B5,
+    -1.5px 1.5px 0 #0030B5,
+    1.5px -1.5px 0 #0030B5,
+    -1.5px -1.5px 0 #0030B5,
+    4px 4px 0 #0030B5;
+}
+
+html.dark .group:hover .brand-name {
+  text-shadow:
+    1.5px 1.5px 0 #0030B5,
+    -1.5px 1.5px 0 #0030B5,
+    1.5px -1.5px 0 #0030B5,
+    -1.5px -1.5px 0 #0030B5,
+    6px 6px 0 #0030B5;
+}
+
+html.dark .maker-card {
+  background-color: #1E292D;
+  border-color: rgba(255, 255, 255, 0.12);
+}
+
+html.dark .maker-btn-secondary {
+  color: #01B1FD;
+}

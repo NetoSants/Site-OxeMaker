@@ -65,24 +65,24 @@ Consulte a coordenação pelo e-mail: ${EVENT_INFO.contact.email}
       aria-labelledby="edital-title"
     >
       <div
-        className="relative w-full max-w-2xl bg-[#1E292D] border-2 border-[#01B1FD] rounded-sm maker-shadow-cyan-lg p-6 max-h-[90vh] overflow-y-auto"
+        className="relative w-full max-w-2xl bg-[#F9FDFE] border-2 border-[#01B1FD] rounded-sm maker-shadow-cyan-lg p-6 max-h-[90vh] overflow-y-auto"
         onClick={(e) => e.stopPropagation()}
       >
         <div className="flex items-start justify-between gap-4 border-b border-slate-700/80 pb-4 mb-4">
           <div className="flex items-center gap-2">
-            <BookOpen className="w-6 h-6 text-[#01B1FD]" />
+            <BookOpen className="w-6 h-6 text-[#0369A1]" />
             <div>
-              <span className="text-xs font-mono-code text-[#FCC140] uppercase block">
+              <span className="text-xs font-mono-code text-[#8A5A04] uppercase block">
                 {category} · Edital Oficial 2026
               </span>
-              <h2 id="edital-title" className="text-xl md:text-2xl font-bold font-heading text-white">
+              <h2 id="edital-title" className="text-xl md:text-2xl font-bold font-heading text-[#0B1330]">
                 {tournamentName}
               </h2>
             </div>
           </div>
           <button
             onClick={onClose}
-            className="p-1.5 text-slate-400 hover:text-white hover:bg-slate-800 rounded transition-colors"
+            className="p-1.5 text-slate-400 hover:text-[#0B1330] hover:bg-slate-800 rounded transition-colors"
           >
             <X className="w-5 h-5" />
           </button>
@@ -90,18 +90,18 @@ Consulte a coordenação pelo e-mail: ${EVENT_INFO.contact.email}
 
         {/* Content of the edital */}
         <div className="space-y-4 text-sm text-slate-300 leading-relaxed font-sans">
-          <div className="p-3 bg-[#050D34] border border-slate-700 rounded-sm">
+          <div className="p-3 bg-[#F1F4FB] border border-slate-700 rounded-sm">
             <p className="text-xs font-mono-code text-slate-400 uppercase mb-1">
               Documento Homologado pela Coordenação Geral
             </p>
-            <p className="text-white font-semibold">
+            <p className="text-[#0B1330] font-semibold">
               GRE Metropolitana Norte · Comissão Especial de Arbitragem Robótica Ôxe Maker
             </p>
           </div>
 
           <div>
-            <h4 className="text-base font-bold text-[#FCC140] flex items-center gap-1.5 mb-1.5">
-              <CheckCircle className="w-4 h-4 text-[#FCC140]" />
+            <h4 className="text-base font-bold text-[#8A5A04] flex items-center gap-1.5 mb-1.5">
+              <CheckCircle className="w-4 h-4 text-[#8A5A04]" />
               1. Disposições Gerais e Elegibilidade
             </h4>
             <p className="text-xs sm:text-sm">
@@ -112,8 +112,8 @@ Consulte a coordenação pelo e-mail: ${EVENT_INFO.contact.email}
           </div>
 
           <div>
-            <h4 className="text-base font-bold text-[#FCC140] flex items-center gap-1.5 mb-1.5">
-              <ShieldAlert className="w-4 h-4 text-[#01B1FD]" />
+            <h4 className="text-base font-bold text-[#8A5A04] flex items-center gap-1.5 mb-1.5">
+              <ShieldAlert className="w-4 h-4 text-[#0369A1]" />
               2. Critérios de Segurança e Homologação
             </h4>
             <p className="text-xs sm:text-sm">
@@ -125,8 +125,8 @@ Consulte a coordenação pelo e-mail: ${EVENT_INFO.contact.email}
           </div>
 
           <div>
-            <h4 className="text-base font-bold text-[#FCC140] flex items-center gap-1.5 mb-1.5">
-              <FileText className="w-4 h-4 text-[#FCC140]" />
+            <h4 className="text-base font-bold text-[#8A5A04] flex items-center gap-1.5 mb-1.5">
+              <FileText className="w-4 h-4 text-[#8A5A04]" />
               3. Sistema de Pontuação e Julgamento
             </h4>
             <p className="text-xs sm:text-sm">
@@ -136,7 +136,7 @@ Consulte a coordenação pelo e-mail: ${EVENT_INFO.contact.email}
             </p>
           </div>
 
-          <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-sm text-xs text-amber-200">
+          <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-sm text-xs text-amber-800">
             <strong>Atenção:</strong> O credenciamento das equipes encerra-se às 08h00 do dia 27 de
             novembro de 2026. Equipes não credenciadas não poderão competir.
           </div>
@@ -154,7 +154,7 @@ Consulte a coordenação pelo e-mail: ${EVENT_INFO.contact.email}
 
           <button
             onClick={onClose}
-            className="px-4 py-2 text-xs font-mono-code text-slate-300 hover:text-white border border-slate-600 rounded-sm transition-colors"
+            className="px-4 py-2 text-xs font-mono-code text-slate-300 hover:text-[#0B1330] border border-slate-600 rounded-sm transition-colors"
           >
             Fechar Visualização
           </button>

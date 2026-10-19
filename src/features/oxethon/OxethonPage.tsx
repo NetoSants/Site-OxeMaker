@@ -18,11 +18,11 @@ export const OxethonPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
       {/* Header */}
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
-        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-wider">
-          <Cpu className="w-4 h-4 text-[#01B1FD]" />
+        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-wider">
+          <Cpu className="w-4 h-4 text-[#0369A1]" />
           <span>Hackathon Ôxe Maker · Pitch Final às 16h</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
+        <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           {OXETHON_INFO.title} 2026
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
@@ -45,36 +45,36 @@ export const OxethonPage: React.FC = () => {
 
       {/* Quick Overview Bento Card */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm maker-shadow-yellow space-y-2">
-          <div className="flex items-center gap-2 text-[#FCC140] font-mono-code text-xs uppercase font-bold">
+        <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm maker-shadow-yellow space-y-2">
+          <div className="flex items-center gap-2 text-[#8A5A04] font-mono-code text-xs uppercase font-bold">
             <Clock className="w-4 h-4" />
             <span>Pitch Final</span>
           </div>
-          <h3 className="text-xl font-heading text-white">16h00 às 17h00</h3>
+          <h3 className="text-xl font-heading text-[#0B1330]">16h00 às 17h00</h3>
           <p className="text-xs text-slate-300 font-sans">
             As equipes apresentam seus projetos no grande pitch, logo antes da cerimônia de
             premiação.
           </p>
         </div>
 
-        <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm maker-shadow-cyan space-y-2">
-          <div className="flex items-center gap-2 text-[#01B1FD] font-mono-code text-xs uppercase font-bold">
+        <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm maker-shadow-cyan space-y-2">
+          <div className="flex items-center gap-2 text-[#0369A1] font-mono-code text-xs uppercase font-bold">
             <Users className="w-4 h-4" />
             <span>Participação</span>
           </div>
-          <h3 className="text-xl font-heading text-white">Equipes Escolares</h3>
+          <h3 className="text-xl font-heading text-[#0B1330]">Equipes Escolares</h3>
           <p className="text-xs text-slate-300 font-sans">
             Inscrição de equipes e projetos pelo formulário oficial até 09/10/2026, com
             representantes da rede pública de Pernambuco.
           </p>
         </div>
 
-        <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm maker-shadow-yellow space-y-2">
-          <div className="flex items-center gap-2 text-emerald-400 font-mono-code text-xs uppercase font-bold">
+        <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm maker-shadow-yellow space-y-2">
+          <div className="flex items-center gap-2 text-emerald-700 font-mono-code text-xs uppercase font-bold">
             <Trophy className="w-4 h-4" />
             <span>Premiação</span>
           </div>
-          <h3 className="text-xl font-heading text-white">Cerimônia às 17h</h3>
+          <h3 className="text-xl font-heading text-[#0B1330]">Cerimônia às 17h</h3>
           <p className="text-xs text-slate-300 font-sans">
             A premiação do Hackathon acontece junto com a entrega de prêmios das competições, das
             17h00 às 18h00.
@@ -83,12 +83,12 @@ export const OxethonPage: React.FC = () => {
       </div>
 
       {/* Hackathon Arretado — história e espírito */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm p-6 sm:p-8 items-center">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm p-6 sm:p-8 items-center">
         <div className="lg:col-span-7 space-y-4">
-          <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-widest block">
+          <span className="text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-widest block">
             O Hackathon Arretado
           </span>
-          <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
+          <h2 className="text-2xl sm:text-3xl font-heading text-[#0B1330] uppercase">
             {OXETHON_INFO.slogan}
           </h2>
           <p className="text-sm text-slate-300 font-sans leading-relaxed">{OXETHON_INFO.story}</p>
@@ -122,10 +122,10 @@ export const OxethonPage: React.FC = () => {
       </div>
 
       {/* Stages Timeline */}
-      <div className="bg-[#1E292D] border-2 border-[#01B1FD] rounded-sm p-6 sm:p-8 maker-shadow-cyan-lg space-y-6">
+      <div className="bg-[#F9FDFE] border-2 border-[#01B1FD] rounded-sm p-6 sm:p-8 maker-shadow-cyan-lg space-y-6">
         <div className="flex items-center gap-2 border-b border-slate-800 pb-4">
-          <Calendar className="w-5 h-5 text-[#FCC140]" />
-          <h2 className="text-2xl font-heading text-white uppercase">
+          <Calendar className="w-5 h-5 text-[#8A5A04]" />
+          <h2 className="text-2xl font-heading text-[#0B1330] uppercase">
             Momento do Hackathon no Cronograma
           </h2>
         </div>
@@ -134,14 +134,14 @@ export const OxethonPage: React.FC = () => {
           {OXETHON_INFO.stages.map((stage, idx) => (
             <div
               key={idx}
-              className="bg-[#050D34] border border-slate-700/80 p-4 rounded-sm space-y-2 flex flex-col justify-between"
+              className="bg-[#F1F4FB] border border-slate-700/80 p-4 rounded-sm space-y-2 flex flex-col justify-between"
             >
               <div>
-                <span className="text-[10px] font-mono-code text-[#01B1FD] uppercase font-bold block mb-1">
+                <span className="text-[10px] font-mono-code text-[#0369A1] uppercase font-bold block mb-1">
                   Etapa 0{idx + 1}
                 </span>
-                <h4 className="text-sm font-bold font-heading text-white">{stage.phase}</h4>
-                <span className="text-xs font-mono-code text-[#FCC140] block my-1">
+                <h4 className="text-sm font-bold font-heading text-[#0B1330]">{stage.phase}</h4>
+                <span className="text-xs font-mono-code text-[#8A5A04] block my-1">
                   {stage.time}
                 </span>
                 <p className="text-xs text-slate-300 font-sans leading-relaxed">
@@ -151,15 +151,15 @@ export const OxethonPage: React.FC = () => {
             </div>
           ))}
 
-          <div className="bg-[#050D34] border border-slate-700/80 p-4 rounded-sm space-y-2 flex flex-col justify-between">
+          <div className="bg-[#F1F4FB] border border-slate-700/80 p-4 rounded-sm space-y-2 flex flex-col justify-between">
             <div>
-              <span className="text-[10px] font-mono-code text-[#FCC140] uppercase font-bold block mb-1">
+              <span className="text-[10px] font-mono-code text-[#8A5A04] uppercase font-bold block mb-1">
                 Premiação
               </span>
-              <h4 className="text-sm font-bold font-heading text-white">
+              <h4 className="text-sm font-bold font-heading text-[#0B1330]">
                 Cerimônia de Premiação Geral
               </h4>
-              <span className="text-xs font-mono-code text-[#FCC140] block my-1">
+              <span className="text-xs font-mono-code text-[#8A5A04] block my-1">
                 Sexta, 27/11 · 17h00 às 18h00
               </span>
               <p className="text-xs text-slate-300 font-sans leading-relaxed">
@@ -172,8 +172,8 @@ export const OxethonPage: React.FC = () => {
 
       {/* Awards highlight */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm space-y-2">
-          <div className="flex items-center gap-2 text-[#FCC140] font-mono-code text-xs uppercase font-bold">
+        <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm space-y-2">
+          <div className="flex items-center gap-2 text-[#8A5A04] font-mono-code text-xs uppercase font-bold">
             <Award className="w-4 h-4" />
             <span>Tema 2026</span>
           </div>
@@ -181,8 +181,8 @@ export const OxethonPage: React.FC = () => {
             "Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"
           </p>
         </div>
-        <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm space-y-2">
-          <div className="flex items-center gap-2 text-[#01B1FD] font-mono-code text-xs uppercase font-bold">
+        <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm space-y-2">
+          <div className="flex items-center gap-2 text-[#0369A1] font-mono-code text-xs uppercase font-bold">
             <Clock className="w-4 h-4" />
             <span>Validação</span>
           </div>
@@ -191,8 +191,8 @@ export const OxethonPage: React.FC = () => {
             Metropolitana Norte e da SEE-PE.
           </p>
         </div>
-        <div className="p-5 bg-[#1E292D] border-2 border-slate-700/80 rounded-sm space-y-2">
-          <div className="flex items-center gap-2 text-emerald-400 font-mono-code text-xs uppercase font-bold">
+        <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm space-y-2">
+          <div className="flex items-center gap-2 text-emerald-700 font-mono-code text-xs uppercase font-bold">
             <Users className="w-4 h-4" />
             <span>Inscrições</span>
           </div>
@@ -203,15 +203,15 @@ export const OxethonPage: React.FC = () => {
       </div>
 
       {/* Regulations summary */}
-      <div className="bg-[#1E292D] border border-slate-700/80 rounded-sm p-6 space-y-4">
-        <h3 className="text-base font-bold font-heading text-white flex items-center gap-2">
-          <FileText className="w-5 h-5 text-[#01B1FD]" />
+      <div className="bg-[#F9FDFE] border border-slate-700/80 rounded-sm p-6 space-y-4">
+        <h3 className="text-base font-bold font-heading text-[#0B1330] flex items-center gap-2">
+          <FileText className="w-5 h-5 text-[#0369A1]" />
           <span>Orientações do Hackathon</span>
         </h3>
         <ul className="grid grid-cols-1 sm:grid-cols-2 gap-2 text-xs text-slate-300 font-sans">
           {OXETHON_INFO.regulationsSummary.map((reg, idx) => (
             <li key={idx} className="flex items-start gap-2">
-              <CheckCircle2 className="w-3.5 h-3.5 text-[#01B1FD] flex-shrink-0 mt-0.5" />
+              <CheckCircle2 className="w-3.5 h-3.5 text-[#0369A1] flex-shrink-0 mt-0.5" />
               <span>{reg}</span>
             </li>
           ))}
@@ -220,7 +220,7 @@ export const OxethonPage: React.FC = () => {
 
       {/* Final CTA Banner */}
       <div className="text-center p-8 bg-[#0030B5]/20 border-2 border-[#FCC140] rounded-sm maker-shadow-yellow space-y-4">
-        <h3 className="text-2xl sm:text-3xl font-heading text-white uppercase">
+        <h3 className="text-2xl sm:text-3xl font-heading text-[#0B1330] uppercase">
           Inscreva Sua Equipe Até 09/10
         </h3>
         <p className="text-slate-300 text-xs sm:text-sm max-w-xl mx-auto font-sans">

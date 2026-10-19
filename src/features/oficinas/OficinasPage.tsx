@@ -21,11 +21,11 @@ export const OficinasPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
       {/* Header */}
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
-        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-wider">
-          <Wrench className="w-4 h-4 text-[#FCC140]" />
+        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-wider">
+          <Wrench className="w-4 h-4 text-[#8A5A04]" />
           <span>Laboratórios Vivos · Mão na Massa</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
+        <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           Oficinas Práticas Maker
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
@@ -40,22 +40,22 @@ export const OficinasPage: React.FC = () => {
         {WORKSHOPS_DATA.map((ws, idx) => (
           <div
             key={ws.id}
-            className="bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-6 sm:p-8 transition-all hover:maker-shadow-yellow group"
+            className="bg-[#F9FDFE] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-6 sm:p-8 transition-all hover:maker-shadow-yellow group"
           >
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
               {/* Left Column: Workshop Details */}
               <div className="lg:col-span-7 space-y-5">
                 <div className="space-y-2">
                   <div className="flex items-center gap-2">
-                    <span className="px-2 py-0.5 bg-[#050D34] text-[#FCC140] font-mono-code text-xs font-bold rounded-sm border border-slate-700">
+                    <span className="px-2 py-0.5 bg-[#F1F4FB] text-[#8A5A04] font-mono-code text-xs font-bold rounded-sm border border-slate-700">
                       Oficina 0{idx + 1}
                     </span>
-                    <span className="text-xs font-mono-code text-[#01B1FD]">
+                    <span className="text-xs font-mono-code text-[#0369A1]">
                       {ws.duration ? `${ws.duration} de imersão` : 'Mão na massa'}
                     </span>
                   </div>
 
-                  <h2 className="text-2xl sm:text-3xl font-heading text-white group-hover:text-[#FCC140] transition-colors">
+                  <h2 className="text-2xl sm:text-3xl font-heading text-[#0B1330] group-hover:text-[#8A5A04] transition-colors">
                     {ws.title}
                   </h2>
                 </div>
@@ -66,14 +66,14 @@ export const OficinasPage: React.FC = () => {
 
                 {/* Target & Prerequisites */}
                 <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-sans">
-                  <div className="p-3 bg-[#050D34] border border-slate-800 rounded-sm">
+                  <div className="p-3 bg-[#F1F4FB] border border-slate-800 rounded-sm">
                     <span className="text-[10px] font-mono-code text-slate-400 uppercase block mb-1">
                       Público-Alvo:
                     </span>
                     <p className="text-slate-200">{ws.targetAudience}</p>
                   </div>
                   {ws.prerequisites && (
-                    <div className="p-3 bg-[#050D34] border border-slate-800 rounded-sm">
+                    <div className="p-3 bg-[#F1F4FB] border border-slate-800 rounded-sm">
                       <span className="text-[10px] font-mono-code text-slate-400 uppercase block mb-1">
                         Pré-Requisitos:
                       </span>
@@ -85,13 +85,13 @@ export const OficinasPage: React.FC = () => {
                 {/* Materials Provided */}
                 {ws.materialsProvided && (
                   <div>
-                    <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold block mb-2">
+                    <span className="text-xs font-mono-code text-[#8A5A04] uppercase font-bold block mb-2">
                       Materiais & Insumos Inclusos:
                     </span>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-300 font-sans">
                       {ws.materialsProvided.map((mat, mIdx) => (
                         <li key={mIdx} className="flex items-center gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#01B1FD] flex-shrink-0" />
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#0369A1] flex-shrink-0" />
                           <span>{mat}</span>
                         </li>
                       ))}
@@ -101,23 +101,23 @@ export const OficinasPage: React.FC = () => {
               </div>
 
               {/* Right Column: Instructor Profile & Registration Info */}
-              <div className="lg:col-span-5 bg-[#050D34] border border-slate-700/80 rounded-sm p-6 space-y-5">
+              <div className="lg:col-span-5 bg-[#F1F4FB] border border-slate-700/80 rounded-sm p-6 space-y-5">
                 {/* Time & Room Info */}
                 <div className="space-y-2 border-b border-slate-800 pb-4 text-xs font-mono-code">
                   <div className="flex items-center justify-between text-slate-300">
                     <span className="flex items-center gap-1.5 text-slate-400">
-                      <Clock className="w-4 h-4 text-[#FCC140]" />
+                      <Clock className="w-4 h-4 text-[#8A5A04]" />
                       Data & Hora:
                     </span>
-                    <span className="font-bold text-white text-right">{ws.schedule}</span>
+                    <span className="font-bold text-[#0B1330] text-right">{ws.schedule}</span>
                   </div>
 
                   <div className="flex items-center justify-between text-slate-300">
                     <span className="flex items-center gap-1.5 text-slate-400">
-                      <MapPin className="w-4 h-4 text-[#01B1FD]" />
+                      <MapPin className="w-4 h-4 text-[#0369A1]" />
                       Local:
                     </span>
-                    <span className="font-bold text-white">
+                    <span className="font-bold text-[#0B1330]">
                       {ws.room || 'A definir'}
                     </span>
                   </div>
@@ -125,10 +125,10 @@ export const OficinasPage: React.FC = () => {
                   {ws.capacity && (
                     <div className="flex items-center justify-between text-slate-300">
                       <span className="flex items-center gap-1.5 text-slate-400">
-                        <Users className="w-4 h-4 text-emerald-400" />
+                        <Users className="w-4 h-4 text-emerald-700" />
                         Vagas Disponíveis:
                       </span>
-                      <span className="font-bold text-[#FCC140]">{ws.capacity} participantes</span>
+                      <span className="font-bold text-[#8A5A04]">{ws.capacity} participantes</span>
                     </div>
                   )}
                 </div>
@@ -140,14 +140,14 @@ export const OficinasPage: React.FC = () => {
                       Instrutor Responsável:
                     </span>
                     <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-sm bg-[#1E292D] border border-[#FCC140] flex items-center justify-center text-[#FCC140] flex-shrink-0">
+                      <div className="w-10 h-10 rounded-sm bg-[#F9FDFE] border border-[#FCC140] flex items-center justify-center text-[#8A5A04] flex-shrink-0">
                         <UserCheck className="w-5 h-5" />
                       </div>
                       <div>
-                        <h4 className="text-sm font-bold text-white font-sans">
+                        <h4 className="text-sm font-bold text-[#0B1330] font-sans">
                           {ws.instructor.name}
                         </h4>
-                        <p className="text-[11px] font-mono-code text-[#01B1FD]">
+                        <p className="text-[11px] font-mono-code text-[#0369A1]">
                           {ws.instructor.role}
                         </p>
                         <p className="text-[10px] text-slate-400">{ws.instructor.institution}</p>

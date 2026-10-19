@@ -22,13 +22,13 @@ export const GeekPage: React.FC = () => {
   const getCategoryIcon = (id: string) => {
     switch (id) {
       case 'cosplay':
-        return <Crown className="w-6 h-6 text-[#FCC140]" />;
+        return <Crown className="w-6 h-6 text-[#8A5A04]" />;
       case 'kpop':
-        return <Music className="w-6 h-6 text-[#01B1FD]" />;
+        return <Music className="w-6 h-6 text-[#0369A1]" />;
       case 'justdance':
-        return <Tv className="w-6 h-6 text-purple-400" />;
+        return <Tv className="w-6 h-6 text-purple-700" />;
       default:
-        return <Sparkles className="w-6 h-6 text-[#FCC140]" />;
+        return <Sparkles className="w-6 h-6 text-[#8A5A04]" />;
     }
   };
 
@@ -36,11 +36,11 @@ export const GeekPage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
       {/* Header */}
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
-        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-wider">
-          <Sparkles className="w-4 h-4 text-[#FCC140]" />
+        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-wider">
+          <Sparkles className="w-4 h-4 text-[#8A5A04]" />
           <span>Palco Geek & Cultura Pop · {EVENT_INFO.location.venue}</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
+        <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           Cultura Geek & Expressão Juvenil
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
@@ -50,13 +50,13 @@ export const GeekPage: React.FC = () => {
       </div>
 
       {/* Geek Banner Highlight */}
-      <div className="p-6 bg-gradient-to-r from-[#1E292D] to-[#0030B5]/40 border-2 border-[#01B1FD] rounded-sm maker-shadow-cyan flex flex-col md:flex-row items-center justify-between gap-6">
+      <div className="p-6 bg-gradient-to-r from-[#F9FDFE] to-[#0030B5]/15 border-2 border-[#01B1FD] rounded-sm maker-shadow-cyan flex flex-col md:flex-row items-center justify-between gap-6">
         <div className="space-y-2">
-          <div className="flex items-center gap-2 text-xs font-mono-code text-[#FCC140] uppercase font-bold">
-            <Flame className="w-4 h-4 text-[#FCC140]" />
+          <div className="flex items-center gap-2 text-xs font-mono-code text-[#8A5A04] uppercase font-bold">
+            <Flame className="w-4 h-4 text-[#8A5A04]" />
             <span>Espaço Totalmente Climatizado para Camarim</span>
           </div>
-          <h2 className="text-xl sm:text-2xl font-heading text-white">
+          <h2 className="text-xl sm:text-2xl font-heading text-[#0B1330]">
             Apresentações ao Vivo, Torcida Apaixonada & Premiações
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 font-sans max-w-xl">
@@ -82,11 +82,11 @@ export const GeekPage: React.FC = () => {
         {GEEK_CATEGORIES.map((cat) => (
           <div
             key={cat.id}
-            className="bg-[#1E292D] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-6 flex flex-col justify-between space-y-6 transition-all hover:maker-shadow-yellow group"
+            className="bg-[#F9FDFE] border-2 border-slate-700/80 hover:border-[#FCC140] rounded-sm p-6 flex flex-col justify-between space-y-6 transition-all hover:maker-shadow-yellow group"
           >
             <div className="space-y-4">
               {cat.image && (
-                <div className="rounded-sm overflow-hidden border border-slate-700/80 bg-[#050D34]">
+                <div className="rounded-sm overflow-hidden border border-slate-700/80 bg-[#F1F4FB]">
                   <img
                     src={cat.image}
                     alt={cat.name}
@@ -98,14 +98,14 @@ export const GeekPage: React.FC = () => {
 
               {/* Icon and Title */}
               <div className="flex items-center gap-3">
-                <div className="p-3 bg-[#050D34] border border-slate-700 rounded-sm">
+                <div className="p-3 bg-[#F1F4FB] border border-slate-700 rounded-sm">
                   {getCategoryIcon(cat.id)}
                 </div>
                 <div>
-                  <h3 className="text-xl font-heading text-white group-hover:text-[#FCC140] transition-colors">
+                  <h3 className="text-xl font-heading text-[#0B1330] group-hover:text-[#8A5A04] transition-colors">
                     {cat.name}
                   </h3>
-                  <span className="text-xs font-mono-code text-[#01B1FD] block">
+                  <span className="text-xs font-mono-code text-[#0369A1] block">
                     {cat.subtitle}
                   </span>
                 </div>
@@ -116,26 +116,26 @@ export const GeekPage: React.FC = () => {
               </p>
 
               {/* Schedule and Stage */}
-              <div className="p-3 bg-[#050D34] border border-slate-800 rounded-sm space-y-1.5 text-xs font-mono-code">
+              <div className="p-3 bg-[#F1F4FB] border border-slate-800 rounded-sm space-y-1.5 text-xs font-mono-code">
                 <div className="flex items-center gap-2 text-slate-300">
-                  <Clock className="w-3.5 h-3.5 text-[#FCC140]" />
+                  <Clock className="w-3.5 h-3.5 text-[#8A5A04]" />
                   <span>{cat.scheduleTime}</span>
                 </div>
                 <div className="flex items-center gap-2 text-slate-400">
-                  <MapPin className="w-3.5 h-3.5 text-[#01B1FD]" />
+                  <MapPin className="w-3.5 h-3.5 text-[#0369A1]" />
                   <span>{cat.stage}</span>
                 </div>
               </div>
 
               {/* Judging Criteria */}
               <div>
-                <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold block mb-2">
+                <span className="text-xs font-mono-code text-[#8A5A04] uppercase font-bold block mb-2">
                   Critérios de Avaliação da Banca:
                 </span>
                 <ul className="space-y-1.5 text-xs text-slate-300 font-sans">
                   {cat.criteria.map((cr, idx) => (
                     <li key={idx} className="flex items-start gap-2">
-                      <CheckCircle2 className="w-3.5 h-3.5 text-[#01B1FD] flex-shrink-0 mt-0.5" />
+                      <CheckCircle2 className="w-3.5 h-3.5 text-[#0369A1] flex-shrink-0 mt-0.5" />
                       <span>{cr}</span>
                     </li>
                   ))}
@@ -150,7 +150,7 @@ export const GeekPage: React.FC = () => {
                 <ul className="space-y-1 text-[11px] text-slate-400 font-sans">
                   {cat.rulesHighlight.map((rule, idx) => (
                     <li key={idx} className="flex items-start gap-1.5">
-                      <span className="text-[#FCC140] font-bold">·</span>
+                      <span className="text-[#8A5A04] font-bold">·</span>
                       <span>{rule}</span>
                     </li>
                   ))}
@@ -159,7 +159,7 @@ export const GeekPage: React.FC = () => {
 
               {/* Prizes */}
               <div className="p-3 bg-[#0030B5]/20 border border-[#01B1FD]/30 rounded-sm text-xs font-sans text-slate-300">
-                <strong className="text-[#FCC140] block font-mono-code text-[11px] uppercase mb-0.5">
+                <strong className="text-[#8A5A04] block font-mono-code text-[11px] uppercase mb-0.5">
                   Premiação Oficial:
                 </strong>
                 <span>{cat.prizes}</span>
@@ -181,9 +181,9 @@ export const GeekPage: React.FC = () => {
       </div>
 
       {/* Safety & Conduct Policy */}
-      <div className="bg-[#1E292D] border border-slate-700/80 rounded-sm p-6 space-y-3">
-        <div className="flex items-center gap-2 text-white font-heading text-lg">
-          <AlertCircle className="w-5 h-5 text-[#FCC140]" />
+      <div className="bg-[#F9FDFE] border border-slate-700/80 rounded-sm p-6 space-y-3">
+        <div className="flex items-center gap-2 text-[#0B1330] font-heading text-lg">
+          <AlertCircle className="w-5 h-5 text-[#8A5A04]" />
           <span>Diretrizes de Convivência & Respeito no Palco Geek</span>
         </div>
         <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">

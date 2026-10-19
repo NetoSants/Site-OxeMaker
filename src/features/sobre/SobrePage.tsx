@@ -25,11 +25,11 @@ export const SobrePage: React.FC = () => {
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-16">
       {/* Header */}
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
-        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-wider">
+        <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-wider">
           <History className="w-4 h-4" />
           <span>6 Anos de História · 2021 a 2026</span>
         </div>
-        <h1 className="text-3xl sm:text-5xl font-heading font-black text-white uppercase tracking-tight">
+        <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           Sobre o <span className="brand-name">Ôxe Maker</span> &amp; Nossa Missão
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
@@ -39,18 +39,18 @@ export const SobrePage: React.FC = () => {
       </div>
 
       {/* Origin & Meaning of "Ôxe" */}
-      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#1E292D] border-2 border-slate-700/80 rounded-sm p-6 sm:p-10 maker-shadow-yellow">
+      <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm p-6 sm:p-10 maker-shadow-yellow">
         <div className="lg:col-span-8 space-y-4">
-          <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest block">
+          <span className="text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-widest block">
             Identidade & Orgulho Pernambucano
           </span>
-          <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
+          <h2 className="text-2xl sm:text-3xl font-heading text-[#0B1330] uppercase">
             Por que "<span className="brand-name">Ôxe Maker</span>"?
           </h2>
           <p className="text-sm text-slate-300 leading-relaxed font-sans">
             "Ôxe" é a interjeição mais autêntica do vocabulário pernambucano: expressa surpresa,
             admiração, entusiasmo e acolhimento. Quando nossos alunos ligam um circuito e exclamam
-            <em className="text-[#FCC140] font-semibold"> "Ôxe, funcionou!"</em>, estamos
+            <em className="text-[#8A5A04] font-semibold"> "Ôxe, funcionou!"</em>, estamos
             celebrando a democratização do conhecimento científico.
           </p>
           <p className="text-sm text-slate-300 leading-relaxed font-sans">
@@ -69,19 +69,19 @@ export const SobrePage: React.FC = () => {
       </div>
 
       {/* Nossa História — origem do projeto */}
-      <div className="bg-[#1E292D] border-2 border-slate-700/80 rounded-sm p-6 sm:p-10 space-y-4">
-        <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest block">
+      <div className="bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm p-6 sm:p-10 space-y-4">
+        <span className="text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-widest block">
           Nossa História · Desde 2021
         </span>
-        <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">O <span className="brand-name">Ôxe Maker</span></h2>
+        <h2 className="text-2xl sm:text-3xl font-heading text-[#0B1330] uppercase">O <span className="brand-name">Ôxe Maker</span></h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           <p className="text-sm text-slate-300 leading-relaxed font-sans">
             O Ôxe Maker surgiu da ideia de trazer para os jovens da Regional Metropolitana Norte da
             Rede Estadual de Educação de Pernambuco um evento que reunisse{' '}
-            <strong className="text-[#FCC140]">Robótica</strong>,{' '}
-            <strong className="text-[#FCC140]">Cultura Maker</strong> e o{' '}
-            <strong className="text-[#FCC140]">Universo Geek</strong>.
+            <strong className="text-[#8A5A04]">Robótica</strong>,{' '}
+            <strong className="text-[#8A5A04]">Cultura Maker</strong> e o{' '}
+            <strong className="text-[#8A5A04]">Universo Geek</strong>.
           </p>
           <p className="text-sm text-slate-300 leading-relaxed font-sans">
             A proposta contempla aspectos vivenciados por essa juventude cosmopolita, possibilitando
@@ -103,10 +103,10 @@ export const SobrePage: React.FC = () => {
             (v, i) => (
               <div
                 key={v}
-                className="p-3 bg-[#050D34] border border-slate-700 rounded-sm text-center"
+                className="p-3 bg-[#F1F4FB] border border-slate-700 rounded-sm text-center"
               >
-                <span className="text-[10px] font-mono-code text-[#01B1FD] block">0{i + 1}_</span>
-                <span className="text-sm font-bold font-heading text-[#FCC140] uppercase">{v}</span>
+                <span className="text-[10px] font-mono-code text-[#0369A1] block">0{i + 1}_</span>
+                <span className="text-sm font-bold font-heading text-[#8A5A04] uppercase">{v}</span>
               </div>
             )
           )}
@@ -116,10 +116,10 @@ export const SobrePage: React.FC = () => {
       {/* Animated Metrics Strip */}
       <div className="space-y-6">
         <div className="text-center space-y-1">
-          <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold">
+          <span className="text-xs font-mono-code text-[#8A5A04] uppercase font-bold">
             Impacto Acumulado
           </span>
-          <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
+          <h2 className="text-2xl sm:text-3xl font-heading text-[#0B1330] uppercase">
             A Trajetória em Números
           </h2>
         </div>
@@ -128,12 +128,12 @@ export const SobrePage: React.FC = () => {
           {METRICS_DATA.map((item) => (
             <div
               key={item.id}
-              className="p-5 bg-[#1E292D] border border-slate-700 rounded-sm text-center"
+              className="p-5 bg-[#F9FDFE] border border-slate-700 rounded-sm text-center"
             >
-              <div className="text-3xl sm:text-4xl font-bold font-mono-code text-[#FCC140] mb-1">
+              <div className="text-3xl sm:text-4xl font-bold font-mono-code text-[#8A5A04] mb-1">
                 <AnimatedCounter value={item.value} suffix={item.suffix} />
               </div>
-              <h3 className="text-xs font-bold text-white uppercase font-heading">{item.label}</h3>
+              <h3 className="text-xs font-bold text-[#0B1330] uppercase font-heading">{item.label}</h3>
             </div>
           ))}
         </div>
@@ -142,10 +142,10 @@ export const SobrePage: React.FC = () => {
       {/* Timeline 2021-2026 */}
       <div className="space-y-8">
         <div className="border-b border-slate-800 pb-4">
-          <span className="text-xs font-mono-code text-[#01B1FD] uppercase font-bold tracking-widest block mb-1">
+          <span className="text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-widest block mb-1">
             Linha do Tempo
           </span>
-          <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
+          <h2 className="text-2xl sm:text-3xl font-heading text-[#0B1330] uppercase">
             Ano a Ano: A Evolução da Mostra
           </h2>
         </div>
@@ -156,20 +156,20 @@ export const SobrePage: React.FC = () => {
               {/* Bullet dot */}
               <div className="absolute -left-[31px] sm:-left-[39px] top-1.5 w-4 h-4 rounded-full bg-[#FCC140] border-2 border-[#050D34] group-hover:scale-125 transition-transform" />
 
-              <div className="bg-[#1E292D] border border-slate-700/80 hover:border-[#FCC140] p-5 sm:p-6 rounded-sm space-y-2 transition-all">
+              <div className="bg-[#F9FDFE] border border-slate-700/80 hover:border-[#FCC140] p-5 sm:p-6 rounded-sm space-y-2 transition-all">
                 <div className="flex flex-wrap items-center justify-between gap-2 border-b border-slate-800 pb-2">
                   <div className="flex items-center gap-2">
-                    <span className="text-xl sm:text-2xl font-bold font-mono-code text-[#FCC140]">
+                    <span className="text-xl sm:text-2xl font-bold font-mono-code text-[#8A5A04]">
                       {m.year}
                     </span>
                     <span className="text-xs font-mono-code text-slate-400">· {m.edition}</span>
                   </div>
-                  <span className="text-xs font-mono-code text-[#01B1FD] font-semibold">
+                  <span className="text-xs font-mono-code text-[#0369A1] font-semibold">
                     {m.stats}
                   </span>
                 </div>
 
-                <h3 className="text-lg font-heading text-white font-bold">{m.title}</h3>
+                <h3 className="text-lg font-heading text-[#0B1330] font-bold">{m.title}</h3>
                 <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
                   {m.description}
                 </p>
@@ -180,14 +180,14 @@ export const SobrePage: React.FC = () => {
       </div>
 
       {/* Special Tribute to Founder Section */}
-      <section className="bg-gradient-to-r from-[#1E292D] via-[#050D34] to-[#0030B5]/30 border-2 border-[#FCC140] rounded-sm maker-shadow-yellow-lg p-6 sm:p-10 space-y-8">
+      <section className="bg-gradient-to-r from-[#F9FDFE] via-[#EDF1FA] to-[#0030B5]/15 border-2 border-[#FCC140] rounded-sm maker-shadow-yellow-lg p-6 sm:p-10 space-y-8">
         <div className="flex items-center gap-3 border-b border-slate-700/80 pb-4">
           <Heart className="w-6 h-6 text-rose-500 fill-rose-500 flex-shrink-0" />
           <div>
-            <span className="text-xs font-mono-code text-[#FCC140] uppercase font-bold tracking-widest block">
+            <span className="text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-widest block">
               Homenagem Especial
             </span>
-            <h2 className="text-2xl sm:text-3xl font-heading text-white uppercase">
+            <h2 className="text-2xl sm:text-3xl font-heading text-[#0B1330] uppercase">
               Tributo à Idealizadora do <span className="brand-name">Ôxe Maker</span>
             </h2>
           </div>
@@ -196,7 +196,7 @@ export const SobrePage: React.FC = () => {
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 items-center">
           {/* Avatar / Vector Profile */}
           <div className="lg:col-span-4 flex flex-col items-center text-center space-y-3">
-            <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-[#1E292D] border-4 border-[#FCC140] flex items-center justify-center p-1 relative maker-shadow-yellow overflow-hidden">
+            <div className="w-36 h-36 sm:w-44 sm:h-44 rounded-full bg-[#F9FDFE] border-4 border-[#FCC140] flex items-center justify-center p-1 relative maker-shadow-yellow overflow-hidden">
               <img
                 src="img/foto-lidy.jpeg"
                 alt={`Foto de ${FOUNDER_TRIBUTE.name}`}
@@ -208,15 +208,15 @@ export const SobrePage: React.FC = () => {
             </div>
 
             <div>
-              <h3 className="text-xl font-heading text-white font-bold">{FOUNDER_TRIBUTE.name}</h3>
-              <p className="text-xs font-mono-code text-[#01B1FD]">{FOUNDER_TRIBUTE.role}</p>
+              <h3 className="text-xl font-heading text-[#0B1330] font-bold">{FOUNDER_TRIBUTE.name}</h3>
+              <p className="text-xs font-mono-code text-[#0369A1]">{FOUNDER_TRIBUTE.role}</p>
             </div>
           </div>
 
           {/* Tribute Quote and Bio */}
           <div className="lg:col-span-8 space-y-4">
             {FOUNDER_TRIBUTE.quote && (
-              <blockquote className="p-4 bg-[#050D34] border-l-4 border-[#FCC140] rounded-r-sm text-sm sm:text-base italic text-slate-200 font-sans">
+              <blockquote className="p-4 bg-[#F1F4FB] border-l-4 border-[#FCC140] rounded-r-sm text-sm sm:text-base italic text-slate-200 font-sans">
                 {FOUNDER_TRIBUTE.quote}
               </blockquote>
             )}
@@ -232,33 +232,33 @@ export const SobrePage: React.FC = () => {
 
       {/* Mission, Vision & Values */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-        <div className="p-6 bg-[#1E292D] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
-          <div className="p-2.5 bg-[#050D34] w-fit rounded-sm text-[#FCC140]">
+        <div className="p-6 bg-[#F9FDFE] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
+          <div className="p-2.5 bg-[#F1F4FB] w-fit rounded-sm text-[#8A5A04]">
             <Target className="w-6 h-6" />
           </div>
-          <h3 className="text-lg font-heading text-white uppercase">Nossa Missão</h3>
+          <h3 className="text-lg font-heading text-[#0B1330] uppercase">Nossa Missão</h3>
           <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
             Democratizar o acesso à tecnologia e à cultura maker para estudantes da rede pública,
             transformando consumidores de tecnologia em criadores de soluções reais.
           </p>
         </div>
 
-        <div className="p-6 bg-[#1E292D] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
-          <div className="p-2.5 bg-[#050D34] w-fit rounded-sm text-[#01B1FD]">
+        <div className="p-6 bg-[#F9FDFE] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
+          <div className="p-2.5 bg-[#F1F4FB] w-fit rounded-sm text-[#0369A1]">
             <Compass className="w-6 h-6" />
           </div>
-          <h3 className="text-lg font-heading text-white uppercase">Nossa Visão</h3>
+          <h3 className="text-lg font-heading text-[#0B1330] uppercase">Nossa Visão</h3>
           <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
             Ser o principal ecossistema de inovação educacional em Pernambuco, conectando escola,
             comunidade e mercado através do 'aprender fazendo'.
           </p>
         </div>
 
-        <div className="p-6 bg-[#1E292D] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
-          <div className="p-2.5 bg-[#050D34] w-fit rounded-sm text-[#FCC140]">
+        <div className="p-6 bg-[#F9FDFE] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
+          <div className="p-2.5 bg-[#F1F4FB] w-fit rounded-sm text-[#8A5A04]">
             <Users className="w-6 h-6" />
           </div>
-          <h3 className="text-lg font-heading text-white uppercase">Nossos Valores</h3>
+          <h3 className="text-lg font-heading text-[#0B1330] uppercase">Nossos Valores</h3>
           <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
             Vidas reais · Escolas Makers · Comunidade Unida · Justiça pra Todos. Educação pública de
             excelência, colaboração solidária e paixão pela ciência viva.
