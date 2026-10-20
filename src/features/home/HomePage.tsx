@@ -91,38 +91,41 @@ export const HomePage: React.FC = () => {
       {/* =====================================================================
           1. HERO SECTION
          ===================================================================== */}
-      <section className="relative overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24 border-b border-slate-800">
+      <section className="relative overflow-hidden pt-8 pb-16 md:pt-12 md:pb-24 lg:pt-8 border-b border-slate-800">
         {/* Glow backdrop circles */}
         <div className="absolute top-10 right-10 w-72 h-72 bg-[#0030B5]/20 blur-[80px] pointer-events-none rounded-full" />
 
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center">
+          <div className="grid grid-cols-1 lg:grid-cols-12 gap-10 items-center lg:items-stretch">
             {/* Left Column: Hero Content */}
-            <div className="lg:col-span-7 space-y-6 text-center lg:text-left">
-              {/* Edition and Slogan Kicker */}
-              <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 text-xs font-mono-code">
-                <span className="px-2.5 py-1 bg-[#FCC140] text-[#050D34] font-bold rounded-sm uppercase tracking-wider">
-                  {EVENT_INFO.edition} · 2021–2026
-                </span>
-                <span className="text-slate-400">·</span>
-                <span className="text-[#0369A1] font-semibold tracking-wide">
-                  {EVENT_INFO.tagline}
-                </span>
+            <div className="max-lg:contents lg:order-1 lg:col-span-7 space-y-6 lg:space-y-4 text-center lg:text-left">
+              <div className="order-2 space-y-6 lg:space-y-3">
+                {/* Edition and Slogan Kicker */}
+                <div className="inline-flex flex-wrap items-center justify-center lg:justify-start gap-2 text-xs font-mono-code">
+                  <span className="px-2.5 py-1 bg-[#FCC140] text-[#050D34] font-bold rounded-sm uppercase tracking-wider">
+                    {EVENT_INFO.edition} · 2021–2026
+                  </span>
+                  <span className="text-slate-400">·</span>
+                  <span className="text-[#0369A1] font-semibold tracking-wide">
+                    {EVENT_INFO.tagline}
+                  </span>
+                </div>
+
+                {/* Main Heading */}
+                <div className="space-y-2">
+                  <h1 className="text-[2.5rem] sm:text-6xl xl:text-7xl font-heading font-black tracking-tight brand-name uppercase leading-[1.05]">
+                    ÔXE MAKER <span>2026</span>
+                  </h1>
+                  <p className="text-lg sm:text-xl font-heading text-[#0369A1] tracking-wide">
+                    Mostra de Robótica Educacional & Cultura Maker da Rede Estadual
+                  </p>
+                </div>
               </div>
 
-              {/* Main Heading */}
-              <div className="space-y-2">
-                <h1 className="text-4xl sm:text-6xl xl:text-7xl font-heading font-black tracking-tight brand-name uppercase leading-[1.05]">
-                  ÔXE MAKER <span>2026</span>
-                </h1>
-                <p className="text-lg sm:text-xl font-heading text-[#0369A1] tracking-wide">
-                  Mostra de Robótica Educacional & Cultura Maker da Rede Estadual
-                </p>
-              </div>
-
+              <div className="order-4 space-y-6 lg:space-y-4">
               {/* Destaque combinado: Tema Central + Data + Local */}
         <div className="rounded-sm overflow-hidden border-2 border-[#FCC140] maker-shadow-yellow-lg bg-[#F9FDFE]">
-          <div className="p-5 sm:p-7 bg-gradient-to-r from-[#F9FDFE] via-[#EDF1FA] to-[#FCC140]/20 border-b-2 border-[#FCC140]/40 text-left">
+          <div className="p-5 sm:p-7 lg:p-4 bg-gradient-to-r from-[#F9FDFE] via-[#EDF1FA] to-[#FCC140]/20 border-b-2 border-[#FCC140]/40 text-left">
             <span className="inline-flex items-center gap-2 text-[11px] font-mono-code text-[#8A5A04] uppercase font-bold tracking-widest mb-2">
               <Lightbulb className="w-4 h-4" /> Tema Central 2026
             </span>
@@ -131,7 +134,7 @@ export const HomePage: React.FC = () => {
             </p>
           </div>
                 <div className="grid grid-cols-1 sm:grid-cols-2 text-left">
-                  <div className="flex items-center gap-3 p-5 sm:p-6 border-b sm:border-b-0 sm:border-r border-slate-700/60">
+                  <div className="flex items-center gap-3 p-5 sm:p-6 lg:p-4 border-b sm:border-b-0 sm:border-r border-slate-700/60">
                     <div className="flex items-center justify-center w-11 h-11 shrink-0 bg-[#FCC140]/15 border-2 border-[#FCC140] rounded-sm">
                       <Calendar className="w-5 h-5 text-[#8A5A04]" />
                     </div>
@@ -145,7 +148,7 @@ export const HomePage: React.FC = () => {
                       <p className="text-xs font-mono-code text-slate-300">{EVENT_INFO.dates.timeRange}</p>
                     </div>
                   </div>
-                  <div className="flex items-center gap-3 p-5 sm:p-6">
+                  <div className="flex items-center gap-3 p-5 sm:p-6 lg:p-4">
                     <div className="flex items-center justify-center w-11 h-11 shrink-0 bg-[#01B1FD]/15 border-2 border-[#01B1FD] rounded-sm">
                       <MapPin className="w-5 h-5 text-[#0369A1]" />
                     </div>
@@ -163,7 +166,7 @@ export const HomePage: React.FC = () => {
               </div>
 
               {/* CTA Buttons */}
-              <div className="pt-2 flex flex-wrap items-center justify-center lg:justify-start gap-4">
+              <div className="pt-2 lg:pt-0 flex flex-wrap items-center justify-center lg:justify-start gap-4">
                 <a
                   href="#inscricoes"
                   className="maker-btn-secondary px-6 py-3.5 text-sm uppercase flex items-center gap-2 cursor-pointer"
@@ -180,11 +183,12 @@ export const HomePage: React.FC = () => {
                   <span>Ver Programação</span>
                 </Link>
               </div>
+              </div>
             </div>
 
             {/* Right Column: Mascot & Live Countdown */}
-            <div className="lg:col-span-5 flex flex-col items-center justify-center space-y-6">
-              <div className="relative w-64 h-64 md:w-80 md:h-80 flex items-center justify-center">
+            <div className="max-lg:contents lg:order-2 lg:col-span-5 flex flex-col items-center space-y-6 lg:justify-between">
+              <div className="order-1 justify-self-center relative w-64 h-64 md:w-80 md:h-80 lg:w-72 lg:h-72 flex items-center justify-center">
                 {/* Texto circular rotativo */}
                 <div className="absolute inset-0 animate-rotate">
                   <svg viewBox="0 0 200 200" className="w-full h-full">
@@ -216,7 +220,7 @@ export const HomePage: React.FC = () => {
               </div>
 
               {/* Live Countdown to 27/11/2026 07:00 */}
-              <div className="w-full">
+              <div className="order-3 w-full">
                 <CountdownTimer />
               </div>
             </div>
@@ -560,7 +564,7 @@ export const HomePage: React.FC = () => {
                 </button>
 
                 {isOpen && (
-                  <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-slate-300 border-t border-slate-800 leading-relaxed font-sans">
+                  <div className="px-4 pb-4 pt-1 text-xs sm:text-sm text-slate-300 border-t border-slate-800 leading-relaxed font-sans text-justify">
                     {item.answer}
                   </div>
                 )}

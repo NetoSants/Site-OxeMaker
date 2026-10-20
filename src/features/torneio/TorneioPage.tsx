@@ -110,7 +110,7 @@ export const TorneioPage: React.FC = () => {
                 )}
 
                 {/* Arena details */}
-                <div className="p-3 bg-[#F1F4FB] border border-slate-800 rounded-sm text-xs font-sans text-slate-300">
+                <div className="p-3 bg-[#F1F4FB] border border-slate-800 rounded-sm text-xs font-sans text-slate-300 text-justify">
                   <strong className="text-slate-200 block font-mono-code text-[11px] uppercase mb-0.5">
                     Especificações da Arena:
                   </strong>

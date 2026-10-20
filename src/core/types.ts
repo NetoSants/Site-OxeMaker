@@ -110,12 +110,15 @@ export interface Workshop {
   description: string;
   schedule: string;
   targetAudience: string;
-  registrationUrl: string;
+  registrationUrl?: string;
   duration?: string;
   room?: string;
   capacity?: number;
   prerequisites?: string;
   materialsProvided?: string[];
+  school?: string;
+  equipment?: string[];
+  software?: string;
   instructor?: {
     name: string;
     role: string;

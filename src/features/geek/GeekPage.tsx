@@ -159,7 +159,7 @@ export const GeekPage: React.FC = () => {
               </div>
 
               {/* Prizes */}
-              <div className="p-3 bg-[#0030B5]/20 border border-[#01B1FD]/30 rounded-sm text-xs font-sans text-slate-300">
+              <div className="p-3 bg-[#0030B5]/20 border border-[#01B1FD]/30 rounded-sm text-xs font-sans text-slate-300 text-justify">
                 <strong className="text-[#8A5A04] block font-mono-code text-[11px] uppercase mb-0.5">
                   Premiação Oficial:
                 </strong>

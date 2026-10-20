@@ -60,8 +60,9 @@
     font-family: var(--font-mono);
   }
 
-  p, li {
+  p, li, blockquote, dd, figcaption {
     text-align: justify;
+    text-justify: inter-word;
     hyphens: auto;
     -webkit-hyphens: auto;
   }

@@ -136,7 +136,7 @@ Consulte a coordenação pelo e-mail: ${EVENT_INFO.contact.email}
             </p>
           </div>
 
-          <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-sm text-xs text-amber-800">
+          <div className="p-3 bg-amber-500/10 border border-amber-500/30 rounded-sm text-xs text-amber-800 text-justify">
             <strong>Atenção:</strong> O credenciamento das equipes encerra-se às 08h00 do dia 27 de
             novembro de 2026. Equipes não credenciadas não poderão competir.
           </div>

@@ -1,41 +1,35 @@
-import React, { useState } from 'react';
-import { WORKSHOPS_DATA, EVENT_INFO } from '../../core/constants';
-import { Workshop } from '../../core/types';
-import { RegistrationModal } from '../../components/RegistrationModal';
+import React from 'react';
+import { WORKSHOPS_DATA } from '../../core/constants';
 import {
   Wrench,
   Clock,
   MapPin,
   Users,
   CheckCircle2,
-  Sparkles,
   BookOpen,
-  ShieldCheck,
-  UserCheck,
+  School,
+  Laptop,
 } from 'lucide-react';
 
 export const OficinasPage: React.FC = () => {
-  const [selectedWorkshopForReg, setSelectedWorkshopForReg] = useState<Workshop | null>(null);
-
   return (
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 space-y-12">
       {/* Header */}
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
         <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-wider">
           <Wrench className="w-4 h-4 text-[#8A5A04]" />
-          <span>Laboratórios Vivos · Mão na Massa</span>
+          <span>Oficinas 2026 · Propostas Recebidas</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
-          Oficinas Práticas Maker
+          Oficinas Propostas
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
-          Cinco opções mão na massa no dia 27 de novembro: a oficina oficial de robótica e cultura
-          maker e as temáticas de soldagem, Arduino, modelagem 3D e robótica com sucata. Todos os
-          insumos e materiais são fornecidos pela organização.
+          Nove propostas enviadas por escolas da rede estadual para a 6ª edição. A programação
+          final, os horários e a disponibilidade de materiais serão confirmados pela organização.
         </p>
       </div>
 
-      {/* Workshop Detailed Cards */}
+      {/* Workshop Proposal Cards */}
       <div className="space-y-8">
         {WORKSHOPS_DATA.map((ws, idx) => (
           <div
@@ -46,13 +40,16 @@ export const OficinasPage: React.FC = () => {
               {/* Left Column: Workshop Details */}
               <div className="lg:col-span-7 space-y-5">
                 <div className="space-y-2">
-                  <div className="flex items-center gap-2">
+                  <div className="flex flex-wrap items-center gap-2">
                     <span className="px-2 py-0.5 bg-[#F1F4FB] text-[#8A5A04] font-mono-code text-xs font-bold rounded-sm border border-slate-700">
-                      Oficina 0{idx + 1}
+                      Proposta {String(idx + 1).padStart(2, '0')}
                     </span>
-                    <span className="text-xs font-mono-code text-[#0369A1]">
-                      {ws.duration ? `${ws.duration} de imersão` : 'Mão na massa'}
-                    </span>
+                    {ws.school && (
+                      <span className="inline-flex items-center gap-1.5 px-2 py-0.5 bg-[#01B1FD]/15 text-[#0369A1] font-mono-code text-[11px] font-bold rounded-sm border border-[#01B1FD]/40">
+                        <School className="w-3.5 h-3.5" />
+                        {ws.school}
+                      </span>
+                    )}
                   </div>
 
                   <h2 className="text-2xl sm:text-3xl font-heading text-[#0B1330] group-hover:text-[#8A5A04] transition-colors">
@@ -64,35 +61,32 @@ export const OficinasPage: React.FC = () => {
                   {ws.description}
                 </p>
 
-                {/* Target & Prerequisites */}
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-3 text-xs font-sans">
-                  <div className="p-3 bg-[#F1F4FB] border border-slate-800 rounded-sm">
-                    <span className="text-[10px] font-mono-code text-slate-400 uppercase block mb-1">
-                      Público-Alvo:
-                    </span>
-                    <p className="text-slate-200">{ws.targetAudience}</p>
-                  </div>
-                  {ws.prerequisites && (
-                    <div className="p-3 bg-[#F1F4FB] border border-slate-800 rounded-sm">
-                      <span className="text-[10px] font-mono-code text-slate-400 uppercase block mb-1">
-                        Pré-Requisitos:
-                      </span>
-                      <p className="text-slate-200">{ws.prerequisites}</p>
-                    </div>
-                  )}
-                </div>
-
-                {/* Materials Provided */}
                 {ws.materialsProvided && (
                   <div>
                     <span className="text-xs font-mono-code text-[#8A5A04] uppercase font-bold block mb-2">
-                      Materiais & Insumos Inclusos:
+                      Materiais Solicitados:
                     </span>
                     <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-300 font-sans">
                       {ws.materialsProvided.map((mat, mIdx) => (
-                        <li key={mIdx} className="flex items-center gap-2">
-                          <CheckCircle2 className="w-3.5 h-3.5 text-[#0369A1] flex-shrink-0" />
+                        <li key={mIdx} className="flex items-start gap-2">
+                          <CheckCircle2 className="w-3.5 h-3.5 text-[#0369A1] flex-shrink-0 mt-0.5" />
                           <span>{mat}</span>
+                        </li>
+                      ))}
+                    </ul>
+                  </div>
+                )}
+
+                {ws.equipment && ws.equipment.length > 0 && (
+                  <div>
+                    <span className="text-xs font-mono-code text-[#0369A1] uppercase font-bold block mb-2">
+                      Equipamentos Solicitados:
+                    </span>
+                    <ul className="grid grid-cols-1 sm:grid-cols-2 gap-1.5 text-xs text-slate-300 font-sans">
+                      {ws.equipment.map((item, eIdx) => (
+                        <li key={eIdx} className="flex items-start gap-2">
+                          <Wrench className="w-3.5 h-3.5 text-[#8A5A04] flex-shrink-0 mt-0.5" />
+                          <span>{item}</span>
                         </li>
                       ))}
                     </ul>
@@ -100,95 +94,71 @@ export const OficinasPage: React.FC = () => {
                 )}
               </div>
 
-              {/* Right Column: Instructor Profile & Registration Info */}
+              {/* Right Column: Proposal Information */}
               <div className="lg:col-span-5 bg-[#F1F4FB] border border-slate-700/80 rounded-sm p-6 space-y-5">
-                {/* Time & Room Info */}
                 <div className="space-y-2 border-b border-slate-800 pb-4 text-xs font-mono-code">
-                  <div className="flex items-center justify-between text-slate-300">
-                    <span className="flex items-center gap-1.5 text-slate-400">
+                  <div className="flex items-center justify-between gap-3 text-slate-300">
+                    <span className="flex items-center gap-1.5 text-slate-400 shrink-0">
                       <Clock className="w-4 h-4 text-[#8A5A04]" />
                       Data & Hora:
                     </span>
                     <span className="font-bold text-[#0B1330] text-right">{ws.schedule}</span>
                   </div>
 
-                  <div className="flex items-center justify-between text-slate-300">
-                    <span className="flex items-center gap-1.5 text-slate-400">
+                  <div className="flex items-center justify-between gap-3 text-slate-300">
+                    <span className="flex items-center gap-1.5 text-slate-400 shrink-0">
                       <MapPin className="w-4 h-4 text-[#0369A1]" />
                       Local:
                     </span>
-                    <span className="font-bold text-[#0B1330]">
+                    <span className="font-bold text-[#0B1330] text-right">
                       {ws.room || 'A definir'}
                     </span>
                   </div>
 
-                  {ws.capacity && (
-                    <div className="flex items-center justify-between text-slate-300">
-                      <span className="flex items-center gap-1.5 text-slate-400">
-                        <Users className="w-4 h-4 text-emerald-700" />
-                        Vagas Disponíveis:
+                  <div className="flex items-center justify-between gap-3 text-slate-300">
+                    <span className="flex items-center gap-1.5 text-slate-400 shrink-0">
+                      <Users className="w-4 h-4 text-emerald-700" />
+                      Público-Alvo:
+                    </span>
+                    <span className="font-bold text-[#0B1330] text-right">
+                      {ws.targetAudience}
+                    </span>
+                  </div>
+                </div>
+
+                <div className="space-y-3">
+                  {ws.software && (
+                    <div>
+                      <span className="flex items-center gap-1.5 text-[10px] font-mono-code text-slate-400 uppercase font-bold mb-1">
+                        <Laptop className="w-3.5 h-3.5 text-[#8A5A04]" />
+                        Programa / Software:
                       </span>
-                      <span className="font-bold text-[#8A5A04]">{ws.capacity} participantes</span>
+                      <p className="text-xs text-[#0B1330] font-sans font-semibold">
+                        {ws.software}
+                      </p>
                     </div>
                   )}
-                </div>
 
-                {/* Instructor Profile Card */}
-                {ws.instructor && (
-                  <div className="space-y-2">
-                    <span className="text-[10px] font-mono-code text-slate-400 uppercase font-bold block">
-                      Instrutor Responsável:
+                  <div>
+                    <span className="flex items-center gap-1.5 text-[10px] font-mono-code text-slate-400 uppercase font-bold mb-1">
+                      <BookOpen className="w-3.5 h-3.5 text-[#0369A1]" />
+                      Escola Proponente:
                     </span>
-                    <div className="flex items-start gap-3">
-                      <div className="w-10 h-10 rounded-sm bg-[#F9FDFE] border border-[#FCC140] flex items-center justify-center text-[#8A5A04] flex-shrink-0">
-                        <UserCheck className="w-5 h-5" />
-                      </div>
-                      <div>
-                        <h4 className="text-sm font-bold text-[#0B1330] font-sans">
-                          {ws.instructor.name}
-                        </h4>
-                        <p className="text-[11px] font-mono-code text-[#0369A1]">
-                          {ws.instructor.role}
-                        </p>
-                        <p className="text-[10px] text-slate-400">{ws.instructor.institution}</p>
-                      </div>
-                    </div>
-                    <p className="text-xs text-slate-300 font-sans italic border-l-2 border-slate-700 pl-2.5 pt-1">
-                      "{ws.instructor.bio}"
+                    <p className="text-xs text-[#0B1330] font-sans font-semibold">
+                      {ws.school || 'A definir'}
                     </p>
                   </div>
-                )}
-
-                {/* CTA Action */}
-                <div className="pt-2">
-                  <button
-                    onClick={() => setSelectedWorkshopForReg(ws)}
-                    className="w-full maker-btn-primary py-3 text-xs uppercase flex items-center justify-center gap-2 cursor-pointer"
-                  >
-                    <Sparkles className="w-4 h-4" />
-                    <span>Garantir Vaga na Oficina</span>
-                  </button>
-                  <p className="text-[10px] font-mono-code text-slate-400 text-center mt-2">
-                    ✓ Vagas preenchidas por ordem de inscrição
-                  </p>
                 </div>
+
+                <p className="text-[10px] font-mono-code text-slate-400 border-t border-slate-800 pt-3 leading-relaxed">
+                  Proposta recebida para avaliação da organização. Horários e materiais ainda serão
+                  confirmados.
+                </p>
               </div>
             </div>
           </div>
         ))}
       </div>
-
-      {/* Registration Modal Dialog */}
-      {selectedWorkshopForReg && (
-        <RegistrationModal
-          isOpen={true}
-          onClose={() => setSelectedWorkshopForReg(null)}
-          title={`Inscrição · ${selectedWorkshopForReg.title}`}
-          categoryName={`Oficina Maker (${selectedWorkshopForReg.room || 'Ôxe Maker 2026'})`}
-          formUrl={selectedWorkshopForReg.registrationUrl}
-          type="oficina"
-        />
-      )}
     </div>
   );
 };
