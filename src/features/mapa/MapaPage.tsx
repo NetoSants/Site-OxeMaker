@@ -60,13 +60,13 @@ export const MapaPage: React.FC = () => {
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
         <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-wider">
           <MapPin className="w-4 h-4 text-[#8A5A04]" />
-          <span>Localização & Infraestrutura · Olinda - PE</span>
+          <span>Localização & Infraestrutura · {EVENT_INFO.location.city} - {EVENT_INFO.location.state}</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           Como Chegar & Mapa do Local
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
-          O Ôxe Maker 2026 será sediado na ETE José de Alencar, em Olinda (Bairro Novo), com
+          O Ôxe Maker 2026 será sediado na {EVENT_INFO.location.venue}, em {EVENT_INFO.location.city} ({EVENT_INFO.location.neighborhood}), com
           frente ampla para credenciamento, palco principal, salas de oficina e cafeteria.
         </p>
       </div>
@@ -123,7 +123,7 @@ export const MapaPage: React.FC = () => {
           <div className="p-2 flex items-center justify-between text-xs font-mono-code text-slate-300 bg-[#F1F4FB] border border-slate-800 rounded-t-sm mb-2">
             <span className="flex items-center gap-1.5 text-[#0369A1]">
               <Compass className="w-3.5 h-3.5" />
-              <span>Bairro Novo, Olinda (PE)</span>
+              <span>{EVENT_INFO.location.neighborhood}, {EVENT_INFO.location.city} ({EVENT_INFO.location.state})</span>
             </span>
             <span className="text-slate-400">Ao vivo</span>
           </div>

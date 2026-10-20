@@ -44,7 +44,7 @@
 | Data | 02 e 03 de julho de 2026 |
 | Horário | 07:00 – 17:30 |
 | Local | ETE José de Alencar — Ginásio e Pátio Central |
-| Endereço | Av. Getúlio Vargas, s/n, Bairro Novo, Olinda – PE, 53030-010 |
+| Endereço | Rua João Francisco Batista, 170, Janga, Paulista – PE, 53439-410 |
 | Entrada | Gratuita |
 | Inscrições | Google Forms (links externos, sem banco de dados) |
 | Countdown alvo | 2026-07-02T09:00:00 |
@@ -167,7 +167,7 @@ cultura maker/geek. Entregue um projeto completo, funcional e responsivo.
 === SERVIÇOS ===
 - Data: 02 e 03 de julho de 2026, das 07h às 17h30
 - Local: ETE José de Alencar — Ginásio e Pátio Central
-- Endereço: Av. Getúlio Vargas, s/n, Bairro Novo, Olinda – PE, 53030-010
+- Endereço: Rua João Francisco Batista, 170, Janga, Paulista – PE, 53439-410
 - Entrada gratuita; inscrições via Google Forms (links como placeholders editáveis)
 - Countdown regressivo para 02/07/2026 09:00
 
@@ -246,7 +246,7 @@ Caminho mais simples: `npm run build` → arrastar `dist/` no Netlify → no ar.
 - **Forms (editáveis/placeholder):** Google Forms das competições — ver
   `src/features/tournament/RoboticsTournament.tsx` e `src/features/geek/GeekCulture.tsx`
   do site atual para URLs existentes
-- **Google Maps:** `https://www.google.com/maps/search/ETE+José+de+Alencar+Olinda`
+- **Google Maps:** `https://www.google.com/maps/search/ETE+José+de+Alencar+Janga+Paulista`
 
 ---
 

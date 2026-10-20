@@ -52,7 +52,7 @@ export const ProgramacaoPage: React.FC = () => {
   }, [selectedCategory, searchQuery]);
 
   const handleExportSchedule = () => {
-    let content = `PROGRAMAÇÃO OFICIAL - ÔXE MAKER 2026\nData: ${EVENT_INFO.dates.display} | ${EVENT_INFO.location.venue}, Olinda-PE\n\n`;
+    let content = `PROGRAMAÇÃO OFICIAL - ÔXE MAKER 2026\nData: ${EVENT_INFO.dates.display} | ${EVENT_INFO.location.venue}, ${EVENT_INFO.location.city}-${EVENT_INFO.location.state}\n\n`;
 
     SCHEDULE_DATA.forEach((item) => {
       content += `${item.time} - ${item.title}\nLocal: ${item.location}\nCategoria: ${item.category.toUpperCase()}\nDetalhes: ${item.description}\n----------------------------------------\n`;
@@ -126,7 +126,7 @@ export const ProgramacaoPage: React.FC = () => {
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
           Acompanhe todos os horários do dia: credenciamento, abertura cultural, TED Talks,
           oficinas, Mostra de Projetos, competições, pitch do Hackathon e cerimônia de premiação
-          na ETE José de Alencar, em Olinda.
+          na ETE José de Alencar, em {EVENT_INFO.location.city}.
         </p>
 
         <div className="pt-2 flex flex-wrap items-center gap-3">

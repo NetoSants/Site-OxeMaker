@@ -38,29 +38,29 @@ export const EVENT_INFO: EventGeneralInfo = {
   },
   location: {
     venue: 'ETE José de Alencar',
-    fullName: 'Escola Técnica Estadual (ETE) José de Alencar',
+    fullName: 'Escola Técnica Estadual (ETE) José de Alencar Gomes da Silva',
     space: 'Frente da escola, ginásio, pátio e cafeteria',
-    street: 'Av. Getúlio Vargas, s/n',
-    neighborhood: 'Bairro Novo',
-    city: 'Olinda',
+    street: 'Rua João Francisco Batista, 170',
+    neighborhood: 'Janga',
+    city: 'Paulista',
     state: 'PE',
-    cep: '53030-010',
-    fullAddress: 'Av. Getúlio Vargas, s/n — Bairro Novo, Olinda – PE, 53030-010',
+    cep: '53439-410',
+    fullAddress: 'Rua João Francisco Batista, 170 — Janga, Paulista – PE, 53439-410',
     // Embed URL for Google Maps
     googleMapsEmbedUrl:
-      'https://www.google.com/maps?q=ETE+Jos%C3%A9+de+Alencar,+Olinda,+PE,+53030-010&output=embed',
+      'https://www.google.com/maps?q=ETE+Jos%C3%A9+de+Alencar+Gomes+da+Silva,+Janga,+Paulista,+PE,+53439-410&output=embed',
     googleMapsDirectionsUrl:
-      'https://maps.google.com/?q=ETE+José+de+Alencar+Olinda+PE',
+      'https://maps.google.com/?q=ETE+José+de+Alencar+Gomes+da+Silva,+Rua+João+Francisco+Batista,+170,+Janga,+Paulista,+PE,+53439-410',
     referencePoints: [
-      'Localizado na Av. Getúlio Vargas — Bairro Novo, Olinda-PE',
-      'Acesso pela Av. Getúlio Vargas (região central de Olinda)',
+      'Localizada na Rua João Francisco Batista, 170 — Janga, Paulista-PE',
+      'Acesso pela Av. Dr. Cláudio José Gueiros Leite (Janga)',
       'Credenciamento na frente do evento (a partir das 07h00)',
     ],
     transitTips: [
       {
         title: 'Ônibus',
         description:
-          'Linhas que circulam pela Av. Getúlio Vargas e região central de Olinda deixam passageiros nas proximidades da escola. Confirme o trajeto com sua escola ou transporte da região.',
+          'Linhas que circulam pela Av. Dr. Cláudio José Gueiros Leite e pelo Janga deixam passageiros nas proximidades da escola. Confirme o trajeto com sua escola ou transporte da região.',
       },
       {
         title: 'Caravana Escolar',
@@ -397,7 +397,7 @@ export const GEEK_CATEGORIES: GeekCategory[] = [
       'Camarim climatizado para preparação dos participantes no local',
     ],
     scheduleTime: 'Sexta, 27 de novembro · Competições & Geek (14h30 - 15h30)',
-    stage: 'ETE José de Alencar · Olinda-PE',
+    stage: 'ETE José de Alencar · Paulista-PE',
     registrationUrl: 'https://docs.google.com/forms/d/e/1FAIpQLSd4R3JcsSD_8gPA9DwBJ3HMes4C9Z5YwhQk57AadqcZn6wGug/viewform',
     rulesPdfUrl: '#regulamento-cosplay',
     prizes: '1º Lugar: R$ 800 em vales geek + Troféu Calango Dourado; 2º e 3º Lugares: Vales e Colecionáveis.',
@@ -420,7 +420,7 @@ export const GEEK_CATEGORIES: GeekCategory[] = [
       'Ensaios e reconhecimento de palco combinados com a coordenação no dia 27/11',
     ],
     scheduleTime: 'Sexta, 27 de novembro · Competições & Geek (14h30 - 15h30)',
-    stage: 'ETE José de Alencar · Olinda-PE',
+    stage: 'ETE José de Alencar · Paulista-PE',
     registrationUrl: 'https://forms.gle/oxemaker2026-kpop',
     rulesPdfUrl: '#regulamento-kpop',
     prizes: 'Troféus para Campeão Solo e Campeão Grupo + Vales em lojas de dança e kits culturais.',
@@ -643,7 +643,7 @@ export const TIMELINE_DATA: TimelineMilestone[] = [
     edition: '6ª Edição',
     title: 'O Presente: Justiça Socioambiental & Futuro',
     description:
-      'A 6ª edição acontece em um único dia, 27 de novembro, na ETE José de Alencar em Olinda, com oficinas, mostra de projetos, competições, cultura geek e o pitch do Hackathon.',
+      'A 6ª edição acontece em um único dia, 27 de novembro, na ETE José de Alencar em Paulista, com oficinas, mostra de projetos, competições, cultura geek e o pitch do Hackathon.',
     stats: '58+ escolas parceiras · 6+ competições · 90+ projetos makers',
   },
 ];
@@ -686,7 +686,7 @@ export const SPONSORS_TIERS: SponsorTier[] = [
       },
       {
         name: 'ETE José de Alencar',
-        role: 'Escola Anfitriã (Olinda-PE)',
+        role: 'Escola Anfitriã (Paulista-PE)',
         logoAlt: 'Logo da ETE José de Alencar',
       },
     ],
@@ -764,7 +764,7 @@ export const FAQ_DATA = [
   {
     question: 'Quando e onde acontece o Ôxe Maker 2026?',
     answer:
-      'O evento acontece em um único dia: 27 de novembro de 2026 (sexta-feira), das 07h00 às 18h00, na ETE José de Alencar (Av. Getúlio Vargas, s/n — Bairro Novo, Olinda-PE).',
+      'O evento acontece em um único dia: 27 de novembro de 2026 (sexta-feira), das 07h00 às 18h00, na ETE José de Alencar (Rua João Francisco Batista, 170 — Janga, Paulista-PE, 53439-410).',
   },
   {
     question: 'Até quando posso me inscrever?',

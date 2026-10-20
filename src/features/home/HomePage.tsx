@@ -156,7 +156,7 @@ export const HomePage: React.FC = () => {
                       <p className="text-base sm:text-lg font-heading text-[#0B1330] font-black leading-tight">
                         {EVENT_INFO.location.venue}
                       </p>
-                      <p className="text-xs font-mono-code text-slate-300">Olinda-PE · {EVENT_INFO.location.neighborhood}</p>
+                      <p className="text-xs font-mono-code text-slate-300">{EVENT_INFO.location.city}-{EVENT_INFO.location.state} · {EVENT_INFO.location.neighborhood}</p>
                     </div>
                   </div>
                 </div>
@@ -586,7 +586,7 @@ export const HomePage: React.FC = () => {
               </h2>
               <p className="text-slate-300 text-sm sm:text-base max-w-2xl font-sans">
                 Traga sua escola, seus amigos e sua família para prestigiar o talento e a inovação
-                dos jovens estudantes da Rede Estadual na {EVENT_INFO.location.venue}, em Olinda.
+                dos jovens estudantes da Rede Estadual na {EVENT_INFO.location.venue}, em {EVENT_INFO.location.city}.
               </p>
             </div>
 
