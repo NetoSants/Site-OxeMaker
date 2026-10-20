@@ -176,3 +176,17 @@ export interface GalleryItem {
   caption: string;
   image?: string;
 }
+
+export interface NewsItem {
+  id: string;
+  date: string;
+  outlet: string;
+  title: string;
+  summary: string;
+  url: string;
+  type: 'reportagem' | 'republicacao';
+  alsoPublishedAt?: {
+    outlet: string;
+    url: string;
+  };
+}

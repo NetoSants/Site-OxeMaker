@@ -43,6 +43,7 @@ export const Navbar: React.FC = () => {
         { label: 'Oxethon 2026', path: '/oxethon' },
       ],
     },
+    { label: 'Na Mídia', path: '/noticias' },
     { label: 'Sobre', path: '/sobre' },
   ];
 
@@ -68,7 +69,7 @@ export const Navbar: React.FC = () => {
             <span className="text-slate-500">·</span>
             <span className="flex items-center gap-1.5 text-slate-300">
               <MapPin className="w-3.5 h-3.5 text-[#0369A1]" />
-              <span>{EVENT_INFO.location.venue} · Olinda-PE</span>
+              <span>{EVENT_INFO.location.venue} · {EVENT_INFO.location.city}-{EVENT_INFO.location.state}</span>
             </span>
           </div>
           <div className="flex items-center gap-3">

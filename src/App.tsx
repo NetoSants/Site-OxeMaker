@@ -30,6 +30,9 @@ const OficinasPage = lazy(() =>
 const SobrePage = lazy(() =>
   import('./features/sobre/SobrePage').then((m) => ({ default: m.SobrePage })),
 );
+const NoticiasPage = lazy(() =>
+  import('./features/noticias/NoticiasPage').then((m) => ({ default: m.NoticiasPage })),
+);
 
 const NotFoundPage: React.FC = () => (
   <div className="max-w-2xl mx-auto px-4 py-24 text-center space-y-6">
@@ -69,6 +72,7 @@ export default function App() {
           <Route path="/geek" element={<GeekPage />} />
           <Route path="/oxethon" element={<OxethonPage />} />
           <Route path="/oficinas" element={<OficinasPage />} />
+          <Route path="/noticias" element={<NoticiasPage />} />
           <Route path="/sobre" element={<SobrePage />} />
           <Route path="/404" element={<NotFoundPage />} />
           <Route path="*" element={<Navigate to="/404" replace />} />
