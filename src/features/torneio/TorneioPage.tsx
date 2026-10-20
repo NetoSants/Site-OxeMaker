@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { TOURNAMENTS_DATA, EVENT_INFO } from '../../core/constants';
 import { RoboticsTournament } from '../../core/types';
-import { RegistrationModal } from '../../components/RegistrationModal';
 import { EditalModal } from '../../components/EditalModal';
 import {
   Bot,
@@ -18,8 +17,6 @@ import {
 
 export const TorneioPage: React.FC = () => {
   const [selectedTournamentForEdital, setSelectedTournamentForEdital] =
-    useState<RoboticsTournament | null>(null);
-  const [selectedTournamentForReg, setSelectedTournamentForReg] =
     useState<RoboticsTournament | null>(null);
 
   const getIcon = (iconName: string) => {
@@ -162,13 +159,15 @@ export const TorneioPage: React.FC = () => {
 
                 {/* Action buttons */}
                 <div className="pt-2 flex flex-col sm:flex-row gap-2.5">
-                  <button
-                    onClick={() => setSelectedTournamentForReg(t)}
+                  <a
+                    href={t.registrationUrl}
+                    target="_blank"
+                    rel="noopener noreferrer"
                     className="flex-1 maker-btn-primary py-2.5 px-4 text-xs uppercase flex items-center justify-center gap-1.5"
                   >
                     <Sparkles className="w-3.5 h-3.5" />
                     <span>Inscrever Robô</span>
-                  </button>
+                  </a>
 
                   <button
                     onClick={() => setSelectedTournamentForEdital(t)}
@@ -183,18 +182,6 @@ export const TorneioPage: React.FC = () => {
           </div>
         ))}
       </div>
-
-      {/* Registration Modal Dialog */}
-      {selectedTournamentForReg && (
-        <RegistrationModal
-          isOpen={true}
-          onClose={() => setSelectedTournamentForReg(null)}
-          title={`Inscrição · ${selectedTournamentForReg.name}`}
-          categoryName={`Torneio de Robótica (${selectedTournamentForReg.category})`}
-          formUrl={selectedTournamentForReg.registrationUrl}
-          type="torneio"
-        />
-      )}
 
       {/* Edital Modal Dialog */}
       {selectedTournamentForEdital && (

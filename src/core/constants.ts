@@ -272,7 +272,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     time: '14h30 - 15h30',
     title: 'Competições & Geek',
     description:
-      'Competições de Buzz Line (linha mais simples), Buzz PRO (linha mais complexa), Sumô de Robôs, Dança K-POP, Just Dance e Cosplay.',
+      'Competições de Buzz Line (linha mais simples), Buzz PRO (linha mais complexa), Sumô de Robôs, Dança K-POP e Cosplay.',
     category: 'robotica',
     location: 'Arena de Competições',
   },
@@ -375,7 +375,7 @@ export const TOURNAMENTS_DATA: RoboticsTournament[] = [
 
 /**
  * ============================================================================
- * 3 CATEGORIAS GEEK (COSPLAY, K-POP, JUST DANCE)
+ * 2 CATEGORIAS GEEK (COSPLAY E K-POP)
  * ============================================================================
  */
 export const GEEK_CATEGORIES: GeekCategory[] = [
@@ -425,28 +425,6 @@ export const GEEK_CATEGORIES: GeekCategory[] = [
     rulesPdfUrl: '#regulamento-kpop',
     prizes: 'Troféus para Campeão Solo e Campeão Grupo + Vales em lojas de dança e kits culturais.',
     image: img('k-pop.webp'),
-  },
-  {
-    id: 'justdance',
-    name: 'Arena Just Dance Interativa',
-    subtitle: 'Diversão Coletiva & Ritmo Sem Parar',
-    description: 'Espaço aberto com projeção de alta definição e sensores de movimento. Qualquer estudante, professor ou visitante pode entrar na fila e dançar.',
-    criteria: [
-      'Pontuação direta calculada pelo sistema do jogo',
-      'Partidas em mata-mata nas eliminatórias da tarde',
-      'Bônus do juri popular para melhor animação',
-    ],
-    rulesHighlight: [
-      'Espaço aberto durante todo o evento, com torneio no horário das Competições & Geek',
-      'Torneio ranqueado no dia 27/11, das 14h30 às 15h30',
-      'Músicas sorteadas entre a lista oficial do Just Dance 2025/2026',
-    ],
-    scheduleTime: 'Sexta, 27 de novembro · Competições & Geek (14h30 - 15h30)',
-    stage: 'Tenda Gamer & Projeção Interativa',
-    registrationUrl: 'https://forms.gle/oxemaker2026-justdance',
-    rulesPdfUrl: '#regulamento-justdance',
-    prizes: 'Medalhas Oficiais Ôxe Maker e brindes temáticos para os 4 maiores pontuadores do dia.',
-    image: img('calango-just.webp'),
   },
 ];
 
@@ -806,7 +784,7 @@ export const FAQ_DATA = [
   {
     question: 'Como faço para participar das competições?',
     answer:
-      'Acesse as abas Torneios (Buzz Line, Buzz PRO e Sumô de Robôs) e Cultura Geek (Cosplay, K-POP e Just Dance), confirme as regras da categoria desejada e faça sua inscrição até 09/10/2026. As competições acontecem no dia 27/11, das 14h30 às 15h30.',
+      'Acesse a página de Inscrições e escolha entre Torneios (Buzz Line, Buzz PRO e Sumô de Robôs), Cultura Geek (Cosplay e K-POP), Oficinas Maker e Oxethon. Confirme as regras da categoria desejada e faça sua inscrição até 09/10/2026. As competições acontecem no dia 27/11, das 14h30 às 15h30.',
   },
   {
     question: 'Qual é a programação do dia do evento?',

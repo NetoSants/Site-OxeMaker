@@ -1,11 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { GEEK_CATEGORIES, EVENT_INFO } from '../../core/constants';
-import { GeekCategory } from '../../core/types';
-import { RegistrationModal } from '../../components/RegistrationModal';
 import {
   Sparkles,
   Music,
-  Tv,
   Crown,
   Clock,
   MapPin,
@@ -17,16 +14,12 @@ import {
 } from 'lucide-react';
 
 export const GeekPage: React.FC = () => {
-  const [selectedCategoryForReg, setSelectedCategoryForReg] = useState<GeekCategory | null>(null);
-
   const getCategoryIcon = (id: string) => {
     switch (id) {
       case 'cosplay':
         return <Crown className="w-6 h-6 text-[#8A5A04]" />;
       case 'kpop':
         return <Music className="w-6 h-6 text-[#0369A1]" />;
-      case 'justdance':
-        return <Tv className="w-6 h-6 text-purple-700" />;
       default:
         return <Sparkles className="w-6 h-6 text-[#8A5A04]" />;
     }
@@ -45,7 +38,7 @@ export const GeekPage: React.FC = () => {
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
           A robótica ganha vida quando se conecta com a paixão dos estudantes por animes, games,
-          ficção científica e dança. Conheça as 3 modalidades do Polo Geek do Ôxe Maker 2026!
+          ficção científica e dança. Conheça as 2 modalidades do Polo Geek do Ôxe Maker 2026!
         </p>
       </div>
 
@@ -61,24 +54,25 @@ export const GeekPage: React.FC = () => {
           </h2>
           <p className="text-xs sm:text-sm text-slate-300 font-sans max-w-xl">
             Inscrições abertas para estudantes da rede pública e comunidade. Traga seu
-            cosplay feito com materiais makers, monte seu grupo cover de K-pop ou venha suar a camisa
-            no Just Dance!
+            cosplay feito com materiais makers ou monte seu grupo cover de K-pop!
           </p>
         </div>
 
         <div className="flex-shrink-0">
-          <button
-            onClick={() => setSelectedCategoryForReg(GEEK_CATEGORIES[0])}
+          <a
+            href={GEEK_CATEGORIES[0].registrationUrl}
+            target="_blank"
+            rel="noopener noreferrer"
             className="maker-btn-primary px-6 py-3 text-xs uppercase flex items-center gap-2"
           >
             <Crown className="w-4 h-4" />
             <span>Inscrever Meu Cosplay</span>
-          </button>
+          </a>
         </div>
       </div>
 
-      {/* 3 Categories Grid */}
-      <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+      {/* 2 Categories Grid */}
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
         {GEEK_CATEGORIES.map((cat) => (
           <div
             key={cat.id}
@@ -90,9 +84,9 @@ export const GeekPage: React.FC = () => {
                   <img
                     src={cat.image}
                     alt={cat.name}
-              className="w-full h-40 object-cover group-hover:scale-[1.02] transition-transform"
-              loading="lazy"
-              decoding="async"
+                    className="w-full aspect-[16/9] object-cover group-hover:scale-[1.02] transition-transform"
+                    loading="lazy"
+                    decoding="async"
                   />
                 </div>
               )}
@@ -169,13 +163,15 @@ export const GeekPage: React.FC = () => {
 
             {/* CTA Button */}
             <div className="pt-4 border-t border-slate-800">
-              <button
-                onClick={() => setSelectedCategoryForReg(cat)}
+              <a
+                href={cat.registrationUrl}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="w-full maker-btn-primary py-2.5 text-xs uppercase flex items-center justify-center gap-2"
               >
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Inscrever-se</span>
-              </button>
+              </a>
             </div>
           </div>
         ))}
@@ -193,18 +189,6 @@ export const GeekPage: React.FC = () => {
           em expulsão imediata do evento. Cosplay não é consentimento! Respeitem os artistas.
         </p>
       </div>
-
-      {/* Registration Modal Dialog */}
-      {selectedCategoryForReg && (
-        <RegistrationModal
-          isOpen={true}
-          onClose={() => setSelectedCategoryForReg(null)}
-          title={`Inscrição · ${selectedCategoryForReg.name}`}
-          categoryName={`Polo Geek (${selectedCategoryForReg.name})`}
-          formUrl={selectedCategoryForReg.registrationUrl}
-          type="geek"
-        />
-      )}
     </div>
   );
 };

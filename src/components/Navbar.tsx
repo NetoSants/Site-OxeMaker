@@ -1,14 +1,12 @@
 import React, { useState, useEffect } from 'react';
-import { NavLink, useLocation } from 'react-router-dom';
+import { Link, NavLink, useLocation } from 'react-router-dom';
 import { Logo } from './Logo';
 import { Menu, X, Calendar, MapPin, Sparkles, ChevronDown, ChevronRight } from 'lucide-react';
-import { RegistrationModal } from './RegistrationModal';
 import { ThemeToggle } from './ThemeToggle';
 import { EVENT_INFO } from '../core/constants';
 
 export const Navbar: React.FC = () => {
   const [isOpen, setIsOpen] = useState(false);
-  const [isRegModalOpen, setIsRegModalOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const location = useLocation();
 
@@ -154,13 +152,14 @@ export const Navbar: React.FC = () => {
             {/* Right Action CTA + Theme Toggle + Hamburger */}
             <div className="flex items-center gap-3">
               <ThemeToggle className="flex items-center justify-center w-10 h-10 border-2 border-slate-700 text-slate-300 hover:border-[#01B1FD] hover:text-[#01B1FD] rounded-sm transition-colors cursor-pointer" />
-              <button
-                onClick={() => setIsRegModalOpen(true)}
+              <Link
+                to="/inscricoes"
+                viewTransition
                 className="hidden sm:flex maker-btn-secondary px-5 py-2.5 text-sm uppercase items-center gap-1.5 tracking-wider cursor-pointer"
               >
                 <Sparkles className="w-3.5 h-3.5" />
                 <span>Inscreva-se</span>
-              </button>
+              </Link>
               <button
                 type="button"
                 onClick={() => setIsOpen(!isOpen)}
@@ -227,28 +226,18 @@ export const Navbar: React.FC = () => {
             )}
 
             <div className="pt-4 mt-2 border-t border-slate-800">
-              <button
-                onClick={() => {
-                  setIsOpen(false);
-                  setIsRegModalOpen(true);
-                }}
-                className="maker-btn-secondary w-full py-3 text-lg uppercase tracking-widest"
+              <Link
+                to="/inscricoes"
+                viewTransition
+                onClick={() => setIsOpen(false)}
+                className="maker-btn-secondary w-full py-3 text-lg uppercase tracking-widest flex items-center justify-center"
               >
                 Inscreva-se
-              </button>
+              </Link>
             </div>
           </div>
         )}
       </header>
-
-      {/* Registration Modal Dialog */}
-      <RegistrationModal
-        isOpen={isRegModalOpen}
-        onClose={() => setIsRegModalOpen(false)}
-        title="Inscrições · Ôxe Maker 2026"
-        categoryName="Oficineiros · Mostra de Projetos · Palestrantes — até 09/10/2026"
-        formUrl={EVENT_INFO.links.oficineirosRegistration}
-      />
     </>
   );
 };

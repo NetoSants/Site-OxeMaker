@@ -11,7 +11,6 @@ import {
 import { CountdownTimer } from '../../components/CountdownTimer';
 import { img } from '../../core/images';
 import { AnimatedCounter } from '../../components/AnimatedCounter';
-import { RegistrationModal } from '../../components/RegistrationModal';
 import {
   Sparkles,
   Calendar,
@@ -28,37 +27,38 @@ import {
   CheckCircle2,
   Users,
   Compass,
-  Mic,
   Lightbulb,
 } from 'lucide-react';
 
 export const HomePage: React.FC = () => {
-  const [isRegModalOpen, setIsRegModalOpen] = useState(false);
-  const [regTitle, setRegTitle] = useState('Inscrição Oficial · Ôxe Maker 2026');
-  const [regCategory, setRegCategory] = useState('Visitante Geral & Comunidade');
-  const [regUrl, setRegUrl] = useState(EVENT_INFO.links.oficineirosRegistration);
-
   const registrationOptions = [
     {
-      id: 'oficineiros',
-      title: 'Oficineiros',
-      description: 'Para alunos e professores que querem participar das oficinas de robótica e cultura maker.',
-      url: EVENT_INFO.links.oficineirosRegistration,
-      icon: <Wrench className="w-5 h-5 text-[#8A5A04]" />,
+      id: 'torneios',
+      title: 'Torneios de Robótica',
+      description: 'Inscreva sua equipe nas modalidades Buzz Line, Buzz PRO e Sumô de Robôs.',
+      href: '/inscricoes#torneios',
+      icon: <Bot className="w-5 h-5 text-[#8A5A04]" />,
     },
     {
-      id: 'mostra',
-      title: 'Mostra de Projetos',
-      description: 'Para equipes que vão apresentar seus projetos para a banca.',
-      url: EVENT_INFO.links.mostraRegistration,
+      id: 'geek',
+      title: 'Cultura Geek',
+      description: 'Participe do concurso Cosplay ou da mostra e torneio de K-Pop Dance Cover.',
+      href: '/inscricoes#geek',
       icon: <Sparkles className="w-5 h-5 text-[#0369A1]" />,
     },
     {
-      id: 'palestrantes',
-      title: 'Palestrantes',
-      description: 'Para quem deseja palestrar, preferencialmente no formato TED Talks.',
-      url: EVENT_INFO.links.palestrantesRegistration,
-      icon: <Mic className="w-5 h-5 text-purple-700" />,
+      id: 'oficinas',
+      title: 'Oficinas Maker',
+      description: 'Conheça as nove propostas de oficinas enviadas pelas escolas da rede estadual.',
+      href: '/inscricoes#oficinas',
+      icon: <Wrench className="w-5 h-5 text-[#8A5A04]" />,
+    },
+    {
+      id: 'oxethon',
+      title: 'Oxethon',
+      description: 'Monte sua equipe para o hackathon e apresente o pitch no dia do evento.',
+      href: '/inscricoes#oxethon',
+      icon: <Cpu className="w-5 h-5 text-[#0369A1]" />,
     },
   ];
 
@@ -72,13 +72,6 @@ export const HomePage: React.FC = () => {
     Cpu: <Cpu className="w-6 h-6 text-[#0369A1]" />,
     Sparkles: <Sparkles className="w-6 h-6 text-[#0369A1]" />,
     Trophy: <Trophy className="w-6 h-6 text-[#8A5A04]" />,
-  };
-
-  const handleOpenRegistration = (title: string, category: string, url: string) => {
-    setRegTitle(title);
-    setRegCategory(category);
-    setRegUrl(url);
-    setIsRegModalOpen(true);
   };
 
   const filteredGallery =
@@ -167,13 +160,13 @@ export const HomePage: React.FC = () => {
 
               {/* CTA Buttons */}
               <div className="pt-2 lg:pt-0 flex flex-wrap items-center justify-center lg:justify-start gap-4">
-                <a
-                  href="#inscricoes"
+                <Link
+                  to="/inscricoes"
                   className="maker-btn-secondary px-6 py-3.5 text-sm uppercase flex items-center gap-2 cursor-pointer"
                 >
                   <Sparkles className="w-4 h-4" />
-                  <span>Inscreva-se até 09/10</span>
-                </a>
+                  <span>Acessar Inscrições</span>
+                </Link>
 
                 <Link
                   to="/programacao"
@@ -477,35 +470,30 @@ export const HomePage: React.FC = () => {
       </section>
 
       {/* =====================================================================
-          5.5 INSCRIÇÕES (3 MODALIDADES ATÉ 09/10)
+          5.5 INSCRIÇÕES (4 TÓPICOS)
          ===================================================================== */}
       <section id="inscricoes" className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 scroll-mt-24">
         <div className="flex flex-col md:flex-row md:items-end justify-between gap-4 mb-10">
           <div>
             <span className="text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-widest block mb-1">
-              Inscrições Abertas · Até 09/10/2026
+              Inscrições Ôxe Maker 2026
             </span>
             <h2 className="text-3xl md:text-4xl font-heading text-[#0B1330] uppercase">
-              Escolha Sua Modalidade
+              Escolha Seu Tópico
             </h2>
           </div>
           <p className="text-sm text-slate-400 max-w-md">
-            Três formas de participar do Ôxe Maker 2026: como oficineiro, apresentando um projeto
-            na mostra ou pautando uma palestra.
+            Quatro caminhos para participar: torneios de robótica, cultura geek, oficinas maker e
+            Oxethon.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {registrationOptions.map((option) => (
-            <button
+            <Link
               key={option.id}
-              onClick={() =>
-                handleOpenRegistration(
-                  `Inscrição · ${option.title}`,
-                  option.title,
-                  option.url
-                )
-              }
+              to={option.href}
+              viewTransition
               className="maker-card p-6 rounded-sm text-left flex flex-col gap-4 group cursor-pointer"
             >
               <div className="p-3 bg-[#F1F4FB] border border-slate-700 rounded-sm w-fit group-hover:border-[#FCC140] transition-colors">
@@ -523,7 +511,7 @@ export const HomePage: React.FC = () => {
                 Inscrever-se
                 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
               </span>
-            </button>
+            </Link>
           ))}
         </div>
       </section>
@@ -595,13 +583,13 @@ export const HomePage: React.FC = () => {
             </div>
 
             <div className="lg:col-span-4 flex flex-col sm:flex-row lg:flex-col gap-3 justify-center">
-              <a
-                href="#inscricoes"
+              <Link
+                to="/inscricoes"
                 className="maker-btn-primary py-3.5 px-6 text-xs uppercase flex items-center justify-center gap-2 cursor-pointer"
               >
                 <Sparkles className="w-4 h-4" />
-                <span>Inscreva-se Até 09/10</span>
-              </a>
+                <span>Acessar Inscrições</span>
+              </Link>
 
               <Link
                 to="/mapa"
@@ -614,15 +602,6 @@ export const HomePage: React.FC = () => {
           </div>
         </div>
       </section>
-
-      {/* Registration Modal Dialog */}
-      <RegistrationModal
-        isOpen={isRegModalOpen}
-        onClose={() => setIsRegModalOpen(false)}
-        title={regTitle}
-        categoryName={regCategory}
-        formUrl={regUrl}
-      />
     </div>
   );
 };

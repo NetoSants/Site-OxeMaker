@@ -81,7 +81,6 @@ O código foi organizado em camadas modulares para facilitar manutenções futur
     │   │   ├── CalangoMascot.tsx   # Mascote Calango vetorial animado (SVG)
     │   │   ├── CountdownTimer.tsx  # Contagem regressiva ao vivo para 27/11/2026 07h00
     │   │   ├── AnimatedCounter.tsx # Contadores com IntersectionObserver
-    │   │   ├── RegistrationModal.tsx # Modal interativo de inscrição (com Google Forms e simulação)
     │   │   ├── EditalModal.tsx     # Modal de leitura e download de editais técnicos
     │   │   ├── ScrollToTop.tsx     # Restaura scroll ao trocar de rota
     │   │   └── MainLayout.tsx       # Shell com fundo de glifos de ciência animados (reagem ao scroll)
@@ -90,9 +89,10 @@ O código foi organizado em camadas modulares para facilitar manutenções futur
     │   │   ├── programacao/        # Grade do dia com blocos Manhã e Tarde, filtros e busca
     │   │   ├── mapa/               # Endereço, Google Maps embed, transporte e setores
     │   │   ├── torneio/            # 3 categorias de robótica (Buzz Line, Buzz Pro, Sumô) e editais
-    │   │   ├── geek/               # Cosplay, K-pop Dance Cover e Arena Just Dance
+    │   │   ├── geek/               # Cosplay e K-pop Dance Cover
     │   │   ├── oxethon/            # Hackathon, história e regulamento
-    │   │   ├── oficinas/           # 5 Oficinas práticas com instrutores editáveis
+    │   │   ├── oficinas/           # 9 propostas de oficinas enviadas pelas escolas
+    │   │   ├── inscricoes/         # Central de inscrições por tópico
     │   │   └── sobre/              # História desde 2021, linha do tempo e Homenagem à Fundadora
     │   ├── index.css               # Tema escuro maker, sombras offset e tipografia justificada
     │   ├── App.tsx                 # Rotas React Router (HashRouter) — necessário para o GitHub Pages
@@ -114,9 +114,9 @@ Todos os textos, datas, nomes e links de inscrição estão concentrados no arqu
 | **Números de impacto (provas sociais)** | Array `METRICS_DATA` |
 | **Grade de horários do evento** | Array `SCHEDULE_DATA` (blocos Manhã/Tarde) |
 | **Categorias dos torneios de robótica** | Array `TOURNAMENTS_DATA` (3 categorias) |
-| **Categorias geek (Cosplay, K-pop, Just Dance)** | Array `GEEK_CATEGORIES` |
+| **Categorias geek (Cosplay e K-pop)** | Array `GEEK_CATEGORIES` |
 | **Desafios e trilhas do Oxethon 48h** | Objeto `OXETHON_INFO` |
-| **Professores e detalhes das oficinas** | Array `WORKSHOPS_DATA` |
+| **Propostas e detalhes das oficinas** | Array `WORKSHOPS_DATA` |
 | **Linha do tempo histórica (2021 a 2026)** | Array `TIMELINE_DATA` |
 | **Texto de homenagem à Fundadora** | Objeto `FOUNDER_TRIBUTE` |
 | **Patrocinadores e realizadores por tier** | Array `SPONSORS_TIERS` |
