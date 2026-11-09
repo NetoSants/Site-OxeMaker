@@ -2,10 +2,10 @@
 
 Site oficial da **6ª edição do Ôxe Maker (2021–2026)** — Mostra de Robótica Educacional e Cultura Maker/Geek da **GRE Metropolitana Norte** (Rede Pública Estadual de Pernambuco).
 
-- **Data do Evento**: 01 de dezembro de 2026 (Terça-feira) — Das 07h00 às 18h00
-- **Local**: ETE José de Alencar — Ginásio e Pátio Central
+- **Data do Evento**: 01 de dezembro de 2026 (Terça-feira) — Das 07h00 às 17h30
+- **Local**: ETE José de Alencar — Auditório, Quadra, Salas de Oficina, Pátio e Cantina
 - **Endereço**: Rua João Francisco Batista, 170, Janga, Paulista – PE, 53439-410
-- **Tema 2026**: *"Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"*
+- **Tema 2026**: *"Educação para a Cidadania Digital e Midiática: formando cidadãs e cidadãos críticos e responsáveis"*
 - **Slogan**: *"Metropolitana Norte · Vidas · Escolas · Comunidade"*
 - **Mascote**: Calango Maker (Lagarto com óculos maker e detalhes robóticos)
 - **Organizador**: GRE Metropolitana Norte · Secretaria de Educação e Esportes de Pernambuco

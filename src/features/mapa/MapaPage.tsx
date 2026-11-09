@@ -14,44 +14,62 @@ import {
 } from 'lucide-react';
 
 export const MapaPage: React.FC = () => {
-  const [activeSector, setActiveSector] = useState<'ginasio' | 'patio' | 'labs' | 'cafeteria'>('ginasio');
+  const [activeSector, setActiveSector] = useState<'credenciamento' | 'auditorio' | 'quadra' | 'labs' | 'patio' | 'cantina'>('credenciamento');
 
   const sectors = [
     {
-      id: 'ginasio',
+      id: 'credenciamento',
       name: 'Frente da Escola · Credenciamento',
       subtitle: '07h00 às 08h00',
       description:
-        'Ponto de chegada de todos os participantes. O credenciamento dos inscritos acontece na frente do evento, das 07h00 às 08h00, antes da abertura cultural.',
+        'Ponto de chegada de todos os participantes. O credenciamento dos inscritos acontece na frente da ETE, das 07h00 às 08h00, antes da apresentação cultural.',
       color: '#FCC140',
       highlights: ['Credenciamento dos inscritos', 'Acolhimento e crachás', 'Chegada de caravanas escolares'],
     },
     {
-      id: 'patio',
-      name: 'Palco Principal · Abertura & Premiação',
-      subtitle: 'Cultura, Palestras & Pitch',
+      id: 'auditorio',
+      name: 'Auditório · Programação Principal',
+      subtitle: 'Cultura, Talks, Geek & Premiação',
       description:
-        'Palco onde acontecem a abertura cultural com danças (08h30), os TED Talks (09h00), a apresentação do pitch do Hackathon (16h00) e a cerimônia de premiação (17h00).',
+        'No Auditório acontecem a apresentação cultural com a Banda da EREM Padre Osmar Novaes (08h15), a abertura oficial (08h30), o TED Talk (09h00), o cosplay e a cultura geek (13h30), o pitch do Hackathon (16h00) e a premiação (17h00).',
       color: '#01B1FD',
-      highlights: ['Abertura Cultural · 08h30', 'TED Talks · 09h00', 'Pitch do Hackathon · 16h00', 'Premiação · 17h00'],
+      highlights: ['Banda · 08h15', 'Abertura & TED Talk · 08h30', 'Cosplay & Geek · 13h30', 'Pitch · 16h00', 'Premiação · 17h00'],
+    },
+    {
+      id: 'quadra',
+      name: 'Quadra · Competições de Robótica',
+      subtitle: '13h30 às 15h30',
+      description:
+        'A Quadra recebe as competições de Buzz Line, Buzz PRO e Sumô de Robôs, das 13h30 às 15h30.',
+      color: '#4ADE80',
+      highlights: ['Buzz Line', 'Buzz PRO', 'Sumô de Robôs'],
     },
     {
       id: 'labs',
       name: 'Salas de Oficina',
       subtitle: 'Oficinas de Robótica & Cultura Maker',
       description:
-        `Salas onde acontecem as oficinas de robótica e cultura maker, das 10h00 às 12h00, com os oficineiros (alunos e professores) inscritos até ${REGISTRATION_DEADLINE.short}.`,
-      color: '#4ADE80',
-      highlights: ['Oficina de robótica', 'Cultura maker', 'Materiais fornecidos pela organização'],
+        `Salas onde acontecem as oficinas de robótica e cultura maker, das 10h00 às 12h00, em 12 salas com 20 vagas cada, para os oficineiros inscritos até ${REGISTRATION_DEADLINE.short}.`,
+      color: '#C084FC',
+      highlights: ['12 salas de oficina', '20 vagas por sala', 'Materiais fornecidos pela organização'],
     },
     {
-      id: 'cafeteria',
-      name: 'Cafeteria · Almoço & Lanches',
+      id: 'patio',
+      name: 'Pátio · Mostra de Projetos',
+      subtitle: '10h00 às 12h00',
+      description:
+        'O Pátio recebe a Mostra de Projetos Científicos, com apresentação dos trabalhos para a banca e os visitantes, das 10h00 às 12h00.',
+      color: '#F97316',
+      highlights: ['Mostra de Projetos', 'Apresentação para a banca', 'Projetos de escolas da rede'],
+    },
+    {
+      id: 'cantina',
+      name: 'Cantina · Almoço & Lanches',
       subtitle: 'Intervalos do Dia',
       description:
-        'Espaço dos intervalos: lanche às 09h30, almoço das 12h00 às 13h00 e novo lanche às 15h30, conforme o cronograma oficial.',
-      color: '#C084FC',
-      highlights: ['Lanche · 09h30', 'Almoço · 12h00 às 13h00', 'Lanche · 15h30'],
+        'Espaço dos intervalos: lanche às 09h40, almoço das 12h00 às 13h30 e novo lanche às 15h30, conforme o cronograma oficial.',
+      color: '#A855F7',
+      highlights: ['Lanche · 09h40', 'Almoço · 12h00 às 13h30', 'Lanche · 15h30'],
     },
   ];
 
@@ -68,7 +86,7 @@ export const MapaPage: React.FC = () => {
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
           O Ôxe Maker 2026 será sediado na {EVENT_INFO.location.venue}, em {EVENT_INFO.location.city} ({EVENT_INFO.location.neighborhood}), com
-          frente ampla para credenciamento, palco principal, salas de oficina e cafeteria.
+          frente ampla para credenciamento, auditório, quadra, salas de oficina, pátio e cantina.
         </p>
       </div>
 
@@ -178,7 +196,7 @@ export const MapaPage: React.FC = () => {
         </div>
 
         {/* Sector Tabs */}
-        <div className="grid grid-cols-2 lg:grid-cols-4 gap-2">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-2">
           {sectors.map((sec) => (
             <button
               key={sec.id}

@@ -51,10 +51,10 @@ export const OxethonPage: React.FC = () => {
             <Clock className="w-4 h-4" />
             <span>Pitch Final</span>
           </div>
-          <h3 className="text-xl font-heading text-[#0B1330]">16h00 às 17h00</h3>
+          <h3 className="text-xl font-heading text-[#0B1330]">{PROGRAM_TIMES.pitch.range}</h3>
           <p className="text-xs text-slate-300 font-sans">
-            As equipes apresentam seus projetos no grande pitch, logo antes da cerimônia de
-            premiação.
+            As equipes apresentam seus projetos no grande pitch, no Auditório, logo antes da
+            cerimônia de premiação.
           </p>
         </div>
 
@@ -77,8 +77,8 @@ export const OxethonPage: React.FC = () => {
           </div>
           <h3 className="text-xl font-heading text-[#0B1330]">Cerimônia às 17h</h3>
           <p className="text-xs text-slate-300 font-sans">
-            A premiação do Hackathon acontece junto com a entrega de prêmios das competições, das
-            17h00 às 18h00.
+            A premiação do Hackathon acontece junto com a entrega de prêmios das competições, no
+            Auditório, das {PROGRAM_TIMES.awards.range}.
           </p>
         </div>
       </div>
@@ -180,7 +180,7 @@ export const OxethonPage: React.FC = () => {
             <span>Tema 2026</span>
           </div>
           <p className="text-sm text-slate-200 font-sans leading-relaxed">
-            "Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"
+            "{EVENT_INFO.theme2026}"
           </p>
         </div>
         <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm space-y-2">

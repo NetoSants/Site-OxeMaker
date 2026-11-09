@@ -1,6 +1,6 @@
 import React, { useState, useMemo } from 'react';
 import { EVENT_INFO, SCHEDULE_DATA } from '../../core/constants';
-import { EVENT_DATE } from '../../core/eventMeta';
+import { EVENT_DATE, EVENT_TIME } from '../../core/eventMeta';
 import { ScheduleItem } from '../../core/types';
 import {
   Calendar,
@@ -119,15 +119,15 @@ export const ProgramacaoPage: React.FC = () => {
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
         <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#8A5A04] uppercase font-bold tracking-wider">
           <Calendar className="w-4 h-4" />
-          <span>Grade Oficial de Atividades · 07h00 às 18h00</span>
+          <span>Grade Oficial de Atividades · {EVENT_TIME.startLabel} às {EVENT_TIME.endLabel}</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           Programação · {EVENT_DATE.dayMonthLongCapitalized}
         </h1>
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
-          Acompanhe todos os horários do dia: credenciamento, abertura cultural, TED Talks,
-          oficinas, Mostra de Projetos, competições, pitch do Hackathon e cerimônia de premiação
-          na ETE José de Alencar, em {EVENT_INFO.location.city}.
+          Acompanhe todos os horários do dia: credenciamento, apresentação cultural, abertura oficial,
+          TED Talk, oficinas, Mostra de Projetos, competições, cultura geek, pitch do Hackathon e
+          premiação na ETE José de Alencar, em {EVENT_INFO.location.city}.
         </p>
 
         <div className="pt-2 flex flex-wrap items-center gap-3">
@@ -200,7 +200,7 @@ export const ProgramacaoPage: React.FC = () => {
           <ul className="space-y-1 text-xs sm:text-sm text-slate-300 font-sans">
             <li>· Competições de robótica em alto nível</li>
             <li>· Oficinas práticas para todas as idades</li>
-            <li>· Arena Geek com cosplay e K-pop</li>
+            <li>· Cosplay e K-pop no Auditório</li>
             <li>· Network com a comunidade maker de Pernambuco</li>
           </ul>
         </div>
@@ -240,14 +240,14 @@ export const ProgramacaoPage: React.FC = () => {
             {
               id: 'manha',
               label: 'Manhã',
-              range: '07h00 às 11h59',
+              range: `${EVENT_TIME.startLabel} às 11h59`,
               icon: Sunrise,
               items: filteredSchedule.filter((i) => getPeriod(i.time) === 'manha'),
             },
             {
               id: 'tarde',
               label: 'Tarde',
-              range: '12h00 às 18h00',
+              range: `12h00 às ${EVENT_TIME.endLabel}`,
               icon: Sunset,
               items: filteredSchedule.filter((i) => getPeriod(i.time) === 'tarde'),
             },

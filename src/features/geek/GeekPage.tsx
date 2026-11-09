@@ -31,7 +31,7 @@ export const GeekPage: React.FC = () => {
       <div className="space-y-3 text-center sm:text-left border-b border-slate-800 pb-8">
         <div className="inline-flex items-center gap-2 text-xs font-mono-code text-[#0369A1] uppercase font-bold tracking-wider">
           <Sparkles className="w-4 h-4 text-[#8A5A04]" />
-          <span>Palco Geek & Cultura Pop · {EVENT_INFO.location.venue}</span>
+          <span>Cultura Geek no Auditório · {EVENT_INFO.location.venue}</span>
         </div>
         <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           Cultura Geek & Expressão Juvenil
@@ -190,7 +190,7 @@ export const GeekPage: React.FC = () => {
       <div className="bg-[#F9FDFE] border border-slate-700/80 rounded-sm p-6 space-y-3">
         <div className="flex items-center gap-2 text-[#0B1330] font-heading text-lg">
           <AlertCircle className="w-5 h-5 text-[#8A5A04]" />
-          <span>Diretrizes de Convivência & Respeito no Palco Geek</span>
+          <span>Diretrizes de Convivência & Respeito na Cultura Geek</span>
         </div>
         <p className="text-xs sm:text-sm text-slate-300 leading-relaxed font-sans">
           O Ôxe Maker promove um ambiente inclusivo, seguro e acolhedor para todas as identidades,

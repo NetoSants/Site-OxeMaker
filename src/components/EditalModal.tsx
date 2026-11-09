@@ -34,7 +34,7 @@ Data: ${EVENT_DATE.long}
 Local: ${EVENT_INFO.location.venue}, ${EVENT_INFO.location.neighborhood}, ${EVENT_INFO.location.city} - ${EVENT_INFO.location.state}
 Realização: GRE Metropolitana Norte / SEE-PE
 
-TEMA 2026: "Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"
+TEMA 2026: "${EVENT_INFO.theme2026}"
 
 1. OBJETIVO GERAL:
 Fomentar a criatividade e a aplicação prática da robótica e cultura maker entre estudantes da rede pública de Pernambuco.

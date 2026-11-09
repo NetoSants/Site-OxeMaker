@@ -1,6 +1,6 @@
 import React from 'react';
 import { TOURNAMENTS_DATA, EVENT_INFO } from '../../core/constants';
-import { EVENT_DATE } from '../../core/eventMeta';
+import { EVENT_DATE, PROGRAM_TIMES } from '../../core/eventMeta';
 import {
   Bot,
   Zap,
@@ -58,7 +58,7 @@ export const TorneioPage: React.FC = () => {
           </div>
         </div>
         <span className="text-xs font-mono-code text-[#0369A1] font-bold flex-shrink-0">
-          Competições · 14h30 às 15h30
+          Competições · {PROGRAM_TIMES.competitions.range} · Quadra
         </span>
       </div>
 

@@ -33,7 +33,7 @@
 - **6ª edição (2021–2026)**; "Ôxe" é expressão pernambucana
 - **Mascote:** Calango (no site atual aparece como "Zé Calango")
 - **Slogan:** *Metropolitana Norte · Vidas · Escolas · Comunidade*
-- **Tema pedagógico 2026:** "Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"
+- **Tema pedagógico 2026:** "Educação para a Cidadania Digital e Midiática: formando cidadãs e cidadãos críticos e responsáveis"
 - **Público:** estudantes da rede pública, professores e famílias
 - **Eixos:** robótica + cultura maker + cultura geek; protagonismo juvenil; aprendizado "mão na massa"
 
@@ -159,7 +159,7 @@ cultura maker/geek. Entregue um projeto completo, funcional e responsivo.
 - 6ª edição (2021–2026); "Ôxe" é expressão pernambucana
 - Mascote: Calango — usar ícone/ilustração local
 - Slogan: "Metropolitana Norte · Vidas · Escolas · Comunidade"
-- Tema 2026: "Vidas, Escolas e Comunidades: Educar para a Promoção da Justiça Socioambiental"
+- Tema 2026: "Educação para a Cidadania Digital e Midiática: formando cidadãs e cidadãos críticos e responsáveis"
 - Público: estudantes da rede pública, professores e famílias
 - Eixos: robótica + cultura maker + cultura geek, protagonismo juvenil,
   aprendizado "mão na massa"

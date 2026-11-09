@@ -280,9 +280,9 @@ export const InscricoesPage: React.FC = () => {
         <SectionHeading
           id="geek"
           icon={<Sparkles className="w-6 h-6 text-[#0369A1]" />}
-          eyebrow="Palco Geek"
+          eyebrow="Cultura Geek"
           title="Cultura Geek"
-          description="Mostre seu talento no Cosplay ou no K-Pop Dance Cover e faça parte do palco geek do evento."
+          description="Mostre seu talento no Cosplay ou no K-Pop Dance Cover e faça parte da programação geek no Auditório."
         />
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
@@ -381,7 +381,7 @@ export const InscricoesPage: React.FC = () => {
           icon={<Presentation className="w-6 h-6 text-[#0369A1]" />}
           eyebrow="Feira de Ciências"
           title="Mostra de Projetos"
-          description="Apresente seu projeto de tecnologia e inovação para a banca e para os visitantes do evento."
+          description="Apresente seu projeto de tecnologia e inovação para a banca e para os visitantes do evento, no Pátio."
         />
 
         <div className="bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm p-6 sm:p-8 grid grid-cols-1 lg:grid-cols-3 gap-6 items-center">
@@ -404,7 +404,7 @@ export const InscricoesPage: React.FC = () => {
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#0369A1] flex-shrink-0 mt-0.5" />
-                <span>Apresentação para banca e visitantes durante a programação do dia {EVENT_DATE.short}</span>
+                <span>Apresentação para banca e visitantes no Pátio, das 10h00 às 12h00, no dia {EVENT_DATE.short}</span>
               </li>
               <li className="flex items-start gap-2">
                 <CheckCircle2 className="w-3.5 h-3.5 text-[#0369A1] flex-shrink-0 mt-0.5" />

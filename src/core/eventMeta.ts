@@ -95,7 +95,7 @@ const createTimeRange = (start: string, end: string): TimeRange => {
 export const EVENT_DATE = createDateLabels(EVENT_START_ISO);
 export const REGISTRATION_DEADLINE = createDateLabels(REGISTRATION_DEADLINE_ISO);
 
-const eventHours = createTimeRange('07:00', '18:00');
+const eventHours = createTimeRange('07:00', '17:30');
 
 export const EVENT_TIME = {
   ...eventHours,
@@ -103,7 +103,7 @@ export const EVENT_TIME = {
 };
 
 export const PROGRAM_TIMES = {
-  competitions: createTimeRange('14:30', '15:30'),
+  competitions: createTimeRange('13:30', '15:30'),
   pitch: createTimeRange('16:00', '17:00'),
-  awards: createTimeRange('17:00', '18:00'),
+  awards: createTimeRange('17:00', '17:30'),
 };
