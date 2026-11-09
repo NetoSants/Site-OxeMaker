@@ -45,7 +45,7 @@ Fomentar a criatividade e a aplicação prática da robótica e cultura maker en
 - Todos os robôs devem respeitar os padrões de segurança e possuir chave geral identificada.
 
 3. PREMIAÇÃO:
-Troféus artesanais makers com corte a laser e PLA ecológico, medalhas para todos os integrantes e kits didáticos.
+Troféus artesanais makers com corte a laser e PLA ecológico para os vencedores.
 
 Consulte a coordenação pelo e-mail: ${EVENT_INFO.contact.email}
 `;

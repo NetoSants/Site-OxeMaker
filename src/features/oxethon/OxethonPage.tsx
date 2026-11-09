@@ -77,7 +77,7 @@ export const OxethonPage: React.FC = () => {
           </div>
           <h3 className="text-xl font-heading text-[#0B1330]">Cerimônia às 17h</h3>
           <p className="text-xs text-slate-300 font-sans">
-            A premiação do Hackathon acontece junto com a entrega de prêmios das competições, no
+            A premiação do Hackathon acontece junto com a entrega de troféus das competições, no
             Auditório, das {PROGRAM_TIMES.awards.range}.
           </p>
         </div>
@@ -165,7 +165,7 @@ export const OxethonPage: React.FC = () => {
                 {EVENT_DATE.weekdayShort}, {EVENT_DATE.short} · {PROGRAM_TIMES.awards.range}
               </span>
               <p className="text-xs text-slate-300 font-sans leading-relaxed">
-                Entrega de prêmios, encerramento e foto oficial do evento.
+                Entrega de troféus, encerramento e foto oficial do evento.
               </p>
             </div>
           </div>
