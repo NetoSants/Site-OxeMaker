@@ -494,8 +494,6 @@ const WORKSHOP_REGISTRATION_URLS: Record<string, string> = {
     'https://docs.google.com/forms/d/e/1FAIpQLScKGG3F9u9iQzmZKHh-ZoatSGR4ZylxicHKb54puLOsW5BOYA/viewform?usp=dialog',
   'prompt-zero-aplicacao':
     'https://docs.google.com/forms/d/e/1FAIpQLSezOl76CDoOwKVGSma7u2LbgalVOVJ9Xls5kPBt9Sh_Y2gFyQ/viewform?usp=dialog',
-  'pixel-medicamento':
-    'https://docs.google.com/forms/d/e/1FAIpQLSfFwW7HZOoWai2SRj-eq85SJ3WXxJW1z0A-lhbaDtSj64PXGg/viewform?usp=dialog',
   'eletronica-sem-misterio':
     'https://docs.google.com/forms/d/e/1FAIpQLScAw27o0PQrlRsYiN3IEo_W9Iv45pr_fFaK1JLfBJhKg47oBw/viewform?usp=dialog',
   'futcar-futebol-robos':
@@ -554,29 +552,6 @@ export const WORKSHOPS_DATA: Workshop[] = [
     materialsProvided: ['Smartphone ou notebook'],
     equipment: ['Projetor ou TV', 'Extensão', 'Internet'],
     software: 'ChatGPT e NotebookLM',
-  },
-  {
-    id: 'pixel-medicamento',
-    title: 'Do Pixel ao Medicamento: Transformando o Celular em um Laboratório de Análise Digital',
-    description:
-      'Oficina prática que usa a câmera do smartphone e aplicativos de leitura de cor para demonstrar conceitos de óptica, espectrofotometria e Lei de Beer-Lambert na análise de soluções coloridas, conectando química, física, saúde e tecnologia.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
-    room: 'Salas de oficina · ETE José de Alencar',
-    targetAudience: 'Estudantes e professores do ensino médio.',
-    school: 'ETE Pastor Isaac Martins Rodrigues',
-    instructor: {
-      name: 'Luiz Pereira',
-      role: 'Oficineiro',
-      institution: 'ETE Pastor Isaac Martins Rodrigues',
-      bio: 'Responsável pela oficina.',
-    },
-    materialsProvided: [
-      'Smartphones dos participantes com acesso à internet',
-      'Aplicativo de leitura de cor (Color Meter)',
-      'Mesa com iluminação constante',
-    ],
-    equipment: ['Projetor (Datashow)', 'Internet', 'Tomadas e extensões'],
-    software: 'Color Meter, Word, PowerPoint e Excel',
   },
   {
     id: 'eletronica-sem-misterio',
