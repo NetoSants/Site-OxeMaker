@@ -37,9 +37,7 @@ export interface EventGeneralInfo {
     phone: string;
   };
   links: {
-    oficineirosRegistration: string;
     mostraRegistration: string;
-    palestrantesRegistration: string;
     visitantesRegistration: string;
   };
 }
@@ -139,7 +137,6 @@ export interface OxethonInfo {
   slogan?: string;
   story?: string;
   registrationUrl?: string;
-  regulationsUrl?: string;
   image?: string;
 }
 

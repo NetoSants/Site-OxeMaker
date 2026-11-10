@@ -102,13 +102,18 @@ export const OxethonPage: React.FC = () => {
               <Users className="w-4 h-4" />
               <span>Inscrever Equipe</span>
             </a>
-            <a
-              href={OXETHON_INFO.regulationsUrl}
+            <button
+              type="button"
+              onClick={() =>
+                document
+                  .getElementById('regulamento-oxethon')
+                  ?.scrollIntoView({ behavior: 'smooth', block: 'start' })
+              }
               className="maker-btn-secondary px-5 py-2.5 text-xs uppercase flex items-center gap-2"
             >
               <FileText className="w-4 h-4" />
               <span>Regulamento</span>
-            </a>
+            </button>
           </div>
         </div>
         <div className="lg:col-span-5">
@@ -195,7 +200,10 @@ export const OxethonPage: React.FC = () => {
       </div>
 
       {/* Regulations summary */}
-      <div className="bg-[#F9FDFE] border border-slate-700/80 rounded-sm p-6 space-y-4">
+      <div
+        id="regulamento-oxethon"
+        className="bg-[#F9FDFE] border border-slate-700/80 rounded-sm p-6 space-y-4 scroll-mt-28"
+      >
         <h3 className="text-base font-bold font-heading text-[#0B1330] flex items-center gap-2">
           <FileText className="w-5 h-5 text-[#0369A1]" />
           <span>Orientações do Hackathon</span>
@@ -220,7 +228,7 @@ export const OxethonPage: React.FC = () => {
           16h.
         </p>
         <Link
-          to="/#inscricoes"
+          to="/inscricoes"
           className="maker-btn-primary px-8 py-3.5 text-xs uppercase inline-flex items-center gap-2"
         >
           <Trophy className="w-4 h-4" />

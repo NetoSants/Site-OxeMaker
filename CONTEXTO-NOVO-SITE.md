@@ -41,7 +41,7 @@
 
 | Campo | Valor |
 |-------|-------|
-| Data | 02 e 03 de julho de 2026 |
+| Data | 01 de dezembro de 2026 |
 | Horário | 07:00 – 17:30 |
 | Local | ETE José de Alencar — Ginásio e Pátio Central |
 | Endereço | Rua João Francisco Batista, 170, Janga, Paulista – PE, 53439-410 |
@@ -165,11 +165,11 @@ cultura maker/geek. Entregue um projeto completo, funcional e responsivo.
   aprendizado "mão na massa"
 
 === SERVIÇOS ===
-- Data: 02 e 03 de julho de 2026, das 07h às 17h30
+- Data: 01 de dezembro de 2026, das 07h às 17h30
 - Local: ETE José de Alencar — Ginásio e Pátio Central
 - Endereço: Rua João Francisco Batista, 170, Janga, Paulista – PE, 53439-410
 - Entrada gratuita; inscrições via Google Forms (links como placeholders editáveis)
-- Countdown regressivo para 02/07/2026 09:00
+- Countdown regressivo para 01/12/2026 07:00
 
 === NÚMEROS (provas sociais) ===
 2.000+ alunos impactados · 70+ escolas envolvidas · 6 competições ·

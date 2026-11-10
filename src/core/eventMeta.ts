@@ -103,6 +103,7 @@ export const EVENT_TIME = {
 };
 
 export const PROGRAM_TIMES = {
+  workshops: createTimeRange('10:00', '12:00'),
   competitions: createTimeRange('13:30', '15:30'),
   pitch: createTimeRange('16:00', '17:00'),
   awards: createTimeRange('17:00', '17:30'),

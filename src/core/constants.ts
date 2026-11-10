@@ -86,9 +86,8 @@ export const EVENT_INFO: EventGeneralInfo = {
     phone: '(81) 3183-8400',
   },
   links: {
-    oficineirosRegistration: 'https://forms.gle/oxemaker2026-oficineiros',
-    mostraRegistration: '',
-    palestrantesRegistration: 'https://forms.gle/oxemaker2026-palestrantes',
+    mostraRegistration:
+      'https://docs.google.com/forms/d/e/1FAIpQLSefHYDtd-Sdc_wwf5vAXSA39WbaDvVmI0ae8yR_Cvu9i2hXlg/viewform?usp=dialog',
     visitantesRegistration:
       'https://docs.google.com/forms/d/e/1FAIpQLSfUfToZY8qBE7wOAklS9ks-9m9mw8_8PcnUltvM9TMPrgGerw/viewform',
   },
@@ -479,8 +478,8 @@ export const OXETHON_INFO: OxethonInfo = {
   slogan: 'O Hackathon Arretado',
   story:
     `O Ôxethon é o hackathon do Ôxe Maker e acontece dentro da programação do evento, no dia ${EVENT_DATE.dayMonthLong}. Equipes multidisciplinares criam soluções tecnológicas que impactem positivamente a comunidade local e apresentam seus projetos no pitch final, no Auditório, às 16h. É o lugar onde o código encontra a realidade e a inovação acontece na prática.`,
-  registrationUrl: 'https://forms.gle/oxemaker2026-oficineiros',
-  regulationsUrl: '#regulamento-oxethon',
+  registrationUrl:
+    'https://docs.google.com/forms/d/e/1FAIpQLSdgCwo3VhRmjO6UB6O9ausy0UPmK7ySRwicAcFpMEpYaWB0bQ/viewform?usp=dialog',
   image: img('oxethon.webp'),
 };
 
@@ -524,7 +523,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Construção de Projetos com Arduino Utilizando Tinkercad e ABP',
     description:
       'Uso do Tinkercad para criação e simulação de projetos com Arduino, explorando modelagem de circuitos elétricos, lógica de programação e algoritmos em blocos. A proposta permite compreender, testar e aprimorar projetos de forma prática, dinâmica e interativa.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Estudantes e professores da rede estadual.',
     school: 'EREM Professor Estevão Pinto',
@@ -543,7 +542,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'IA sem segredos: da Teoria à Sala de Aula',
     description:
       'Criação, refino e validação de prompts para diferentes atividades pedagógicas, desde a produção de vídeos curtos até a elaboração de atividades.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Professores e estudantes interessados em inteligência artificial.',
     school: 'EREM Áurea de Moura Cavalcanti',
@@ -562,7 +561,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Eletrônica sem Mistério',
     description:
       'Oficina de eletrônica básica voltada para a robótica, com montagem de circuitos simples e dinâmicos para tornar o aprendizado mais interativo e prático.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Estudantes e professores da rede estadual.',
     school: 'ETE Pastor Isaac Martins Rodrigues',
@@ -587,7 +586,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'FutCar – Futebol de Robôs',
     description:
       'Montagem de robôs LEGO para competição de futebol e programação no aplicativo, com foco em construção, movimentação e trabalho em equipe.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Estudantes e professores da rede estadual.',
     school: 'EREM Alberto Augusto de Morais Pradines',
@@ -606,7 +605,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Primeiros passos na programação: descobrindo o micro:bit',
     description:
       'Apresentação da placa micro:bit, seus botões, LEDs e sensores; exploração da plataforma MakeCode; criação da primeira programação em blocos e teste do projeto no simulador ou na placa física.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Estudantes e professores da rede estadual.',
     school: 'EREM Maria Gayão Pessoa Guerra',
@@ -625,7 +624,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Mundo 3D',
     description:
       'Oficina de introdução ao universo 3D, com fundamentos da modelagem e da percepção espacial. A atividade combina demonstrações e práticas com caneta 3D e óculos de realidade virtual Meta Quest para explorar criação digital, tridimensionalidade e experiências imersivas.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Estudantes e professores da rede estadual.',
     instructor: {
@@ -643,7 +642,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Robôs Manipuladores',
     description:
       'Controle de um robô manipulador de 3 graus de liberdade com garra, abordando noções básicas de Arduino, acionamento de servomotores e leitura de joystick analógico.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Estudantes e professores da rede estadual.',
     instructor: {
@@ -661,7 +660,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Recomposição da Aprendizagem: como transformar diagnósticos em decisões pedagógicas',
     description:
       'Oficina para gestores escolares sobre como usar evidências de aprendizagem para identificar lacunas e orientar ações de recomposição, conectando diagnósticos à tomada de decisão pedagógica.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Gestores escolares e professores.',
     instructor: {
@@ -679,7 +678,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Solarisando a Bioglow',
     description:
       'Atividade inspirada na FIRST LEGO League Challenge: capacitação em robótica LEGO, programação, montagem de anexos e uma competição prática com o tapete oficial BIOGLOW 2026/2027.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Estudantes e professores da rede estadual.',
     school: 'ETE Pastor Isaac Martins Rodrigues',
@@ -698,7 +697,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Monitoramento Climático e IoT na Prática',
     description:
       'Montagem de uma estação microclimática com ESP32/ESP8266, leitura de sensores ambientais e envio de dados em tempo real para a nuvem usando MQTT, com visualização de gráficos ao vivo.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Estudantes e professores da rede estadual.',
     school: 'EREM Maestro Nelson Ferreira',
@@ -717,7 +716,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Introdução ao Arduino',
     description:
       'Introdução à eletrônica básica e ao Arduino, com uso de multímetro, apresentação de componentes e montagem prática de um semáforo.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Estudantes e professores da rede estadual.',
     school: 'EREM Senador José Ermírio de Morais',
@@ -743,7 +742,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Robótica Emocional',
     description:
       'Oficina de Robótica Educacional baseada nos cinco pilares do Design Thinking — empatia, definição, ideação, prototipagem e teste — utilizando atividades práticas com Arduino e cultura maker para estimular a criatividade, a resolução de problemas, o pensamento computacional e o trabalho em equipe.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience:
       'Estudantes e professores da rede estadual interessados em robótica, cultura maker e Design Thinking.',
@@ -775,7 +774,7 @@ export const WORKSHOPS_DATA: Workshop[] = [
     title: 'Oficina Sumô - Design Mentor IA: Meninas nas Ciências',
     description:
       'Introdução aos conceitos básicos de montagem com LEGO NXT, seguida da separação em grupos para montagem dos protótipos e finalização com uma batalha de sumô.',
-    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    schedule: `${EVENT_DATE.dayMonthLong} · ${PROGRAM_TIMES.workshops.range}`,
     room: 'Salas de oficina · ETE José de Alencar',
     targetAudience: 'Estudantes da rede estadual, com foco em meninas na tecnologia.',
     school: 'ETE JAGS',
