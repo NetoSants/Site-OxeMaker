@@ -130,8 +130,6 @@ export interface Workshop {
 export interface OxethonInfo {
   title: string;
   description: string;
-  theme: string;
-  themeDescription: string;
   stages: {
     phase: string;
     time: string;

@@ -176,7 +176,7 @@ export const HIGHLIGHTS_DATA: FeatureHighlight[] = [
     id: 'hackathon',
     title: 'Hackathon Ôxe Maker',
     description:
-      `As equipes criam soluções para Acessibilidade e Inclusão Digital e apresentam o pitch final às ${PROGRAM_TIMES.pitch.startLabel} do dia ${EVENT_DATE.dayMonthLong}.`,
+      `As equipes apresentam seus projetos no grande pitch do Hackathon, às ${PROGRAM_TIMES.pitch.startLabel} do dia ${EVENT_DATE.dayMonthLong}.`,
     iconName: 'Cpu',
     link: '/oxethon',
     tag: 'Pitch Final',
@@ -462,9 +462,6 @@ export const OXETHON_INFO: OxethonInfo = {
   title: 'Hackathon Ôxe Maker',
   description:
     `As equipes do Hackathon Ôxe Maker apresentam seus projetos no grande pitch, no Auditório, no dia ${EVENT_DATE.long}, das ${PROGRAM_TIMES.pitch.range}, logo antes da cerimônia de premiação.`,
-  theme: 'Acessibilidade e Inclusão Digital',
-  themeDescription:
-    'Crie soluções que reduzam barreiras tecnológicas e ampliem o acesso à informação para pessoas com deficiência, idosos e grupos em vulnerabilidade digital.',
   stages: [
     {
       phase: 'Apresentação do Pitch do Hackathon',

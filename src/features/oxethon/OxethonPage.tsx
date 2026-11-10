@@ -9,7 +9,6 @@ import {
   CheckCircle2,
   Calendar,
   Users,
-  Award,
   FileText,
   Compass,
 } from 'lucide-react';
@@ -26,19 +25,6 @@ export const OxethonPage: React.FC = () => {
         <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           {OXETHON_INFO.title} 2026
         </h1>
-
-        <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-4 bg-[#FCC140] text-[#050D34] rounded-sm border-2 border-[#8A5A04] maker-shadow-yellow">
-          <Award className="w-7 h-7 flex-shrink-0" />
-          <div className="text-center sm:text-left">
-            <span className="text-[10px] font-mono-code uppercase font-bold tracking-widest block">
-              Tema do Hackathon
-            </span>
-            <strong className="text-xl sm:text-2xl font-heading font-black uppercase leading-tight">
-              {OXETHON_INFO.theme}
-            </strong>
-          </div>
-        </div>
-
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
           {OXETHON_INFO.description}
         </p>
@@ -186,17 +172,7 @@ export const OxethonPage: React.FC = () => {
       </div>
 
       {/* Awards highlight */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-        <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm space-y-2">
-          <div className="flex items-center gap-2 text-[#8A5A04] font-mono-code text-xs uppercase font-bold">
-            <Award className="w-4 h-4" />
-            <span>Tema do Hackathon</span>
-          </div>
-          <h3 className="text-base font-heading text-[#0B1330]">{OXETHON_INFO.theme}</h3>
-          <p className="text-xs text-slate-300 font-sans leading-relaxed">
-            {OXETHON_INFO.themeDescription}
-          </p>
-        </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
         <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm space-y-2">
           <div className="flex items-center gap-2 text-[#0369A1] font-mono-code text-xs uppercase font-bold">
             <Clock className="w-4 h-4" />
