@@ -49,9 +49,9 @@ export const MapaPage: React.FC = () => {
       name: 'Salas de Oficina',
       subtitle: 'Oficinas de Robótica & Cultura Maker',
       description:
-        `Salas onde acontecem as oficinas de robótica e cultura maker, das 10h00 às 12h00, em 12 salas com 20 vagas cada, para os oficineiros inscritos até ${REGISTRATION_DEADLINE.short}.`,
+        `Salas onde acontecem as oficinas de robótica e cultura maker, das 10h00 às 12h00, em 13 salas com 20 vagas cada, para os oficineiros inscritos até ${REGISTRATION_DEADLINE.short}.`,
       color: '#C084FC',
-      highlights: ['12 salas de oficina', '20 vagas por sala', 'Materiais fornecidos pela organização'],
+      highlights: ['13 salas de oficina', '20 vagas por sala', 'Materiais fornecidos pela organização'],
     },
     {
       id: 'patio',

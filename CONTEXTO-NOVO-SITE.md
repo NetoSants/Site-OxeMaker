@@ -173,7 +173,7 @@ cultura maker/geek. Entregue um projeto completo, funcional e responsivo.
 
 === NÚMEROS (provas sociais) ===
 2.000+ alunos impactados · 70+ escolas envolvidas · 6 competições ·
-12 oficinas maker · em 2025: +70 escolas, ~2 mil estudantes, ~10 mil visitantes
+13 oficinas maker · em 2025: +70 escolas, ~2 mil estudantes, ~10 mil visitantes
 
 === ESTRUTURA (React 19 + TypeScript + Vite + Tailwind CSS 4 + React Router) ===
 1. Home — hero com logo/mascote animado, título, countdown, CTA "Inscreva-se",

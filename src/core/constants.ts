@@ -89,7 +89,8 @@ export const EVENT_INFO: EventGeneralInfo = {
     oficineirosRegistration: 'https://forms.gle/oxemaker2026-oficineiros',
     mostraRegistration: '',
     palestrantesRegistration: 'https://forms.gle/oxemaker2026-palestrantes',
-    visitantesRegistration: '',
+    visitantesRegistration:
+      'https://docs.google.com/forms/d/e/1FAIpQLSfUfToZY8qBE7wOAklS9ks-9m9mw8_8PcnUltvM9TMPrgGerw/viewform',
   },
 };
 
@@ -122,7 +123,7 @@ export const METRICS_DATA: MetricProof[] = [
   },
   {
     id: 'oficinas',
-    value: 12,
+    value: 13,
     suffix: '',
     label: 'Oficinas Maker',
     description: 'Oficinas confirmadas para a 6ª edição, com 20 vagas por sala.',
@@ -258,7 +259,7 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     day: 'day1',
     time: '10h00 - 12h00',
     title: 'Oficinas',
-    description: 'Oficinas de robótica e cultura maker em 12 salas, com 20 vagas por sala.',
+    description: 'Oficinas de robótica e cultura maker em 13 salas, com 20 vagas por sala.',
     category: 'oficinas',
     location: 'Salas de oficina',
   },
@@ -511,6 +512,10 @@ const WORKSHOP_REGISTRATION_URLS: Record<string, string> = {
     'https://docs.google.com/forms/d/e/1FAIpQLSeTkz2Ty1TKUkRAanmzYRzCq95vqQbkODcA2eDD5MNlFR-6Lg/viewform?usp=dialog',
   'introducao-arduino':
     'https://docs.google.com/forms/d/e/1FAIpQLSc5azkSINDVZ1TI0xf2fVkYR0mQREK3covcMMtVvqG5mUl-xg/viewform?usp=dialog',
+  'robotica-emocional':
+    'https://docs.google.com/forms/d/e/1FAIpQLSeMpJwT39gzsGS2cOZHhfPGQAGKcK0thCShPWkLUevgs2IDIA/viewform?usp=dialog',
+  'sumo-lego-nxt-meninas-ciencias':
+    'https://docs.google.com/forms/d/e/1FAIpQLSeewNYF_kpgB7n-x0pfMyjcV6sDPq3nyBnWyZ50KDzLzBOR1A/viewform?usp=dialog',
 };
 
 export const WORKSHOPS_DATA: Workshop[] = [
@@ -734,6 +739,38 @@ export const WORKSHOPS_DATA: Workshop[] = [
     software: 'Arduino IDE',
   },
   {
+    id: 'robotica-emocional',
+    title: 'Robótica Emocional',
+    description:
+      'Oficina de Robótica Educacional baseada nos cinco pilares do Design Thinking — empatia, definição, ideação, prototipagem e teste — utilizando atividades práticas com Arduino e cultura maker para estimular a criatividade, a resolução de problemas, o pensamento computacional e o trabalho em equipe.',
+    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    room: 'Salas de oficina · ETE José de Alencar',
+    targetAudience:
+      'Estudantes e professores da rede estadual interessados em robótica, cultura maker e Design Thinking.',
+    instructor: {
+      name: 'Messias Daniel',
+      role: 'Oficineiro',
+      institution: 'CESAR School',
+      bio: 'Ministra oficinas de robótica educacional na FUNASE e na ONG Casa da Comunidade do Berardo (CCB), trabalhando com Arduino, cultura maker, pensamento computacional e aprendizagem prática.',
+    },
+    materialsProvided: [
+      'Computadores com acesso à internet',
+      'Kits Arduino',
+      'Protoboards',
+      'LEDs',
+      'Sensores',
+      'Jumpers',
+      'Resistores',
+    ],
+    equipment: [
+      'Projetor',
+      'Tomadas',
+      'Acesso à internet',
+      'Computadores para Tinkercad e Arduino IDE',
+    ],
+    software: 'Arduino IDE e Tinkercad (simulador de circuitos e programação)',
+  },
+  {
     id: 'sumo-lego-nxt-meninas-ciencias',
     title: 'Oficina Sumô - Design Mentor IA: Meninas nas Ciências',
     description:
@@ -808,7 +845,7 @@ export const TIMELINE_DATA: TimelineMilestone[] = [
     title: 'O Presente: Cidadania Digital & Futuro',
     description:
       `A 6ª edição acontece em um único dia, ${EVENT_DATE.dayMonthLong}, na ETE José de Alencar em Paulista, com oficinas, mostra de projetos, competições, cultura geek e o pitch do Hackathon.`,
-    stats: '12 oficinas · 6 competições · 240 vagas em oficinas',
+    stats: '13 oficinas · 6 competições · 260 vagas em oficinas',
   },
 ];
 
