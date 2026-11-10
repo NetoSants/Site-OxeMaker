@@ -32,9 +32,9 @@
   - Endereço da GRE: R. Acdo. Hélio Ramos, 500 — Cidade Universitária, CDU – PE, 50740-530
 - **6ª edição (2021–2026)**; "Ôxe" é expressão pernambucana
 - **Mascote:** Calango (no site atual aparece como "Zé Calango")
-- **Slogan:** *Metropolitana Norte · Vidas · Escolas · Comunidade*
+- **Slogan:** *Metropolitana Norte*
 - **Tema pedagógico 2026:** "Educação para a Cidadania Digital e Midiática: formando cidadãs e cidadãos críticos e responsáveis"
-- **Público:** estudantes da rede pública, professores e famílias
+- **Público:** estudantes da rede pública e professores
 - **Eixos:** robótica + cultura maker + cultura geek; protagonismo juvenil; aprendizado "mão na massa"
 
 ### Dados do evento (serviço)
@@ -51,7 +51,7 @@
 
 ### Números de impacto (provas sociais)
 
-- **2.000+** alunos impactados · **58+** escolas parceiras · **9+** competições · **90+** projetos makers
+- **2.000+** alunos impactados · **70+** escolas envolvidas · **6** competições · **12** oficinas maker
 - Edição 2025: +70 escolas, ~2 mil estudantes, ~10 mil visitantes circulantes
 
 ---
@@ -158,9 +158,9 @@ cultura maker/geek. Entregue um projeto completo, funcional e responsivo.
 - Realização: GRE Metropolitana Norte (rede pública estadual de Pernambuco)
 - 6ª edição (2021–2026); "Ôxe" é expressão pernambucana
 - Mascote: Calango — usar ícone/ilustração local
-- Slogan: "Metropolitana Norte · Vidas · Escolas · Comunidade"
+- Slogan: "Metropolitana Norte"
 - Tema 2026: "Educação para a Cidadania Digital e Midiática: formando cidadãs e cidadãos críticos e responsáveis"
-- Público: estudantes da rede pública, professores e famílias
+- Público: estudantes da rede pública e professores
 - Eixos: robótica + cultura maker + cultura geek, protagonismo juvenil,
   aprendizado "mão na massa"
 
@@ -172,8 +172,8 @@ cultura maker/geek. Entregue um projeto completo, funcional e responsivo.
 - Countdown regressivo para 02/07/2026 09:00
 
 === NÚMEROS (provas sociais) ===
-2.000+ alunos impactados · 58+ escolas parceiras · 9+ competições ·
-90+ projetos makers · em 2025: +70 escolas, ~2 mil estudantes, ~10 mil visitantes
+2.000+ alunos impactados · 70+ escolas envolvidas · 6 competições ·
+12 oficinas maker · em 2025: +70 escolas, ~2 mil estudantes, ~10 mil visitantes
 
 === ESTRUTURA (React 19 + TypeScript + Vite + Tailwind CSS 4 + React Router) ===
 1. Home — hero com logo/mascote animado, título, countdown, CTA "Inscreva-se",

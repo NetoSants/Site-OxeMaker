@@ -4,6 +4,7 @@ import {
   EVENT_INFO,
   METRICS_DATA,
   HIGHLIGHTS_DATA,
+  WORKSHOPS_DATA,
   SPONSORS_TIERS,
   FAQ_DATA,
 } from '../../core/constants';
@@ -51,7 +52,7 @@ export const HomePage: React.FC = () => {
     {
       id: 'oficinas',
       title: 'Oficinas Maker',
-      description: 'Conheça as nove propostas de oficinas enviadas pelas escolas da rede estadual.',
+      description: `Conheça as ${WORKSHOPS_DATA.length} propostas de oficinas enviadas pelas escolas da rede estadual.`,
       href: '/inscricoes#oficinas',
       icon: <Wrench className="w-5 h-5 text-[#8A5A04]" />,
     },
@@ -120,7 +121,7 @@ export const HomePage: React.FC = () => {
                     ÔXE MAKER <span>2026</span>
                   </h1>
                   <p className="text-lg sm:text-xl font-heading text-[#0369A1] tracking-wide">
-                    Mostra de Robótica Educacional & Cultura Maker da Rede Estadual
+                    Mostra de Robótica Educacional & Cultura Maker da GRE Metropolitana Norte
                   </p>
                 </div>
               </div>
@@ -267,6 +268,11 @@ export const HomePage: React.FC = () => {
           ))}
         </div>
 
+        <p className="mt-3 text-[11px] text-slate-500 font-sans leading-relaxed text-center md:text-left">
+          Fontes: SEE-PE e Folha de Pernambuco (26/06/2025) para os dados de 2025; programação
+          oficial Ôxe Maker 2026 para oficinas e competições.
+        </p>
+
         {/* 2025 Retrospective Snapshot Callout */}
         <div className="mt-6 p-4 bg-[#FCC140]/15 border border-[#FCC140]/60 rounded-sm flex flex-col md:flex-row items-center justify-between gap-4 text-xs font-mono-code">
           <div className="flex items-center gap-3">
@@ -301,7 +307,7 @@ export const HomePage: React.FC = () => {
             </h2>
           </div>
             <p className="text-sm text-slate-400 max-w-md">
-              Um dia intensíssimo de aprendizado mão na massa, adrenalina nas arenas de batalha e
+              Um dia intenso de aprendizado mão na massa, adrenalina nas arenas de batalha e
               celebração do protagonismo juvenil.
             </p>
         </div>

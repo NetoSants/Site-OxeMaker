@@ -15,7 +15,6 @@ import {
   Sparkles,
   BookOpen,
   Target,
-  Users,
   Compass,
   CheckCircle2,
   GraduationCap,
@@ -106,19 +105,6 @@ export const SobrePage: React.FC = () => {
           </p>
         </div>
 
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-3 pt-2">
-          {['Vidas reais', 'Escolas Makers', 'Comunidade Unida', 'Justiça pra Todos'].map(
-            (v, i) => (
-              <div
-                key={v}
-                className="p-3 bg-[#F1F4FB] border border-slate-700 rounded-sm text-center"
-              >
-                <span className="text-[10px] font-mono-code text-[#0369A1] block">0{i + 1}_</span>
-                <span className="text-sm font-bold font-heading text-[#8A5A04] uppercase">{v}</span>
-              </div>
-            )
-          )}
-        </div>
       </div>
 
       {/* Brand logos archive */}
@@ -288,8 +274,8 @@ export const SobrePage: React.FC = () => {
         </div>
       </section>
 
-      {/* Mission, Vision & Values */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
+      {/* Mission & Vision */}
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
         <div className="p-6 bg-[#F9FDFE] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
           <div className="p-2.5 bg-[#F1F4FB] w-fit rounded-sm text-[#8A5A04]">
             <Target className="w-6 h-6" />
@@ -312,16 +298,6 @@ export const SobrePage: React.FC = () => {
           </p>
         </div>
 
-        <div className="p-6 bg-[#F9FDFE] border border-slate-700/80 rounded-sm space-y-3 hover:border-[#01B1FD] transition-colors">
-          <div className="p-2.5 bg-[#F1F4FB] w-fit rounded-sm text-[#8A5A04]">
-            <Users className="w-6 h-6" />
-          </div>
-          <h3 className="text-lg font-heading text-[#0B1330] uppercase">Nossos Valores</h3>
-          <p className="text-xs sm:text-sm text-slate-300 font-sans leading-relaxed">
-            Vidas reais · Escolas Makers · Comunidade Unida · Justiça pra Todos. Educação pública de
-            excelência, colaboração solidária e paixão pela ciência viva.
-          </p>
-        </div>
       </div>
     </div>
   );

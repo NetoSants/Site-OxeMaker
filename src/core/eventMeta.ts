@@ -1,7 +1,7 @@
 const EVENT_TIME_ZONE = 'America/Recife';
 
 export const EVENT_START_ISO = '2026-12-01T07:00:00-03:00';
-export const REGISTRATION_DEADLINE_ISO = '2026-11-25T23:59:59-03:00';
+export const REGISTRATION_DEADLINE_ISO = '2026-11-27T23:59:59-03:00';
 
 export interface DateLabels {
   iso: string;

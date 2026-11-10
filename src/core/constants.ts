@@ -32,7 +32,7 @@ export const EVENT_INFO: EventGeneralInfo = {
   shortName: 'Ôxe Maker 2026',
   edition: '6ª Edição',
   year: 2026,
-  tagline: 'Metropolitana Norte · Vidas · Escolas · Comunidade',
+  tagline: 'Metropolitana Norte',
   theme2026: 'Educação para a Cidadania Digital e Midiática: formando cidadãs e cidadãos críticos e responsáveis',
   organizer: 'GRE Metropolitana Norte',
   organizerFullName: 'Gerência Regional de Educação Metropolitana Norte · Secretaria de Educação e Esportes de Pernambuco',
@@ -108,31 +108,31 @@ export const METRICS_DATA: MetricProof[] = [
   },
   {
     id: 'escolas',
-    value: 58,
+    value: 70,
     suffix: '+',
-    label: 'Escolas Parceiras',
-    description: 'Polos de ensino integral, regulares e técnicas de Pernambuco.',
+    label: 'Escolas Envolvidas',
+    description: 'Escolas da Rede Estadual de Pernambuco na edição 2025.',
   },
   {
     id: 'competicoes',
     value: 6,
-    suffix: '+',
+    suffix: '',
     label: 'Competições & Desafios',
-    description: 'Modalidades de robótica, dança e cultura geek.',
+    description: 'Buzz Line, Buzz PRO, Sumô, Cosplay, K-pop e Hackathon.',
   },
   {
-    id: 'projetos',
-    value: 90,
-    suffix: '+',
-    label: 'Projetos Makers',
-    description: 'Soluções reais para sustentabilidade, clima e inclusão.',
+    id: 'oficinas',
+    value: 12,
+    suffix: '',
+    label: 'Oficinas Maker',
+    description: 'Oficinas confirmadas para a 6ª edição, com 20 vagas por sala.',
   },
   {
     id: 'visitantes',
     value: 10000,
     suffix: '+',
     label: 'Visitantes em 2025',
-    description: 'Comunidade escolar, famílias e entusiastas de tecnologia.',
+    description: 'Público circulante nos dois dias da 5ª edição.',
   },
 ];
 
@@ -243,7 +243,6 @@ export const SCHEDULE_DATA: ScheduleItem[] = [
     description: 'Palestra breve sobre tecnologia, educação e protagonismo juvenil.',
     category: 'palestras',
     location: 'Auditório',
-    speakerOrHost: 'Laís — Tech Woman',
   },
   {
     id: 'd1-5',
@@ -734,6 +733,29 @@ export const WORKSHOPS_DATA: Workshop[] = [
     equipment: ['Projetor ou TV', 'Extensão', 'Internet'],
     software: 'Arduino IDE',
   },
+  {
+    id: 'sumo-lego-nxt-meninas-ciencias',
+    title: 'Oficina Sumô - Design Mentor IA: Meninas nas Ciências',
+    description:
+      'Introdução aos conceitos básicos de montagem com LEGO NXT, seguida da separação em grupos para montagem dos protótipos e finalização com uma batalha de sumô.',
+    schedule: `${EVENT_DATE.dayMonthLong} · horário a definir`,
+    room: 'Salas de oficina · ETE José de Alencar',
+    targetAudience: 'Estudantes da rede estadual, com foco em meninas na tecnologia.',
+    school: 'ETE JAGS',
+    instructor: {
+      name: 'Evelly Estefanny, Sthefany, Amanda e Irla',
+      role: 'Oficineiras',
+      institution: 'ETE JAGS',
+      bio: 'Equipe Design Mentor IA · Meninas nas Ciências. O projeto já foi ministrado em quatro escolas da GRE Recife Norte, na própria escola em quatro turmas e no curso de TI da UNINASSAU Pátio Olinda.',
+    },
+    materialsProvided: [
+      'Material para montagem de 2 protótipos com LEGO NXT',
+      'Peças de LEGO NXT separadas para a atividade',
+    ],
+    prerequisites:
+      'Para mais de 2 grupos, a organização precisa disponibilizar peças LEGO NXT adicionais.',
+    software: 'LEGO NXT',
+  },
 ].map((workshop) => ({
   ...workshop,
   registrationUrl: WORKSHOP_REGISTRATION_URLS[workshop.id],
@@ -786,7 +808,7 @@ export const TIMELINE_DATA: TimelineMilestone[] = [
     title: 'O Presente: Cidadania Digital & Futuro',
     description:
       `A 6ª edição acontece em um único dia, ${EVENT_DATE.dayMonthLong}, na ETE José de Alencar em Paulista, com oficinas, mostra de projetos, competições, cultura geek e o pitch do Hackathon.`,
-    stats: '58+ escolas parceiras · 6+ competições · 90+ projetos makers',
+    stats: '12 oficinas · 6 competições · 240 vagas em oficinas',
   },
 ];
 
@@ -914,7 +936,7 @@ export const FAQ_DATA = [
   {
     question: 'Quem pode participar do Ôxe Maker?',
     answer:
-      'O evento é da GRE Metropolitana Norte e abre espaço para toda a comunidade escolar: estudantes da rede estadual, professores, famílias e amantes da tecnologia.',
+      'O evento é da GRE Metropolitana Norte e abre espaço para toda a comunidade escolar: estudantes da rede estadual, professores e amantes da tecnologia.',
   },
   {
     question: 'Como faço para participar das competições?',
