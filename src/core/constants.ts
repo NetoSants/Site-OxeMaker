@@ -477,7 +477,7 @@ export const OXETHON_INFO: OxethonInfo = {
   ],
   slogan: 'O Hackathon Arretado',
   story:
-    `O Ôxethon é o hackathon do Ôxe Maker e acontece dentro da programação do evento, no dia ${EVENT_DATE.dayMonthLong}. Equipes multidisciplinares criam soluções tecnológicas que impactem positivamente a comunidade local e apresentam seus projetos no pitch final, no Auditório, às 16h. É o lugar onde o código encontra a realidade e a inovação acontece na prática.`,
+    `O Oxethôn é o hackathon do Ôxe Maker e acontece dentro da programação do evento, no dia ${EVENT_DATE.dayMonthLong}. Equipes multidisciplinares criam soluções tecnológicas que impactem positivamente a comunidade local e apresentam seus projetos no pitch final, no Auditório, às 16h. É o lugar onde o código encontra a realidade e a inovação acontece na prática.`,
   registrationUrl:
     'https://docs.google.com/forms/d/e/1FAIpQLSdgCwo3VhRmjO6UB6O9ausy0UPmK7ySRwicAcFpMEpYaWB0bQ/viewform?usp=dialog',
   image: img('oxethon.webp'),
@@ -962,12 +962,12 @@ export const FAQ_DATA = [
   {
     question: 'Até quando posso me inscrever?',
     answer:
-      `As inscrições vão até ${REGISTRATION_DEADLINE.long} e abrangem Torneios (Buzz Line, Buzz PRO e Sumô de Robôs), Cultura Geek (Cosplay e K-pop), Oficinas Maker, Mostra de Projetos, Ôxethon e Visitantes.`,
+      `As inscrições vão até ${REGISTRATION_DEADLINE.long} e abrangem Torneios (Buzz Line, Buzz PRO e Sumô de Robôs), Cultura Geek (Cosplay e K-pop), Oficinas Maker, Mostra de Projetos, Oxethôn e Visitantes.`,
   },
   {
     question: 'Quais são as modalidades de inscrição?',
     answer:
-      'As modalidades estão reunidas na página de Inscrições: Torneios (Buzz Line, Buzz PRO e Sumô de Robôs), Cultura Geek (Cosplay e K-pop), Oficinas Maker, Mostra de Projetos, Ôxethon e Visitantes.',
+      'As modalidades estão reunidas na página de Inscrições: Torneios (Buzz Line, Buzz PRO e Sumô de Robôs), Cultura Geek (Cosplay e K-pop), Oficinas Maker, Mostra de Projetos, Oxethôn e Visitantes.',
   },
   {
     question: 'Quem pode participar do Ôxe Maker?',
@@ -977,7 +977,7 @@ export const FAQ_DATA = [
   {
     question: 'Como faço para participar das competições?',
     answer:
-      `Acesse a página de Inscrições e escolha entre Torneios (Buzz Line, Buzz PRO e Sumô de Robôs), Cultura Geek (Cosplay e K-POP), Oficinas Maker e Oxethon. Confirme as regras da categoria desejada e faça sua inscrição até ${REGISTRATION_DEADLINE.shortWithYear}. As competições acontecem no dia ${EVENT_DATE.short}, das ${PROGRAM_TIMES.competitions.range}.`,
+      `Acesse a página de Inscrições e escolha entre Torneios (Buzz Line, Buzz PRO e Sumô de Robôs), Cultura Geek (Cosplay e K-POP), Oficinas Maker e Oxethôn. Confirme as regras da categoria desejada e faça sua inscrição até ${REGISTRATION_DEADLINE.shortWithYear}. As competições acontecem no dia ${EVENT_DATE.short}, das ${PROGRAM_TIMES.competitions.range}.`,
   },
   {
     question: 'Qual é a programação do dia do evento?',

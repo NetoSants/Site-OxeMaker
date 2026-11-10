@@ -52,7 +52,7 @@ const TOPICS = [
   },
   {
     id: 'oxethon',
-    title: 'Oxethon',
+    title: 'Oxethôn',
     description: 'Hackathon e pitch final',
     icon: Cpu,
   },
@@ -452,7 +452,7 @@ export const InscricoesPage: React.FC = () => {
           id="oxethon"
           icon={<Cpu className="w-6 h-6 text-[#0369A1]" />}
           eyebrow="Hackathon"
-          title="Oxethon"
+          title="Oxethôn"
           description={`Monte sua equipe, desenvolva uma solução e apresente o pitch no dia ${EVENT_DATE.dayMonthLong}.`}
         />
 

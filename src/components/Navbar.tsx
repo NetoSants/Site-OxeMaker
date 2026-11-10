@@ -39,7 +39,7 @@ export const Navbar: React.FC = () => {
         { label: 'Robótica', path: '/torneio' },
         { label: 'Cultura Geek', path: '/geek' },
         { label: 'Oficinas Maker', path: '/oficinas' },
-        { label: 'Oxethon 2026', path: '/oxethon' },
+        { label: 'Oxethôn 2026', path: '/oxethon' },
       ],
     },
     { label: 'Na Mídia', path: '/noticias' },

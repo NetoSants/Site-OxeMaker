@@ -65,7 +65,7 @@ export const HomePage: React.FC = () => {
     },
     {
       id: 'oxethon',
-      title: 'Oxethon',
+      title: 'Oxethôn',
       description: 'Monte sua equipe para o hackathon e apresente o pitch no dia do evento.',
       href: '/inscricoes#oxethon',
       icon: <Cpu className="w-5 h-5 text-[#0369A1]" />,
@@ -424,7 +424,7 @@ export const HomePage: React.FC = () => {
           </div>
           <p className="text-sm text-slate-400 max-w-md">
             Seis caminhos para participar: torneios de robótica, cultura geek, oficinas maker,
-            Mostra de Projetos, Oxethon e credenciamento de visitantes.
+            Mostra de Projetos, Oxethôn e credenciamento de visitantes.
           </p>
         </div>
 
