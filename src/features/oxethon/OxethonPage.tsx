@@ -177,10 +177,11 @@ export const OxethonPage: React.FC = () => {
         <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm space-y-2">
           <div className="flex items-center gap-2 text-[#8A5A04] font-mono-code text-xs uppercase font-bold">
             <Award className="w-4 h-4" />
-            <span>Tema 2026</span>
+            <span>Tema do Hackathon</span>
           </div>
-          <p className="text-sm text-slate-200 font-sans leading-relaxed">
-            "{EVENT_INFO.theme2026}"
+          <h3 className="text-base font-heading text-[#0B1330]">{OXETHON_INFO.theme}</h3>
+          <p className="text-xs text-slate-300 font-sans leading-relaxed">
+            {OXETHON_INFO.themeDescription}
           </p>
         </div>
         <div className="p-5 bg-[#F9FDFE] border-2 border-slate-700/80 rounded-sm space-y-2">
