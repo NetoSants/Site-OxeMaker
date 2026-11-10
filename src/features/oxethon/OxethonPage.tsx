@@ -26,6 +26,19 @@ export const OxethonPage: React.FC = () => {
         <h1 className="text-3xl sm:text-5xl font-heading font-black text-[#0B1330] uppercase tracking-tight">
           {OXETHON_INFO.title} 2026
         </h1>
+
+        <div className="inline-flex flex-col sm:flex-row items-center gap-3 px-5 py-4 bg-[#FCC140] text-[#050D34] rounded-sm border-2 border-[#8A5A04] maker-shadow-yellow">
+          <Award className="w-7 h-7 flex-shrink-0" />
+          <div className="text-center sm:text-left">
+            <span className="text-[10px] font-mono-code uppercase font-bold tracking-widest block">
+              Tema do Hackathon
+            </span>
+            <strong className="text-xl sm:text-2xl font-heading font-black uppercase leading-tight">
+              {OXETHON_INFO.theme}
+            </strong>
+          </div>
+        </div>
+
         <p className="text-slate-300 text-sm sm:text-base max-w-3xl font-sans">
           {OXETHON_INFO.description}
         </p>
